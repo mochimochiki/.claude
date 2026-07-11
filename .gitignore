@@ -1,0 +1,15 @@
+# 全除外
+*
+!*/
+
+# 許可
+!/agents/**
+!/skills/**
+!/hooks/**
+!/scripts/**
+!/README.md
+!/.gitignore
+
+# 除外
+.DS_Store
+Thumbs.db
