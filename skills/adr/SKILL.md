@@ -29,6 +29,7 @@ description: Architectural Decision Recordを簡潔に記録し、既存の意�
 # Architectural Decision Record
 
 ## template
+新しいものを上に追加する。背景・決定・理由は必須、備考は特記事項があるときのみ。各項目90文字以内で簡潔に書く。
 ```
 ### ADR-YYMMDD-NN: {決定名}
 **背景** : {決定に至った背景 — 90文字以内で簡潔に}
