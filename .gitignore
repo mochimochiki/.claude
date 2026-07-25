@@ -3,8 +3,13 @@
 !*/
 
 # 許可
-!/agents/**
-!/skills/**
+!/agents
+!/skills
+!/skills/adr/**
+!/skills/grill-x/**
+!/skills/roadmap/**
+!/skills/task/**
+!/skills/writer/**
 !/hooks/**
 !/scripts/**
 !/README.md
