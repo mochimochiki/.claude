@@ -1,0 +1,12 @@
+# 外部から取ってくるスキルの一覧。
+# apm（AI エージェント用の設定をまとめて管理するツール）がこのファイルを読み、
+# 書かれたスキルを ~/.claude/skills/ に配置する。
+name: mochimochiki-claude
+version: 0.1.0
+description: Claude Code の個人設定で使う外部スキル
+targets:
+  - claude
+dependencies:
+  apm:
+    # デザインまわりのスキル。~/.claude/skills/impeccable/ に入る
+    - pbakaus/impeccable
