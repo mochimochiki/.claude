@@ -15,6 +15,7 @@
 !/scripts/**
 !/README.md
 !/CLAUDE.md
+!/apm.yml
 !/.gitignore
 
 
