@@ -1,0 +1,15 @@
+# 外部から取ってくるスキルの一覧。
+# apm（AI エージェント用の設定をまとめて管理するツール）がこのファイルを読み、
+# 書かれたスキルを ~/.claude/skills/ に配置する。
+name: mochimochiki-claude
+version: 0.1.0
+description: Claude Code の個人設定で使う外部スキル
+targets:
+  - claude
+dependencies:
+  apm:
+    # デザインまわりのスキル。~/.claude/skills/impeccable/ に入る。
+    # git: の形で書くと GitHub の API を使わず git だけで取得する。
+    # ref: は取得するバージョン。上げたいときはここのタグを差し替える。
+    - git: https://github.com/pbakaus/impeccable.git
+      ref: skill-v4.0.3
