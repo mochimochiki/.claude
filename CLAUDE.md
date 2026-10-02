@@ -8,6 +8,6 @@
 
 ## CI 失敗の切り分け
 CIが `failure`/`cancelled` ならジョブが実際に走ったか確認する。
-`runner_name` 空・実行数秒・ステップ0、注釈 "Actions budget"/"was not started"/"spending limit" はジョブ未起動で失敗ではない
-編集も再実行連打もせず、予算/インフラブロックとして報告。
+`runner_name` が空、実行時間が数秒、ステップが0、または注釈に "Actions budget"/"was not started"/"spending limit" とある場合は、ジョブが起動していないだけで、失敗ではない。
+この場合は、編集も再実行の連打もせず、予算またはインフラによるブロックとして報告する。
 確認: MCP `get_workflow_job`、または `gh api repos/<o>/<r>/actions/runs/<run_id>/jobs` と `.../check-runs/<job_id>/annotations`
