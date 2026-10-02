@@ -13,3 +13,7 @@ dependencies:
     # ref: は取得するバージョン。上げたいときはここのタグを差し替える。
     - git: https://github.com/pbakaus/impeccable.git
       ref: skill-v4.0.3
+    # 日本語の文章を読みやすく直すスキル。~/.claude/skills/yomiyasu/ に入る。
+    # CLAUDE.md で「日本語を書くときは常に使う」と指示している。
+    - git: https://github.com/nanaism/yomiyasu.git
+      ref: v1.0.3

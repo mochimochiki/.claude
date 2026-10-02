@@ -11,6 +11,7 @@ apm（AI エージェント用の設定をまとめて管理するツール）�
 現在の対象:
 
 - [impeccable](https://github.com/pbakaus/impeccable) — デザインまわりのスキル
+- [yomiyasu](https://github.com/nanaism/yomiyasu) — 日本語の文章を読みやすく直すスキル。CLAUDE.md で常に使うよう指示している
 
 ## セットアップ
 
