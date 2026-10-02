@@ -15,5 +15,8 @@ dependencies:
       ref: skill-v4.0.3
     # 日本語の文章を読みやすく直すスキル。~/.claude/skills/yomiyasu/ に入る。
     # CLAUDE.md で「日本語を書くときは常に使う」と指示している。
+    # リポジトリには同じスキルが2か所（直下と skills/yomiyasu/）にある。
+    # 丸ごと入れると Claude Code が両方を別のスキルとして読むので、path: で片方だけ入れる。
     - git: https://github.com/nanaism/yomiyasu.git
+      path: skills/yomiyasu
       ref: v1.0.3
