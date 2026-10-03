@@ -5,19 +5,19 @@ Claude Codeの個人設定（スキル・ルール）をまとめたリポジト
 ## 外部スキルについて
 
 他の人が公開しているスキルは、このリポジトリには入れずに `apm.yml` へ名前だけ書いておく。
-apm（AIエージェント用の設定をまとめて管理するツール）がそれを読んで
-`~/.claude/skills/` に配置する。
+apm（AIエージェント用の設定をまとめて管理するツール）が `apm.yml` を読んで、
+書かれたスキルを `~/.claude/skills/` に配置する。
 
 現在の対象は次のとおり。
 
-- [impeccable](https://github.com/pbakaus/impeccable) — デザインまわりのスキル
-- [yomiyasu](https://github.com/nanaism/yomiyasu) — 日本語の文章を読みやすく直すスキル。既存の文章の書き直しを頼まれたときに使う
+- [impeccable](https://github.com/pbakaus/impeccable): デザインまわりのスキル
+- [yomiyasu](https://github.com/nanaism/yomiyasu): 日本語の文章を読みやすく直すスキル。既存の文章の書き直しを頼まれたときに使う
 
 日本語を書くときの規範は、yomiyasu から書くときに使う部分を抜き出した `skills/readable/` にある（MIT License、出典は同じフォルダの `LICENSE`）。
 
 ## セットアップ
 
-環境構築時に実行するスクリプトとして、以下を登録する。
+環境構築時に実行するスクリプトとして、次の内容を登録する。
 
 ```bash
 #!/bin/bash
@@ -43,7 +43,7 @@ cp "$HOME/.claude/apm.yml" "$HOME/.apm/apm.yml"
 apm install -g
 ```
 
-### 手順2がpip経由な理由
+### 手順2でpipを使う理由
 
 apmの公式の入れ方は `curl https://aka.ms/apm-unix | sh` だが、`aka.ms` への接続が
 許可されていない環境があり、そこでは403で失敗する。
@@ -53,10 +53,10 @@ apmはPyPIにも `apm-cli` という名前で置かれているため、そち�
 
 `apm install -g` は実行した場所ではなく `~/.apm/apm.yml` だけを読む。
 そのため、リポジトリの `apm.yml` をそこへ写してから実行している。
-リポジトリ側を正として毎回上書きするので、`apm install -g <名前>` で
-別のスキルを個別に入れていた場合はこの上書きで消える点に注意。
+この写しは毎回リポジトリ側の内容で上書きする。そのため、`apm install -g <名前>` で
+個別に入れたスキルは、この上書きで消える。
 
 ### スキルを増やしたいとき
 
-`apm.yml` の `dependencies.apm` に一件足す。GitHubのAPIを使わずに済むよう、
-`git:` にクローン URL、`ref:` にタグを書く形で揃えている。
+`apm.yml` の `dependencies.apm` に1件足す。GitHubのAPIを使わずに済むよう、
+`git:` にクローンURL、`ref:` にタグを書く形にそろえている。
