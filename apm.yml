@@ -13,10 +13,3 @@ dependencies:
     # ref: は取得するバージョン。上げたいときはここのタグを差し替える。
     - git: https://github.com/pbakaus/impeccable.git
       ref: skill-v4.0.3
-    # 日本語の文章を読みやすく直すスキル。~/.claude/skills/yomiyasu/ に入る。
-    # 既存の文章の書き直しを頼まれたときに使う。ふだん書くときの規範は skills/readable/ にある。
-    # リポジトリには同じスキルが2か所（直下と skills/yomiyasu/）にある。
-    # 丸ごと入れると Claude Code が両方を別のスキルとして読むので、path: で片方だけ入れる。
-    - git: https://github.com/nanaism/yomiyasu.git
-      path: skills/yomiyasu
-      ref: v1.0.3
