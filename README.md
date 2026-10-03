@@ -11,7 +11,9 @@ apm（AIエージェント用の設定をまとめて管理するツール）が
 現在の対象は次のとおり。
 
 - [impeccable](https://github.com/pbakaus/impeccable) — デザインまわりのスキル
-- [yomiyasu](https://github.com/nanaism/yomiyasu) — 日本語の文章を読みやすく直すスキル。CLAUDE.md で常に使うよう指示している
+- [yomiyasu](https://github.com/nanaism/yomiyasu) — 日本語の文章を読みやすく直すスキル。既存の文章の書き直しを頼まれたときに使う
+
+日本語を書くときの規範は、yomiyasu から書くときに使う部分を抜き出した `skills/readable/` にある（MIT License、出典は同じフォルダの `LICENSE`）。
 
 ## セットアップ
 

@@ -14,7 +14,7 @@ dependencies:
     - git: https://github.com/pbakaus/impeccable.git
       ref: skill-v4.0.3
     # 日本語の文章を読みやすく直すスキル。~/.claude/skills/yomiyasu/ に入る。
-    # CLAUDE.md で「日本語を書くときは常に使う」と指示している。
+    # 既存の文章の書き直しを頼まれたときに使う。ふだん書くときの規範は skills/readable/ にある。
     # リポジトリには同じスキルが2か所（直下と skills/yomiyasu/）にある。
     # 丸ごと入れると Claude Code が両方を別のスキルとして読むので、path: で片方だけ入れる。
     - git: https://github.com/nanaism/yomiyasu.git
