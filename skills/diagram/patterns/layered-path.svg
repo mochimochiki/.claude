@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 500" width="640" height="500" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+  <title>手前の層のキャッシュで返せるほど、レスポンスが速い</title>
+  <desc>レイヤー図にリクエストの経路を重ねた作例。Web のリクエストは、ブラウザのキャッシュ、CDN、アプリのキャッシュ、データベースの順に奥へ進む。線は行きと帰りの経路で、キャッシュがある層で折り返してレスポンスを返す。手前で返すほど経路が短く、レスポンスが速い。ブラウザのキャッシュで返せば通信しない。CDN で返せばオリジンサーバーまでリクエストが届かない。アプリのキャッシュで返せばデータベースに問い合わせない。どこにも無ければデータベースまで届く。キャッシュが新しい(fresh)場合を描き、古くなったキャッシュを条件付きリクエストで再検証する経路は省いた。アプリのキャッシュは HTTP キャッシュ(RFC 9111)ではなく、アプリ側の仕組みである。</desc>
+  <defs>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#4a5563"/></marker>
+    <marker id="ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#1e2733"/></marker>
+    <symbol id="person" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4" fill="currentColor"/><path d="M4,21 C4,15.5 7.5,13 12,13 C16.5,13 20,15.5 20,21 Z" fill="currentColor"/></symbol>
+    <symbol id="screen" viewBox="0 0 24 24"><rect x="2.5" y="4" width="19" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8.5,21 H15.5 M12,17 V21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="cloud" viewBox="0 0 24 24"><path d="M7,19 C4.2,19 2.5,17 2.5,14.6 C2.5,12.3 4.2,10.6 6.4,10.4 C7,7.2 9.4,5 12.5,5 C15.7,5 18,7.3 18.4,10.3 C20.2,10.6 21.5,12.3 21.5,14.5 C21.5,17 19.8,19 17.4,19 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="server" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="7.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13.5" width="18" height="7.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="7" cy="6.75" r="1.2" fill="currentColor"/><circle cx="7" cy="17.25" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="database" viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="8" ry="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4,5.5 V18.5 C4,20.2 7.6,21.5 12,21.5 C16.4,21.5 20,20.2 20,18.5 V5.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4,12 C4,13.7 7.6,15 12,15 C16.4,15 20,13.7 20,12" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  </defs>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .band { fill: #e8eaed; }
+    .path { stroke: #4a5563; stroke-width: 2; fill: none; marker-end: url(#ag); }
+    .hit { fill: #2b5c8a; }
+    .miss { fill: #fcfcfa; stroke: #7a8490; stroke-width: 2; }
+  </style>
+  <rect x="0" y="0" width="640" height="500" fill="#f5f6f4"/>
+
+  <text x="16" y="42" class="title">手前の層のキャッシュで返せるほど、レスポンスが速い</text>
+
+  <rect x="112" y="64" width="124" height="324" class="band"/>
+  <rect x="240" y="64" width="124" height="324" class="band"/>
+  <rect x="368" y="64" width="124" height="324" class="band"/>
+  <rect x="496" y="64" width="128" height="324" class="band"/>
+  <g color="#4a5563">
+    <use href="#screen" x="158" y="76" width="32" height="32"/>
+    <use href="#cloud" x="286" y="76" width="32" height="32"/>
+    <use href="#server" x="414" y="76" width="32" height="32"/>
+    <use href="#database" x="544" y="76" width="32" height="32"/>
+  </g>
+  <text x="174" y="130" class="h" text-anchor="middle">ブラウザ</text>
+  <text x="302" y="130" class="h" text-anchor="middle">CDN</text>
+  <text x="430" y="130" class="h" text-anchor="middle">アプリ</text>
+  <text x="560" y="130" class="h" text-anchor="middle">データベース</text>
+
+  <use href="#person" x="40" y="76" width="32" height="32" color="#1e2733"/>
+  <text x="56" y="130" class="h" text-anchor="middle">利用者</text>
+  <line x1="56" y1="142" x2="56" y2="380" stroke="#7a8490" stroke-width="1.5"/>
+
+  <path d="M58,160 H164 A10,10 0 0 1 164,180 H62" class="path"/>
+  <circle cx="174" cy="170" r="6" class="hit"/>
+
+  <path d="M58,224 H292 A10,10 0 0 1 292,244 H62" class="path"/>
+  <circle cx="174" cy="224" r="5" class="miss"/>
+  <circle cx="302" cy="234" r="6" class="hit"/>
+
+  <path d="M58,288 H420 A10,10 0 0 1 420,308 H62" class="path"/>
+  <circle cx="174" cy="288" r="5" class="miss"/>
+  <circle cx="302" cy="288" r="5" class="miss"/>
+  <circle cx="430" cy="298" r="6" class="hit"/>
+
+  <path d="M58,352 H550 A10,10 0 0 1 550,372 H62" class="path"/>
+  <circle cx="174" cy="352" r="5" class="miss"/>
+  <circle cx="302" cy="352" r="5" class="miss"/>
+  <circle cx="430" cy="352" r="5" class="miss"/>
+  <circle cx="560" cy="362" r="6" class="hit"/>
+
+  <line x1="112" y1="412" x2="620" y2="412" stroke="#1e2733" stroke-width="2" marker-end="url(#ak)"/>
+  <text x="112" y="436" class="h">速い</text>
+  <text x="620" y="436" class="h" text-anchor="end">遅い</text>
+
+  <circle cx="22" cy="466" r="6" class="hit"/>
+  <text x="36" y="471" class="s">この層でレスポンスを返す</text>
+  <circle cx="252" cy="466" r="5" class="miss"/>
+  <text x="266" y="471" class="s">次の層へ転送する</text>
+</svg>

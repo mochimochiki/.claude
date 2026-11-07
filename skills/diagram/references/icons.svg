@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+  <title>絵記号の部品集</title>
+  <desc>説明図で使う絵記号の一覧。24×24 の格子、線の太さ 2、currentColor で描いている。使う記号の symbol を図の defs に写して use で置く。</desc>
+  <defs>
+    <symbol id="person" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4" fill="currentColor"/><path d="M4,21 C4,15.5 7.5,13 12,13 C16.5,13 20,15.5 20,21 Z" fill="currentColor"/></symbol>
+    <symbol id="people" viewBox="0 0 24 24"><circle cx="8" cy="8" r="3" fill="currentColor"/><path d="M2,19 C2,15 4.5,13 8,13 C11.5,13 14,15 14,19 Z" fill="currentColor"/><circle cx="16.5" cy="7" r="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15,12.2 C19,12 22,14 22,18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="document" viewBox="0 0 24 24"><path d="M6,2.5 H14 L19,7.5 V21.5 H6 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14,2.5 V7.5 H19" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9,12 H16 M9,15.5 H16 M9,19 H13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="folder" viewBox="0 0 24 24"><path d="M2.5,6 V19.5 H21.5 V8 H11 L9,5.5 H3 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="database" viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="8" ry="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4,5.5 V18.5 C4,20.2 7.6,21.5 12,21.5 C16.4,21.5 20,20.2 20,18.5 V5.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4,12 C4,13.7 7.6,15 12,15 C16.4,15 20,13.7 20,12" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="server" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="7.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13.5" width="18" height="7.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="7" cy="6.75" r="1.2" fill="currentColor"/><circle cx="7" cy="17.25" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="screen" viewBox="0 0 24 24"><rect x="2.5" y="4" width="19" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8.5,21 H15.5 M12,17 V21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="phone" viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10.5,18 H13.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="mail" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3,6 L12,13 L21,6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="chat" viewBox="0 0 24 24"><path d="M3,4 H21 V16 H10 L5,20 V16 H3 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="key" viewBox="0 0 24 24"><circle cx="7.5" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12,12 H21.5 M18.5,12 V15.5 M15.5,12 V14.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="lock" viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="11" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8,10.5 V7.5 C8,5 9.8,3 12,3 C14.2,3 16,5 16,7.5 V10.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="16" r="1.5" fill="currentColor"/></symbol>
+    <symbol id="cloud" viewBox="0 0 24 24"><path d="M7,19 C4.2,19 2.5,17 2.5,14.6 C2.5,12.3 4.2,10.6 6.4,10.4 C7,7.2 9.4,5 12.5,5 C15.7,5 18,7.3 18.4,10.3 C20.2,10.6 21.5,12.3 21.5,14.5 C21.5,17 19.8,19 17.4,19 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12,7 V12 L15.5,14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="search" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15,15 L21,21" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></symbol>
+    <symbol id="gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12,2.5 V5.5 M12,18.5 V21.5 M2.5,12 H5.5 M18.5,12 H21.5 M5.3,5.3 L7.4,7.4 M16.6,16.6 L18.7,18.7 M5.3,18.7 L7.4,16.6 M16.6,7.4 L18.7,5.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="7" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="package" viewBox="0 0 24 24"><path d="M3,7.5 L12,3 L21,7.5 V17 L12,21.5 L3,17 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M3,7.5 L12,12 L21,7.5 M12,12 V21.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="truck" viewBox="0 0 24 24"><path d="M2,6 H14 V16 H2 Z M14,9.5 H18.5 L22,13 V16 H14" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="6" cy="18" r="2" fill="#fcfcfa" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="18" r="2" fill="#fcfcfa" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="queue" viewBox="0 0 24 24"><rect x="2.5" y="6.5" width="19" height="11" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8.8,6.5 V17.5 M15.2,6.5 V17.5" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="ok" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2.5"/></symbol>
+    <symbol id="partial" viewBox="0 0 24 24"><path d="M12,3.5 L21,19.5 H3 Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></symbol>
+    <symbol id="ng" viewBox="0 0 24 24"><path d="M5,5 L19,19 M19,5 L5,19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></symbol>
+    <symbol id="warning" viewBox="0 0 24 24"><path d="M12,3 L22,20.5 H2 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12,9.5 V14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="17.2" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="ai" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" fill="currentColor"/><text x="12" y="16.2" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo',sans-serif">AI</text></symbol>
+  </defs>
+  <style>
+    .l { font-size: 14px; fill: #4a5563; }
+    .h { font-size: 20px; font-weight: 700; fill: #1e2733; }
+  </style>
+  <rect x="0" y="0" width="640" height="400" fill="#f5f6f4"/>
+  <text x="16" y="40" class="h">絵記号の部品集</text>
+
+  <g color="#1e2733">
+    <use href="#person" x="40" y="72" width="40" height="40"/><text x="60" y="134" class="l" text-anchor="middle">person</text>
+    <use href="#people" x="140" y="72" width="40" height="40"/><text x="160" y="134" class="l" text-anchor="middle">people</text>
+    <use href="#document" x="240" y="72" width="40" height="40"/><text x="260" y="134" class="l" text-anchor="middle">document</text>
+    <use href="#folder" x="340" y="72" width="40" height="40"/><text x="360" y="134" class="l" text-anchor="middle">folder</text>
+    <use href="#database" x="440" y="72" width="40" height="40"/><text x="460" y="134" class="l" text-anchor="middle">database</text>
+    <use href="#server" x="540" y="72" width="40" height="40"/><text x="560" y="134" class="l" text-anchor="middle">server</text>
+
+    <use href="#screen" x="40" y="164" width="40" height="40"/><text x="60" y="226" class="l" text-anchor="middle">screen</text>
+    <use href="#phone" x="140" y="164" width="40" height="40"/><text x="160" y="226" class="l" text-anchor="middle">phone</text>
+    <use href="#mail" x="240" y="164" width="40" height="40"/><text x="260" y="226" class="l" text-anchor="middle">mail</text>
+    <use href="#chat" x="340" y="164" width="40" height="40"/><text x="360" y="226" class="l" text-anchor="middle">chat</text>
+    <use href="#key" x="440" y="164" width="40" height="40"/><text x="460" y="226" class="l" text-anchor="middle">key</text>
+    <use href="#lock" x="540" y="164" width="40" height="40"/><text x="560" y="226" class="l" text-anchor="middle">lock</text>
+
+    <use href="#cloud" x="40" y="256" width="40" height="40"/><text x="60" y="318" class="l" text-anchor="middle">cloud</text>
+    <use href="#clock" x="140" y="256" width="40" height="40"/><text x="160" y="318" class="l" text-anchor="middle">clock</text>
+    <use href="#search" x="240" y="256" width="40" height="40"/><text x="260" y="318" class="l" text-anchor="middle">search</text>
+    <use href="#gear" x="340" y="256" width="40" height="40"/><text x="360" y="318" class="l" text-anchor="middle">gear</text>
+    <use href="#package" x="440" y="256" width="40" height="40"/><text x="460" y="318" class="l" text-anchor="middle">package</text>
+    <use href="#truck" x="540" y="256" width="40" height="40"/><text x="560" y="318" class="l" text-anchor="middle">truck</text>
+  </g>
+  <use href="#ok" x="40" y="340" width="32" height="32" color="#2b5c8a"/><text x="80" y="362" class="l">ok</text>
+  <use href="#partial" x="140" y="340" width="32" height="32" color="#4a5563"/><text x="180" y="362" class="l">partial</text>
+  <use href="#ng" x="240" y="340" width="32" height="32" color="#b35a1f"/><text x="280" y="362" class="l">ng</text>
+  <use href="#warning" x="340" y="340" width="32" height="32" color="#b35a1f"/><text x="380" y="362" class="l">warning</text>
+  <use href="#ai" x="440" y="340" width="32" height="32" color="#1e2733"/><text x="480" y="362" class="l">ai</text>
+  <use href="#queue" x="540" y="340" width="32" height="32" color="#1e2733"/><text x="580" y="362" class="l">queue</text>
+</svg>

@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 744" width="640" height="744" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+  <title>返金の可否は検品で決まり、受付時点では決まらない</title>
+  <desc>スイムレーン図の作例で、表記は BPMN 2.0.2 に従う。EC の返品申請から結果の確認までを描く。顧客とショップを別のプールに分け、ショップはサポート窓口・倉庫・経理のレーンに分ける。顧客が返品を申請すると、サポート窓口は返品を受け付けて返送方法を案内する。顧客が商品を返送すると、倉庫が検品し、返品可能かで分岐する。可なら経理が返金処理をし、不可ならサポート窓口が返品不可を連絡する。どちらの場合も顧客は結果を確認して終わる。実線の矢印はプールの中の順序を示すシーケンスフロー、始点に白丸を付けた破線の矢印はプール間のやり取りを示すメッセージフロー。</desc>
+  <defs>
+    <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4a5563"/>
+    </marker>
+    <marker id="p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2b5c8a"/>
+    </marker>
+    <marker id="o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b35a1f"/>
+    </marker>
+    <marker id="gh" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M1,1 L11,6 L1,11 z" fill="#fcfcfa" stroke="#4a5563" stroke-width="1.5"/>
+    </marker>
+    <marker id="ph" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M1,1 L11,6 L1,11 z" fill="#fcfcfa" stroke="#2b5c8a" stroke-width="1.5"/>
+    </marker>
+    <marker id="oh" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M1,1 L11,6 L1,11 z" fill="#fcfcfa" stroke="#b35a1f" stroke-width="1.5"/>
+    </marker>
+    <marker id="gs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="5" markerHeight="5" orient="auto"><circle cx="5" cy="5" r="4" fill="#fcfcfa" stroke="#4a5563" stroke-width="1.5"/></marker>
+    <marker id="ps" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="5" markerHeight="5" orient="auto"><circle cx="5" cy="5" r="4" fill="#fcfcfa" stroke="#2b5c8a" stroke-width="1.5"/></marker>
+    <marker id="os" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="5" markerHeight="5" orient="auto"><circle cx="5" cy="5" r="4" fill="#fcfcfa" stroke="#b35a1f" stroke-width="1.5"/></marker>
+    <symbol id="person" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4" fill="currentColor"/><path d="M4,21 C4,15.5 7.5,13 12,13 C16.5,13 20,15.5 20,21 Z" fill="currentColor"/></symbol>
+    <symbol id="package" viewBox="0 0 24 24"><path d="M3,7.5 L12,3 L21,7.5 V17 L12,21.5 L3,17 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M3,7.5 L12,12 L21,7.5 M12,12 V21.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  </defs>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .b { font-size: 14px; font-weight: 700; fill: #1e2733; }
+    .tp { font-size: 14px; font-weight: 700; fill: #2b5c8a; }
+    .to { font-size: 14px; font-weight: 700; fill: #9a4a14; }
+    .box { fill: #fcfcfa; stroke: #7a8490; stroke-width: 1.5; }
+    .seq { stroke: #4a5563; stroke-width: 1.8; fill: none; marker-end: url(#g); }
+    .msg { stroke: #4a5563; stroke-width: 1.8; fill: none; stroke-dasharray: 7 5; marker-start: url(#gs); marker-end: url(#gh); }
+    .seq-p { stroke: #2b5c8a; stroke-width: 2; fill: none; marker-end: url(#p); }
+    .msg-p { stroke: #2b5c8a; stroke-width: 2; fill: none; stroke-dasharray: 7 5; marker-start: url(#ps); marker-end: url(#ph); }
+    .seq-o { stroke: #b35a1f; stroke-width: 2; fill: none; marker-end: url(#o); }
+    .msg-o { stroke: #b35a1f; stroke-width: 2; fill: none; stroke-dasharray: 7 5; marker-start: url(#os); marker-end: url(#oh); }
+  </style>
+  <rect x="0" y="0" width="640" height="744" fill="#f5f6f4"/>
+
+  <text x="16" y="42" class="title">返金の可否は検品で決まり、受付時点では決まらない</text>
+
+  <rect x="16" y="84" width="144" height="612" fill="#dfe2e6" stroke="#7a8490" stroke-width="1.5"/>
+  <rect x="168" y="84" width="456" height="612" fill="#e8eaed" stroke="#7a8490" stroke-width="1.5"/>
+  <line x1="16" y1="128" x2="160" y2="128" stroke="#7a8490" stroke-width="1.5"/>
+  <line x1="168" y1="104" x2="624" y2="104" stroke="#7a8490" stroke-width="1.5"/>
+  <line x1="168" y1="128" x2="624" y2="128" stroke="#7a8490" stroke-width="1.5"/>
+  <line x1="320" y1="104" x2="320" y2="696" stroke="#7a8490" stroke-width="1.5"/>
+  <line x1="472" y1="104" x2="472" y2="696" stroke="#7a8490" stroke-width="1.5"/>
+  <use href="#person" x="56" y="94" width="24" height="24" color="#1e2733"/>
+  <text x="100" y="113" class="h" text-anchor="middle">顧客</text>
+  <text x="396" y="99" class="s" text-anchor="middle">ショップ</text>
+  <text x="244" y="122" class="h" text-anchor="middle">サポート窓口</text>
+  <text x="396" y="122" class="h" text-anchor="middle">倉庫</text>
+  <text x="548" y="122" class="h" text-anchor="middle">経理</text>
+
+  <circle cx="88" cy="148" r="10" fill="#fcfcfa" stroke="#1e2733" stroke-width="1.5"/>
+  <path d="M88,158 V170" class="seq"/>
+
+  <rect x="28" y="172" width="120" height="48" rx="8" class="box"/>
+  <text x="88" y="201" class="b" text-anchor="middle">返品を申請する</text>
+  <path d="M88,220 V362" class="seq"/>
+  <path d="M148,196 H244 V234" class="msg"/>
+
+  <rect x="176" y="236" width="136" height="48" rx="8" class="box"/>
+  <text x="244" y="265" class="b" text-anchor="middle">返品を受け付ける</text>
+  <path d="M244,284 V372 H150" class="msg"/>
+  <text x="236" y="332" class="s" text-anchor="end">返送方法</text>
+  <path d="M312,252 H396 V362" class="seq"/>
+
+  <rect x="28" y="364" width="120" height="48" rx="8" class="box"/>
+  <text x="88" y="393" class="b" text-anchor="middle">商品を返送する</text>
+  <path d="M148,396 H334" class="msg"/>
+  <use href="#package" x="200" y="404" width="24" height="24" color="#1e2733"/>
+  <text x="230" y="422" class="s">商品</text>
+  <path d="M88,412 V590" class="seq"/>
+
+  <rect x="336" y="364" width="120" height="48" rx="8" class="box"/>
+  <text x="396" y="393" class="b" text-anchor="middle">検品する</text>
+  <path d="M396,412 V434" class="seq"/>
+
+  <path d="M396,436 L456,470 L396,504 L336,470 Z" fill="#fcfcfa" stroke="#1e2733" stroke-width="2.5"/>
+  <text x="396" y="475" class="b" text-anchor="middle">返品可能か</text>
+
+  <path d="M456,470 H548 V528" class="seq-p"/>
+  <text x="480" y="463" class="tp">可</text>
+  <path d="M336,470 H244 V528" class="seq-o"/>
+  <text x="312" y="463" class="to" text-anchor="end">不可</text>
+
+  <rect x="488" y="530" width="120" height="48" rx="8" fill="#fcfcfa" stroke="#2b5c8a" stroke-width="2"/>
+  <text x="548" y="559" class="b" text-anchor="middle">返金処理をする</text>
+  <rect x="184" y="530" width="120" height="48" rx="8" fill="#fcfcfa" stroke="#b35a1f" stroke-width="2"/>
+  <text x="244" y="550" class="b" text-anchor="middle">返品不可を</text>
+  <text x="244" y="568" class="b" text-anchor="middle">連絡する</text>
+
+  <path d="M244,578 V606 H150" class="msg-o"/>
+  <text x="236" y="600" class="to" text-anchor="end">連絡</text>
+  <path d="M548,578 V632 H150" class="msg-p"/>
+  <text x="380" y="626" class="tp">返金</text>
+
+  <rect x="28" y="592" width="120" height="52" rx="8" class="box"/>
+  <text x="88" y="623" class="b" text-anchor="middle">結果を確認する</text>
+  <path d="M88,644 V660" class="seq"/>
+  <circle cx="88" cy="672" r="10" fill="#fcfcfa" stroke="#1e2733" stroke-width="3.5"/>
+
+  <path d="M16,720 H52" class="seq"/>
+  <text x="62" y="725" class="s">シーケンスフロー</text>
+  <path d="M200,720 H236" class="msg"/>
+  <text x="246" y="725" class="s">メッセージフロー</text>
+</svg>

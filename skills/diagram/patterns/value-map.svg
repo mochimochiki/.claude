@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 376" width="640" height="376" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+  <title>未対応の課題に機能を足し、余った機能を外す</title>
+  <desc>課題と機能の対応図の作例。中小の工場向け生産管理クラウドで、左に顧客の課題、右に提供する機能を並べ、機能が解決する課題へ矢印を引く。スマホで実績入力は、日報の転記の手間と納期回答の遅さを解決する。計画の自動立案は納期回答の遅さを、バーコードで入出庫は在庫数の不一致を解決する。設備停止に気付けない課題にはどの機能も対応しておらず、機能を足す候補である。多言語表示はどの課題にも結び付かず、外す候補である。</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4a5563"/>
+    </marker>
+    <symbol id="person" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4" fill="currentColor"/><path d="M4,21 C4,15.5 7.5,13 12,13 C16.5,13 20,15.5 20,21 Z" fill="currentColor"/></symbol>
+    <symbol id="package" viewBox="0 0 24 24"><path d="M3,7.5 L12,3 L21,7.5 V17 L12,21.5 L3,17 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M3,7.5 L12,12 L21,7.5 M12,12 V21.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  </defs>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .i { font-size: 16px; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .n { font-size: 14px; font-weight: 700; }
+    .prob { fill: #fcfcfa; stroke: #7a8490; stroke-width: 1.5; }
+    .feat { fill: #e3ecf5; stroke: #2b5c8a; stroke-width: 1.5; }
+    .ln { stroke: #4a5563; stroke-width: 1.8; fill: none; marker-end: url(#a); }
+  </style>
+  <rect x="0" y="0" width="640" height="376" fill="#f5f6f4"/>
+
+  <text x="16" y="42" class="title">未対応の課題に機能を足し、余った機能を外す</text>
+
+  <use href="#person" x="16" y="64" width="24" height="24" color="#4a5563"/>
+  <text x="48" y="83" class="h">顧客の課題</text>
+  <text x="320" y="83" class="s" text-anchor="middle">解決する</text>
+  <use href="#package" x="424" y="64" width="24" height="24" color="#2b5c8a"/>
+  <text x="456" y="83" class="h" style="fill:#2b5c8a">提供する機能</text>
+
+  <!-- 対応 -->
+  <path d="M422,128 H220" class="ln"/>
+  <path d="M422,132 C340,136 300,180 220,184" class="ln"/>
+  <path d="M422,184 H220" class="ln"/>
+  <path d="M422,240 H220" class="ln"/>
+
+  <!-- 顧客の課題 -->
+  <rect x="16" y="108" width="200" height="40" rx="6" class="prob"/>
+  <text x="32" y="134" class="i">日報の転記が手間</text>
+  <rect x="16" y="164" width="200" height="40" rx="6" class="prob"/>
+  <text x="32" y="190" class="i">納期回答が遅い</text>
+  <rect x="16" y="220" width="200" height="40" rx="6" class="prob"/>
+  <text x="32" y="246" class="i">在庫数が合わない</text>
+  <rect x="16" y="276" width="200" height="40" rx="6" fill="#fbeee5" stroke="#b35a1f" stroke-width="2"/>
+  <text x="32" y="302" class="i">設備停止に気付けない</text>
+
+  <!-- 提供する機能 -->
+  <rect x="424" y="108" width="200" height="40" rx="6" class="feat"/>
+  <text x="440" y="134" class="i">スマホで実績入力</text>
+  <rect x="424" y="164" width="200" height="40" rx="6" class="feat"/>
+  <text x="440" y="190" class="i">計画の自動立案</text>
+  <rect x="424" y="220" width="200" height="40" rx="6" class="feat"/>
+  <text x="440" y="246" class="i">バーコードで入出庫</text>
+  <rect x="424" y="276" width="200" height="40" rx="6" fill="#fcfcfa" stroke="#7a8490" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="440" y="302" class="i" style="fill:#4a5563">多言語表示</text>
+
+  <!-- 結論 -->
+  <text x="32" y="344" class="n" style="fill:#9a4a14">機能を足す</text>
+  <path d="M24,320 V338" stroke="#b35a1f" stroke-width="1.5"/>
+  <text x="440" y="344" class="n" style="fill:#4a5563">外す</text>
+  <path d="M432,320 V338" stroke="#7a8490" stroke-width="1.5"/>
+</svg>

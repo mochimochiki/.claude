@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 392" width="640" height="392" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+  <rect x="0" y="0" width="640" height="392" fill="#f5f6f4"/>
+  <title>4M で要因を洗い出し、重要要因から検証する</title>
+  <desc>特性要因図の作例。基板実装の不良「はんだブリッジ」を特性として右端に置き、人・機械・材料・方法の 4M を大骨にして要因を 2 つずつ挙げる。人は作業者の熟練差とメタルマスクの清掃漏れ、機械はリフロー温度の変動と印刷位置のずれ、材料はペーストの粘度低下と狭ピッチの部品、方法はメタルマスク開口が広いこととスキージ圧が不適切なこと。はんだがパッドの外へはみ出す原因になる 2 つを重要要因として橙で示す。</desc>
+  <defs>
+    <marker id="k" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1e2733"/>
+    </marker>
+  </defs>
+  <style>
+    .t { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .c { font-size: 16px; font-weight: 700; fill: #2b5c8a; }
+    .b { font-size: 14px; fill: #1e2733; }
+    .key { font-size: 14px; font-weight: 700; fill: #9a4a14; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .spine { stroke: #1e2733; stroke-width: 3; fill: none; marker-end: url(#k); }
+    .bone { stroke: #2b5c8a; stroke-width: 2; fill: none; }
+    .sub { stroke: #7a8490; stroke-width: 1.2; fill: none; }
+    .subk { stroke: #b35a1f; stroke-width: 2.5; fill: none; }
+    .cat { fill: #e3ecf5; }
+  </style>
+  <text x="16" y="40" class="t">4M で要因を洗い出し、重要要因から検証する</text>
+
+  <path d="M32,220 H484" class="spine"/>
+  <rect x="488" y="194" width="136" height="52" rx="6" fill="#fcfcfa" stroke="#1e2733" stroke-width="2.5"/>
+  <text x="556" y="226" class="h" text-anchor="middle">はんだブリッジ</text>
+
+  <rect x="88" y="64" width="64" height="30" rx="4" class="cat"/>
+  <text x="120" y="85" class="c" text-anchor="middle">人</text>
+  <rect x="288" y="64" width="64" height="30" rx="4" class="cat"/>
+  <text x="320" y="85" class="c" text-anchor="middle">機械</text>
+  <rect x="88" y="346" width="64" height="30" rx="4" class="cat"/>
+  <text x="120" y="367" class="c" text-anchor="middle">材料</text>
+  <rect x="288" y="346" width="64" height="30" rx="4" class="cat"/>
+  <text x="320" y="367" class="c" text-anchor="middle">方法</text>
+
+  <path d="M120,94 L220,220" class="bone"/>
+  <path d="M320,94 L420,220" class="bone"/>
+  <path d="M120,346 L220,220" class="bone"/>
+  <path d="M320,346 L420,220" class="bone"/>
+
+  <path d="M20,145 H160" class="sub"/>
+  <text x="136" y="139" class="b" text-anchor="end">作業者の熟練差</text>
+  <path d="M16,189 H195" class="sub"/>
+  <text x="171" y="183" class="b" text-anchor="end">メタルマスクの清掃漏れ</text>
+
+  <path d="M220,145 H360" class="sub"/>
+  <text x="336" y="139" class="b" text-anchor="end">リフロー温度の変動</text>
+  <path d="M271,189 H395" class="subk"/>
+  <text x="371" y="183" class="key" text-anchor="end">印刷位置のずれ</text>
+
+  <path d="M36,251 H195" class="sub"/>
+  <text x="187" y="245" class="b" text-anchor="end">ペーストの粘度低下</text>
+  <path d="M36,295 H160" class="sub"/>
+  <text x="152" y="289" class="b" text-anchor="end">狭ピッチの部品</text>
+
+  <path d="M229,251 H395" class="subk"/>
+  <text x="387" y="245" class="key" text-anchor="end">メタルマスク開口が広い</text>
+  <path d="M222,295 H360" class="sub"/>
+  <text x="352" y="289" class="b" text-anchor="end">スキージ圧が不適切</text>
+
+  <path d="M488,300 H516" class="subk"/>
+  <text x="524" y="305" class="s">重要要因</text>
+</svg>

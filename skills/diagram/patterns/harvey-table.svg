@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 404" width="640" height="404" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+  <title>どの方式にも弱点があり、業務の独自性と期限で選ぶ</title>
+  <desc>社内システムをクラウドへ移す 3 つの移行方式を、ハーベイボールの比較表で並べる。そのまま移す(リホスト)は期間が短く業務をそのまま続けられるが、運用負荷はあまり減らない。作り直す(リアーキテクト)は現行業務に適合させられ運用負荷も減るが、期間が長い。SaaS に置き換える(リパーチェス)は運用負荷が最も減るが、業務を SaaS の標準に合わせる必要がある。最下段に、それぞれが向いている場合を書く。評価は 3 つの移行方式を互いに比べた相対的な位置で、弱点は橙で示す。</desc>
+  <defs>
+    <g id="full"><circle r="12" fill="#2b5c8a" stroke="#2b5c8a" stroke-width="2"/></g>
+    <g id="half"><circle r="12" fill="#fcfcfa" stroke="#2b5c8a" stroke-width="2"/><path d="M0,-12 A12,12 0 0 1 0,12 Z" fill="#2b5c8a"/></g>
+    <g id="weak"><circle r="12" fill="#fbeee5" stroke="#b35a1f" stroke-width="2"/></g>
+  </defs>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .t { font-size: 14px; fill: #1e2733; }
+    .rule { stroke: #7a8490; stroke-width: 1; }
+  </style>
+  <rect x="0" y="0" width="640" height="404" fill="#f5f6f4"/>
+
+  <text x="16" y="42" class="title">どの方式にも弱点があり、業務の独自性と期限で選ぶ</text>
+
+  <text x="256" y="100" text-anchor="middle" class="h">そのまま移す</text>
+  <text x="396" y="100" text-anchor="middle" class="h">作り直す</text>
+  <text x="536" y="100" text-anchor="middle" class="h">SaaS に置き換える</text>
+  <line x1="16" y1="116" x2="624" y2="116" stroke="#1e2733" stroke-width="2"/>
+
+  <text x="16" y="149" class="h">移行期間の短さ</text>
+  <use href="#full" x="256" y="144"/>
+  <use href="#weak" x="396" y="144"/>
+  <use href="#half" x="536" y="144"/>
+  <line x1="16" y1="172" x2="624" y2="172" class="rule"/>
+
+  <text x="16" y="205" class="h">運用負荷の削減</text>
+  <use href="#weak" x="256" y="200"/>
+  <use href="#half" x="396" y="200"/>
+  <use href="#full" x="536" y="200"/>
+  <line x1="16" y1="228" x2="624" y2="228" class="rule"/>
+
+  <text x="16" y="261" class="h">現行業務への適合</text>
+  <use href="#full" x="256" y="256"/>
+  <use href="#full" x="396" y="256"/>
+  <use href="#weak" x="536" y="256"/>
+
+  <rect x="16" y="284" width="608" height="56" fill="#e8eaed"/>
+  <text x="32" y="317" class="h">向いている場合</text>
+  <text x="256" y="317" text-anchor="middle" class="t">期限が近い</text>
+  <text x="396" y="317" text-anchor="middle" class="t">中核業務を長く使う</text>
+  <text x="536" y="317" text-anchor="middle" class="t">業務が標準的</text>
+
+  <use href="#full" x="28" y="374"/>
+  <text x="48" y="379" class="s">有利</text>
+  <use href="#half" x="108" y="374"/>
+  <text x="128" y="379" class="s">中間</text>
+  <use href="#weak" x="188" y="374"/>
+  <text x="208" y="379" class="s">不利</text>
+</svg>

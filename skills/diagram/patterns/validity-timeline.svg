@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" width="640" height="340" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+  <rect x="0" y="0" width="640" height="340" fill="#f5f6f4"/>
+  <title>ごみ箱を空にすると、どの方法でも戻せない</title>
+  <desc>有効範囲の時間軸の作例。文書を編集する、保存して閉じる、削除する、ごみ箱を空にする、の 4 つの操作を時間軸に置き、その下に 3 つの戻し方が使える期間を帯で示す。元に戻す(Ctrl+Z)は編集してから閉じるまで使える。バージョン履歴は保存してから削除するまで使え、保存のたびにバージョンが残る。ごみ箱から復元は削除してからごみ箱を空にするまで使える。3 つの帯は切れ目なく続くが、ごみ箱を空にした後はどの方法でも戻せない。使える期間を主の色、戻せない期間を対の色で示す。</desc>
+  <defs>
+    <symbol id="ng" viewBox="0 0 24 24"><path d="M5,5 L19,19 M19,5 L5,19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></symbol>
+  </defs>
+  <style>
+    .t { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .e { font-size: 16px; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .bar { fill: #2b5c8a; }
+    .bv { font-size: 16px; font-weight: 700; fill: #ffffff; }
+    .guide { stroke: #7a8490; stroke-width: 1; stroke-dasharray: 4 4; }
+  </style>
+  <text x="16" y="40" class="t">ごみ箱を空にすると、どの方法でも戻せない</text>
+
+  <rect x="540" y="136" width="84" height="184" fill="#fbeee5"/>
+  <use href="#ng" x="566" y="196" width="32" height="32" color="#b35a1f"/>
+  <text x="582" y="256" class="h" text-anchor="middle" style="fill:#9a4a14">戻せない</text>
+
+  <line x1="32" y1="84" x2="624" y2="84" stroke="#4a5563" stroke-width="2"/>
+  <circle cx="120" cy="84" r="6" fill="#1e2733"/>
+  <circle cx="260" cy="84" r="6" fill="#1e2733"/>
+  <circle cx="400" cy="84" r="6" fill="#1e2733"/>
+  <circle cx="540" cy="84" r="6" fill="#1e2733"/>
+  <text x="120" y="116" class="e" text-anchor="middle">編集する</text>
+  <text x="260" y="116" class="e" text-anchor="middle">保存して閉じる</text>
+  <text x="400" y="116" class="e" text-anchor="middle">削除する</text>
+  <text x="540" y="116" class="e" text-anchor="middle">ごみ箱を空にする</text>
+
+  <line x1="120" y1="132" x2="120" y2="320" class="guide"/>
+  <line x1="260" y1="132" x2="260" y2="320" class="guide"/>
+  <line x1="400" y1="132" x2="400" y2="320" class="guide"/>
+  <line x1="540" y1="132" x2="540" y2="320" class="guide"/>
+
+  <rect x="120" y="148" width="140" height="32" rx="4" class="bar"/>
+  <text x="190" y="170" class="bv" text-anchor="middle">元に戻す</text>
+  <text x="190" y="200" class="s" text-anchor="middle">Ctrl+Z</text>
+
+  <rect x="260" y="212" width="140" height="32" rx="4" class="bar"/>
+  <text x="330" y="234" class="bv" text-anchor="middle">バージョン履歴</text>
+  <text x="330" y="264" class="s" text-anchor="middle">保存のたびに残る</text>
+
+  <rect x="400" y="276" width="140" height="32" rx="4" class="bar"/>
+  <text x="470" y="298" class="bv" text-anchor="middle">ごみ箱から復元</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 392" width="640" height="392" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+  <rect x="0" y="0" width="640" height="392" fill="#f5f6f4"/>
+  <title>電池を増やすと、連続使用時間は延びるが重く高くなる</title>
+  <desc>設計のトレードオフの作例。コードレス掃除機の電池を増やすという 1 つの設計変更から、結果へ矢印を引く。得るものは連続使用時間が延びること。失うものは、重くなって片手で持ちにくくなること、部品コストが上がること、本体が厚くなること。得るものを青の面と実線、失うものを橙の面と実線に分ける。</desc>
+  <defs>
+    <marker id="pb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2b5c8a"/>
+    </marker>
+    <marker id="po" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b35a1f"/>
+    </marker>
+    <symbol id="battery" viewBox="0 0 24 24"><rect x="2" y="7" width="17" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M21,10 V14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M6,10.5 V13.5 M9.5,10.5 V13.5 M13,10.5 V13.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  </defs>
+  <style>
+    .t { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .w { font-size: 16px; font-weight: 700; fill: #ffffff; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .rb { font-size: 14px; font-weight: 700; fill: #2b5c8a; }
+    .ro { font-size: 14px; font-weight: 700; fill: #9a4a14; }
+    .item { fill: #fcfcfa; stroke: #7a8490; stroke-width: 1.5; }
+    .gain { stroke: #2b5c8a; stroke-width: 2.5; fill: none; marker-end: url(#pb); }
+    .loss { stroke: #b35a1f; stroke-width: 2.5; fill: none; marker-end: url(#po); }
+  </style>
+  <text x="16" y="40" class="t">電池を増やすと、連続使用時間は延びるが重く高くなる</text>
+
+  <rect x="392" y="60" width="232" height="88" rx="6" fill="#e3ecf5"/>
+  <text x="408" y="82" class="rb">得るもの</text>
+  <rect x="392" y="160" width="232" height="216" rx="6" fill="#fbeee5"/>
+  <text x="408" y="182" class="ro">失うもの</text>
+
+  <rect x="24" y="214" width="208" height="52" rx="6" fill="#1e2733"/>
+  <use href="#battery" x="36" y="224" width="32" height="32" color="#ffffff"/>
+  <text x="76" y="246" class="w">電池を増やす</text>
+
+  <path d="M232,232 C300,200 340,116 404,116" class="gain"/>
+  <path d="M232,240 C300,230 340,214 404,214" class="loss"/>
+  <path d="M232,248 C300,260 340,284 404,284" class="loss"/>
+  <path d="M232,256 C300,300 340,348 404,348" class="loss"/>
+
+  <rect x="408" y="94" width="200" height="44" rx="6" class="item"/>
+  <text x="424" y="122" class="h">連続使用時間が延びる</text>
+
+  <rect x="408" y="192" width="200" height="60" rx="6" class="item"/>
+  <text x="424" y="217" class="h">重くなる</text>
+  <text x="424" y="239" class="s">片手で持ちにくい</text>
+  <rect x="408" y="264" width="200" height="44" rx="6" class="item"/>
+  <text x="424" y="292" class="h">部品コストが上がる</text>
+  <rect x="408" y="320" width="200" height="44" rx="6" class="item"/>
+  <text x="424" y="348" class="h">本体が厚くなる</text>
+</svg>

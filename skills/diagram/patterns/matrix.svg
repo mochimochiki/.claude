@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+  <title>影響が大きく直す工数が小さい負債から先に返す</title>
+  <desc>技術的負債の優先順位を、放置したときの影響と直す工数の 2 軸で 4 つの象限に分けた 2×2 マトリクス。影響が大きく工数が小さい象限は先に返す(例: 手作業のリリース手順)。影響が大きく工数が大きい象限は計画して返す(例: サポート終了のフレームワーク)。影響が小さく工数が小さい象限はついでに返す(例: 使われていないコード)。影響が小さく工数が大きい象限は返さずに、記録して定期的に見直す(例: めったに変えない古い画面)。負債の例は典型的に当てはまる象限に置いたもので、実際の位置は案件ごとに見積もる。</desc>
+  <defs>
+    <marker id="ax" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4a5563"/>
+    </marker>
+  </defs>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .t { font-size: 14px; fill: #1e2733; }
+    .axis { stroke: #4a5563; stroke-width: 1.8; fill: none; marker-end: url(#ax); }
+  </style>
+  <rect x="0" y="0" width="640" height="400" fill="#f5f6f4"/>
+
+  <text x="16" y="42" class="title">影響が大きく直す工数が小さい負債から先に返す</text>
+
+  <rect x="104" y="72" width="252" height="124" fill="#e3ecf5"/>
+  <rect x="364" y="72" width="252" height="124" fill="#e8eaed"/>
+  <rect x="104" y="204" width="252" height="124" fill="#e8eaed"/>
+  <rect x="364" y="204" width="252" height="124" fill="#e8eaed"/>
+
+  <text x="124" y="108" class="h" style="fill:#2b5c8a">先に返す</text>
+  <circle cx="130" cy="163" r="5" fill="#2b5c8a"/>
+  <text x="144" y="168" class="t">手作業のリリース手順</text>
+
+  <text x="384" y="108" class="h">計画して返す</text>
+  <circle cx="390" cy="163" r="5" fill="#4a5563"/>
+  <text x="404" y="168" class="t">サポート終了のフレームワーク</text>
+
+  <text x="124" y="240" class="h">ついでに返す</text>
+  <circle cx="130" cy="295" r="5" fill="#4a5563"/>
+  <text x="144" y="300" class="t">使われていないコード</text>
+
+  <text x="384" y="240" class="h">返さない</text>
+  <text x="384" y="264" class="s">記録して定期的に見直す</text>
+  <circle cx="390" cy="295" r="5" fill="#4a5563"/>
+  <text x="404" y="300" class="t">めったに変えない古い画面</text>
+
+  <line x1="88" y1="328" x2="88" y2="76" class="axis"/>
+  <text transform="translate(72,200) rotate(-90)" text-anchor="middle" class="h">放置したときの影響</text>
+  <text x="74" y="90" text-anchor="end" class="s">大</text>
+  <text x="74" y="324" text-anchor="end" class="s">小</text>
+  <line x1="104" y1="348" x2="612" y2="348" class="axis"/>
+  <text x="360" y="376" text-anchor="middle" class="h">直す工数</text>
+  <text x="108" y="370" class="s">小</text>
+  <text x="600" y="370" text-anchor="end" class="s">大</text>
+</svg>

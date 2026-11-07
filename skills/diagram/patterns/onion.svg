@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 560" width="640" height="560" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+  <title>依存は外側から内側へだけ向ける</title>
+  <desc>同心の層で依存の向きを示す作例。クリーンアーキテクチャにならい、受注管理を内側からエンティティ、ユースケース、インターフェースアダプターの 3 層に分ける。Robert C. Martin の原典の 4 つの円のうち、最も外側のフレームワークとドライバーは省いた。原典は円の数を 4 つに限らないとしている。外側の Web API は注文確定のユースケースを呼び出し、ユースケースは注文・在庫のルールを使う。ユースケースは在庫リポジトリのインターフェースを使い、外側の在庫リポジトリ実装がそのインターフェースを実装する。ユースケースは外側の実装を直接呼び出さない。実線の矢印はすべて内側を向く。</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4a5563"/>
+    </marker>
+    <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b35a1f"/>
+    </marker>
+    <symbol id="screen" viewBox="0 0 24 24"><rect x="2.5" y="4" width="19" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8.5,21 H15.5 M12,17 V21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="database" viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="8" ry="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4,5.5 V18.5 C4,20.2 7.6,21.5 12,21.5 C16.4,21.5 20,20.2 20,18.5 V5.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4,12 C4,13.7 7.6,15 12,15 C16.4,15 20,13.7 20,12" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="ng" viewBox="0 0 24 24"><path d="M5,5 L19,19 M19,5 L5,19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></symbol>
+  </defs>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .box { fill: #fcfcfa; stroke: #7a8490; stroke-width: 1.5; }
+    .line { stroke: #4a5563; stroke-width: 1.8; fill: none; marker-end: url(#a); }
+  </style>
+  <rect x="0" y="0" width="640" height="560" fill="#f5f6f4"/>
+
+  <text x="16" y="42" class="title">依存は外側から内側へだけ向ける</text>
+
+  <!-- 層 -->
+  <rect x="16" y="64" width="608" height="480" rx="16" fill="#dfe2e6"/>
+  <text x="32" y="92" class="h">インターフェースアダプター</text>
+  <rect x="64" y="140" width="512" height="328" rx="12" fill="#e8eaed"/>
+  <text x="80" y="164" class="h">ユースケース</text>
+  <rect x="144" y="216" width="352" height="140" rx="10" fill="#e3ecf5" stroke="#2b5c8a" stroke-width="2.5"/>
+  <text x="160" y="244" class="h" style="fill:#2b5c8a">エンティティ</text>
+
+  <!-- 要素 -->
+  <rect x="248" y="84" width="144" height="44" rx="8" class="box"/>
+  <use href="#screen" x="262" y="94" width="24" height="24" color="#4a5563"/>
+  <text x="296" y="112" class="h">Web API</text>
+
+  <rect x="256" y="168" width="128" height="40" rx="8" class="box"/>
+  <text x="320" y="194" class="h" text-anchor="middle">注文確定</text>
+
+  <rect x="240" y="284" width="160" height="40" rx="8" class="box"/>
+  <text x="320" y="310" class="h" text-anchor="middle">注文・在庫のルール</text>
+
+  <rect x="248" y="412" width="144" height="40" rx="8" class="box"/>
+  <text x="320" y="438" class="h" text-anchor="middle">在庫リポジトリ</text>
+  <text x="400" y="437" class="s">インターフェース</text>
+
+  <rect x="216" y="484" width="208" height="44" rx="8" class="box"/>
+  <use href="#database" x="230" y="494" width="24" height="24" color="#4a5563"/>
+  <text x="264" y="512" class="h">在庫リポジトリ実装</text>
+
+  <!-- 内向きの依存 -->
+  <path d="M320,128 V166" class="line"/>
+  <text x="328" y="153" class="s">呼び出す</text>
+  <path d="M320,208 V282" class="line"/>
+  <text x="328" y="266" class="s">使う</text>
+  <path d="M256,188 H112 V432 H246" class="line"/>
+  <text x="104" y="320" class="s" text-anchor="end">使う</text>
+  <path d="M320,484 V454" class="line"/>
+  <text x="328" y="474" class="s">実装する</text>
+
+  <!-- 避ける依存 -->
+  <path d="M384,188 H528 V504 H426" stroke="#b35a1f" stroke-width="1.8" stroke-dasharray="6 4" fill="none" marker-end="url(#b)"/>
+  <rect x="512" y="284" width="32" height="32" fill="#e8eaed"/>
+  <use href="#ng" x="516" y="288" width="24" height="24" color="#b35a1f"/>
+  <text x="548" y="306" class="s" style="fill:#9a4a14">呼ばない</text>
+</svg>

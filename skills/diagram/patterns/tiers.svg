@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 528" width="640" height="528" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+  <title>許可しない操作のツールは AI に渡さない</title>
+  <desc>区分の段の作例。AnswerScout の AI(Copilot CLI)に許す操作を 3 段に分ける。常に許可するのはファイルの閲覧・検索、作業フォルダへの書き込み、ワークフローの読み込みで、渡すツールを名前で指定する。組織の設定で選ぶのは Python の実行と添付の解析(既定で有効)、指定した実行ファイルの起動と指定した社内サイトの閲覧(既定で無効)で、変えられるのは PC の管理者権限を持つユーザーだけである。許可しないのは任意のコマンドの実行、インターネットへの接続、作業フォルダ外への書き込み、メール送信とチケット更新、MCP 連携で、これらの手段は渡さず、許可していない操作は拒否して記録する。</desc>
+  <defs>
+    <symbol id="ok" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2.5"/></symbol>
+    <symbol id="partial" viewBox="0 0 24 24"><path d="M12,3.5 L21,19.5 H3 Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></symbol>
+    <symbol id="ng" viewBox="0 0 24 24"><path d="M5,5 L19,19 M19,5 L5,19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></symbol>
+  </defs>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; }
+    .i { font-size: 16px; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+  </style>
+  <rect x="0" y="0" width="640" height="528" fill="#f5f6f4"/>
+
+  <text x="16" y="42" class="title">許可しない操作のツールは AI に渡さない</text>
+
+  <rect x="16" y="64" width="608" height="120" rx="10" fill="#e3ecf5"/>
+  <use href="#ok" x="32" y="78" width="32" height="32" color="#2b5c8a"/>
+  <text x="76" y="100" class="h" fill="#2b5c8a">常に許可</text>
+  <text x="76" y="140" class="i">閲覧・検索</text>
+  <text x="336" y="140" class="i">作業フォルダへの書き込み</text>
+  <text x="76" y="168" class="i">ワークフロー読み込み</text>
+
+  <rect x="16" y="200" width="608" height="144" rx="10" fill="#f5f6f4" stroke="#2b5c8a" stroke-width="2" stroke-dasharray="8 5"/>
+  <use href="#partial" x="32" y="214" width="32" height="32" color="#4a5563"/>
+  <text x="76" y="236" class="h" fill="#1e2733">組織の設定で選ぶ</text>
+  <text x="76" y="272" class="s" style="fill:#2b5c8a">既定で有効</text>
+  <text x="76" y="300" class="i">Python 実行</text>
+  <text x="76" y="328" class="i">添付の解析</text>
+  <text x="336" y="272" class="s">既定で無効</text>
+  <text x="336" y="300" class="i">実行ファイルの起動</text>
+  <text x="336" y="328" class="i">社内サイトの閲覧</text>
+
+  <rect x="16" y="360" width="608" height="152" rx="10" fill="#fbeee5"/>
+  <use href="#ng" x="32" y="374" width="32" height="32" color="#b35a1f"/>
+  <text x="76" y="396" class="h" fill="#9a4a14">許可しない</text>
+  <text x="76" y="436" class="i">任意のコマンド実行</text>
+  <text x="336" y="436" class="i">インターネット接続</text>
+  <text x="76" y="464" class="i">作業フォルダ外の書き込み</text>
+  <text x="336" y="464" class="i">メール送信・チケット更新</text>
+  <text x="76" y="492" class="i">MCP 連携</text>
+</svg>

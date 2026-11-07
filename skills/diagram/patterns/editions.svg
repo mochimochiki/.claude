@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 392" width="640" height="392" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+  <title>上位プランを選ぶ理由を、1 段ごとに 1 つ足す</title>
+  <desc>エディション構成の作例。経費精算クラウドを、スタンダード・ビジネス・エンタープライズの 3 つのプランに分ける。上位プランは下位プランの機能をすべて含み、1 段上がるごとに上位を選ぶ理由になる機能を 1 つ足す。スタンダードは少人数で使う会社向けで、領収書の読み取りを提供する。ビジネスは部門で使う会社向けで、多段階承認を足す。エンタープライズは全社で使う会社向けで、シングルサインオンを足す。月額の価格は空欄の枠にしてある。</desc>
+  <defs>
+    <symbol id="person" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4" fill="currentColor"/><path d="M4,21 C4,15.5 7.5,13 12,13 C16.5,13 20,15.5 20,21 Z" fill="currentColor"/></symbol>
+    <symbol id="people" viewBox="0 0 24 24"><circle cx="8" cy="8" r="3" fill="currentColor"/><path d="M2,19 C2,15 4.5,13 8,13 C11.5,13 14,15 14,19 Z" fill="currentColor"/><circle cx="16.5" cy="7" r="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15,12.2 C19,12 22,14 22,18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  </defs>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .t { font-size: 14px; fill: #1e2733; }
+    .w { font-size: 16px; font-weight: 700; fill: #ffffff; }
+    .add { fill: #2b5c8a; }
+    .keep { fill: #e3ecf5; }
+    .blank { fill: #fcfcfa; stroke: #7a8490; stroke-width: 1.5; }
+  </style>
+  <rect x="0" y="0" width="640" height="392" fill="#f5f6f4"/>
+
+  <text x="16" y="42" class="title">上位プランを選ぶ理由を、1 段ごとに 1 つ足す</text>
+
+  <!-- プランの名前と価格 -->
+  <text x="114" y="86" class="h" text-anchor="middle">スタンダード</text>
+  <text x="320" y="86" class="h" text-anchor="middle">ビジネス</text>
+  <text x="526" y="86" class="h" text-anchor="middle">エンタープライズ</text>
+  <text x="60" y="122" class="s">月額</text>
+  <rect x="94" y="104" width="64" height="26" rx="4" class="blank"/>
+  <text x="166" y="122" class="s">円</text>
+  <text x="266" y="122" class="s">月額</text>
+  <rect x="300" y="104" width="64" height="26" rx="4" class="blank"/>
+  <text x="372" y="122" class="s">円</text>
+  <text x="472" y="122" class="s">月額</text>
+  <rect x="506" y="104" width="64" height="26" rx="4" class="blank"/>
+  <text x="578" y="122" class="s">円</text>
+
+  <!-- 機能の積み上げ -->
+  <rect x="428" y="148" width="196" height="44" rx="6" class="add"/>
+  <text x="526" y="176" class="w" text-anchor="middle">シングルサインオン</text>
+
+  <rect x="428" y="200" width="196" height="44" rx="6" class="keep"/>
+  <rect x="222" y="200" width="196" height="44" rx="6" class="add"/>
+  <text x="320" y="228" class="w" text-anchor="middle">多段階承認</text>
+
+  <rect x="222" y="252" width="196" height="44" rx="6" class="keep"/>
+  <rect x="428" y="252" width="196" height="44" rx="6" class="keep"/>
+  <rect x="16" y="252" width="196" height="44" rx="6" class="add"/>
+  <text x="114" y="280" class="w" text-anchor="middle">領収書の読み取り</text>
+
+
+  <!-- 対象の顧客 -->
+  <use href="#person" x="64" y="314" width="24" height="24" color="#4a5563"/>
+  <text x="94" y="332" class="t">少人数で使う</text>
+  <use href="#people" x="270" y="314" width="24" height="24" color="#4a5563"/>
+  <text x="300" y="332" class="t">部門で使う</text>
+  <use href="#people" x="476" y="314" width="24" height="24" color="#4a5563"/>
+  <text x="506" y="332" class="t">全社で使う</text>
+
+  <!-- 凡例 -->
+  <rect x="300" y="360" width="24" height="16" rx="3" class="add"/>
+  <text x="332" y="373" class="s">上位を選ぶ理由</text>
+  <rect x="444" y="360" width="24" height="16" rx="3" class="keep"/>
+  <text x="476" y="373" class="s">下位プランと同じ</text>
+</svg>

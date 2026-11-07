@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 392" width="640" height="392" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+  <title>各ゲートで、次へ進めるかを基準で決める</title>
+  <desc>ステージゲートの作例。業務用コーヒーマシンの開発を企画・設計・試作・量産準備の 4 段階と発売に分け、段階の間にゲート G1〜G4 を置く。各ゲートは課題の実在、目標原価、信頼性試験、量産品質の安定を基準に、進める・差し戻す・保留する・中止するのどれかを決める。ゲートと判断は Cooper の Stage-Gate に従う。原典の標準形は発見と 5 段階・5 ゲートで、段階の数は案件に合わせて変えてよいとされており、この図の段階の名前と数は一例である。保留は、基準は満たすが資源の都合で開発を一時止める判断である。</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4a5563"/>
+    </marker>
+    <symbol id="document" viewBox="0 0 24 24"><path d="M6,2.5 H14 L19,7.5 V21.5 H6 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14,2.5 V7.5 H19" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9,12 H16 M9,15.5 H16 M9,19 H13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="screen" viewBox="0 0 24 24"><rect x="2.5" y="4" width="19" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8.5,21 H15.5 M12,17 V21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="package" viewBox="0 0 24 24"><path d="M3,7.5 L12,3 L21,7.5 V17 L12,21.5 L3,17 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M3,7.5 L12,12 L21,7.5 M12,12 V21.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12,2.5 V5.5 M12,18.5 V21.5 M2.5,12 H5.5 M18.5,12 H21.5 M5.3,5.3 L7.4,7.4 M16.6,16.6 L18.7,18.7 M5.3,18.7 L7.4,16.6 M16.6,7.4 L18.7,5.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="7" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="truck" viewBox="0 0 24 24"><path d="M2,6 H14 V16 H2 Z M14,9.5 H18.5 L22,13 V16 H14" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="6" cy="18" r="2" fill="#fcfcfa" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="18" r="2" fill="#fcfcfa" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="ok" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2.5"/></symbol>
+    <symbol id="partial" viewBox="0 0 24 24"><path d="M12,3.5 L21,19.5 H3 Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></symbol>
+    <symbol id="hold" viewBox="0 0 24 24"><path d="M8.5,5 V19 M15.5,5 V19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></symbol>
+    <symbol id="ng" viewBox="0 0 24 24"><path d="M5,5 L19,19 M19,5 L5,19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></symbol>
+  </defs>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .c { font-size: 14px; fill: #1e2733; }
+    .g { font-size: 14px; font-weight: 700; fill: #ffffff; }
+    .stage { fill: #fcfcfa; stroke: #7a8490; stroke-width: 1.5; }
+    .gate { fill: #1e2733; }
+    .ln { stroke: #4a5563; stroke-width: 1.8; fill: none; }
+  </style>
+  <rect x="0" y="0" width="640" height="392" fill="#f5f6f4"/>
+
+  <text x="16" y="42" class="title">各ゲートで、次へ進めるかを基準で決める</text>
+
+  <!-- 段階とゲート -->
+  <path d="M16,108 H600" class="ln"/>
+  <rect x="16" y="72" width="96" height="72" rx="8" class="stage"/>
+  <use href="#document" x="52" y="80" width="24" height="24" color="#4a5563"/>
+  <text x="64" y="132" class="h" text-anchor="middle">企画</text>
+  <rect x="152" y="72" width="96" height="72" rx="8" class="stage"/>
+  <use href="#screen" x="188" y="80" width="24" height="24" color="#4a5563"/>
+  <text x="200" y="132" class="h" text-anchor="middle">設計</text>
+  <rect x="288" y="72" width="96" height="72" rx="8" class="stage"/>
+  <use href="#package" x="324" y="80" width="24" height="24" color="#4a5563"/>
+  <text x="336" y="132" class="h" text-anchor="middle">試作</text>
+  <rect x="424" y="72" width="96" height="72" rx="8" class="stage"/>
+  <use href="#gear" x="460" y="80" width="24" height="24" color="#4a5563"/>
+  <text x="472" y="132" class="h" text-anchor="middle">量産準備</text>
+  <rect x="560" y="72" width="64" height="72" rx="8" fill="#2b5c8a"/>
+  <use href="#truck" x="580" y="80" width="24" height="24" color="#ffffff"/>
+  <text x="592" y="132" class="h" text-anchor="middle" style="fill:#ffffff">発売</text>
+
+  <path d="M132,90 L150,108 L132,126 L114,108 Z" fill="#1e2733"/>
+  <text x="132" y="113" class="g" text-anchor="middle">G1</text>
+  <path d="M268,90 L286,108 L268,126 L250,108 Z" fill="#1e2733"/>
+  <text x="268" y="113" class="g" text-anchor="middle">G2</text>
+  <path d="M404,90 L422,108 L404,126 L386,108 Z" fill="#1e2733"/>
+  <text x="404" y="113" class="g" text-anchor="middle">G3</text>
+  <path d="M540,90 L558,108 L540,126 L522,108 Z" fill="#1e2733"/>
+  <text x="540" y="113" class="g" text-anchor="middle">G4</text>
+
+  <!-- ゲートの基準 -->
+  <path d="M132,150 V160 M268,150 V160 M404,150 V160 M540,150 V160" stroke="#7a8490" stroke-width="1.5"/>
+  <text x="132" y="180" class="c" text-anchor="middle">課題が実在する</text>
+  <text x="268" y="204" class="c" text-anchor="middle">目標原価に収まる</text>
+  <path d="M268,160 V186" stroke="#7a8490" stroke-width="1.5"/>
+  <text x="404" y="180" class="c" text-anchor="middle">信頼性試験に合格</text>
+  <text x="540" y="204" class="c" text-anchor="middle">量産品質が安定</text>
+  <path d="M540,160 V186" stroke="#7a8490" stroke-width="1.5"/>
+
+  <!-- ゲートの判断 -->
+  <rect x="16" y="232" width="608" height="144" rx="10" fill="#e8eaed"/>
+  <text x="120" y="358" class="h" text-anchor="middle">ゲートの判断</text>
+  <path d="M120,276 L152,304 L120,332 L88,304 Z" fill="#1e2733"/>
+  <path d="M146,296 C190,262 250,250 316,250" class="ln" marker-end="url(#a)"/>
+  <path d="M152,304 C200,292 260,286 316,286" class="ln" marker-end="url(#a)"/>
+  <path d="M152,304 C200,316 260,322 316,322" class="ln" marker-end="url(#a)"/>
+  <path d="M146,312 C190,346 250,358 316,358" class="ln" marker-end="url(#a)"/>
+  <use href="#ok" x="328" y="238" width="24" height="24" color="#2b5c8a"/>
+  <text x="360" y="256" class="h" style="fill:#2b5c8a">進める</text>
+  <text x="456" y="256" class="s">次の段階へ</text>
+  <use href="#partial" x="328" y="274" width="24" height="24" color="#4a5563"/>
+  <text x="360" y="292" class="h">差し戻す</text>
+  <text x="456" y="292" class="s">同じ段階をやり直す</text>
+  <use href="#hold" x="328" y="310" width="24" height="24" color="#4a5563"/>
+  <text x="360" y="328" class="h">保留する</text>
+  <text x="456" y="328" class="s">開発を一時止める</text>
+  <use href="#ng" x="328" y="346" width="24" height="24" color="#b35a1f"/>
+  <text x="360" y="364" class="h" style="fill:#9a4a14">中止する</text>
+  <text x="456" y="364" class="s">開発をやめる</text>
+</svg>

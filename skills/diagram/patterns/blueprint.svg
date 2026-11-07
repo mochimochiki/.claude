@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 524" width="640" height="524" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+  <title>顧客が待つあいだの仕事は、すべて可視ラインの下</title>
+  <desc>サービスブループリントの作例。製品の問い合わせから回答までを、左から右へ時間順に描く。列は受付・調査・回答の 3 段階、行は上から顧客の行動、窓口(フロントステージ)、技術担当(バックステージ)、社内システム(サポートプロセス)。行の境目は上からインタラクションライン、可視ライン、内部インタラクションラインで、可視ラインより下は顧客から見えない。行とラインは NN/g の定義に従い、証拠(顧客が目にする物や場所)の行は省いた。顧客が問い合わせると窓口が受け付け、問い合わせ管理システムに登録して技術担当に調査を依頼する。技術担当は過去事例を探し、原因を調べ、回答案を窓口に渡す。窓口は回答を送る。調査の段階では顧客は待つだけで、その間の仕事はすべて可視ラインより下にある。</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4a5563"/>
+    </marker>
+    <symbol id="person" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4" fill="currentColor"/><path d="M4,21 C4,15.5 7.5,13 12,13 C16.5,13 20,15.5 20,21 Z" fill="currentColor"/></symbol>
+    <symbol id="server" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="7.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13.5" width="18" height="7.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="7" cy="6.75" r="1.2" fill="currentColor"/><circle cx="7" cy="17.25" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12,7 V12 L15.5,14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .i { font-size: 16px; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .box { fill: #fcfcfa; stroke: #7a8490; stroke-width: 1.5; }
+    .flow { stroke: #4a5563; stroke-width: 1.8; fill: none; marker-end: url(#a); }
+    .rule { stroke: #7a8490; stroke-width: 1.5; }
+  </style>
+  <rect x="0" y="0" width="640" height="524" fill="#f5f6f4"/>
+
+  <text x="16" y="42" class="title">顧客が待つあいだの仕事は、すべて可視ラインの下</text>
+
+  <rect x="16" y="314" width="608" height="194" fill="#e8eaed"/>
+  <rect x="300" y="88" width="160" height="420" fill="#fbeee5"/>
+  <text x="220" y="112" class="h" text-anchor="middle">受付</text>
+  <text x="380" y="112" class="h" text-anchor="middle" style="fill:#9a4a14">調査</text>
+  <text x="540" y="112" class="h" text-anchor="middle">回答</text>
+
+  <g color="#4a5563">
+    <use href="#person" x="20" y="130" width="24" height="24"/>
+    <use href="#person" x="20" y="230" width="24" height="24"/>
+    <use href="#person" x="20" y="330" width="24" height="24"/>
+    <use href="#server" x="20" y="430" width="24" height="24"/>
+  </g>
+  <text x="20" y="174" class="h">顧客</text>
+  <text x="20" y="274" class="h">窓口</text>
+  <text x="20" y="374" class="h">技術担当</text>
+  <text x="20" y="474" class="h">社内システム</text>
+
+  <line x1="16" y1="214" x2="624" y2="214" class="rule"/>
+  <line x1="16" y1="314" x2="624" y2="314" stroke="#1e2733" stroke-width="2.5" stroke-dasharray="10 6"/>
+  <text x="20" y="306" class="s" style="fill:#1e2733;font-weight:700">可視ライン</text>
+  <line x1="16" y1="414" x2="624" y2="414" class="rule"/>
+
+  <rect x="152" y="142" width="136" height="44" rx="6" class="box"/>
+  <text x="220" y="170" class="i" text-anchor="middle">問い合わせる</text>
+  <use href="#clock" x="364" y="136" width="32" height="32" color="#b35a1f"/>
+  <text x="380" y="190" class="h" text-anchor="middle" style="fill:#9a4a14">待つ</text>
+  <rect x="472" y="142" width="136" height="44" rx="6" class="box"/>
+  <text x="540" y="170" class="i" text-anchor="middle">回答を読む</text>
+
+  <rect x="152" y="242" width="136" height="44" rx="6" class="box"/>
+  <text x="220" y="270" class="i" text-anchor="middle">受け付ける</text>
+  <rect x="472" y="242" width="136" height="44" rx="6" class="box"/>
+  <text x="540" y="270" class="i" text-anchor="middle">回答を送る</text>
+
+  <rect x="312" y="342" width="136" height="44" rx="6" class="box"/>
+  <text x="380" y="370" class="i" text-anchor="middle">原因を調べる</text>
+
+  <rect x="152" y="442" width="456" height="44" rx="6" class="box"/>
+  <text x="380" y="470" class="i" text-anchor="middle">問い合わせ管理システム</text>
+
+  <path d="M220,186 V240" class="flow"/>
+  <text x="228" y="206" class="s">送る</text>
+  <path d="M288,264 H364 V340" class="flow"/>
+  <text x="372" y="296" class="s">調査を依頼する</text>
+  <path d="M448,364 H500 V288" class="flow"/>
+  <text x="508" y="346" class="s">回答案を渡す</text>
+  <path d="M540,242 V188" class="flow"/>
+  <text x="552" y="206" class="s">送る</text>
+  <path d="M220,286 V440" class="flow"/>
+  <text x="228" y="370" class="s">登録する</text>
+  <path d="M340,386 V440" class="flow"/>
+  <text x="348" y="406" class="s">過去事例を探す</text>
+</svg>

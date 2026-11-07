@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="640" height="480" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+  <rect x="0" y="0" width="640" height="480" fill="#f5f6f4"/>
+  <title>予報円は大きさや強さでなく、中心が入る範囲を表す</title>
+  <desc>注釈付きの図の作例。台風の進路予報図を単純化し、24・48・72 時間後の予報円を青い破線で描く。予報円は、その時刻に台風の中心が入る確率が 70% の範囲である。先の時刻ほど中心が進む可能性のある位置の幅が広がるため円が大きくなる。台風の大きさは強風域の半径で、強さは最大風速で表す。72 時間後の円には点を 10 個置き、7 個を円の中、3 個を外にした。点は説明のための模式で、中心が円の中に一様に分布するという意味ではない。</desc>
+  <style>
+    .t { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .b { font-size: 14px; fill: #1e2733; }
+    .fc { fill: none; stroke: #2b5c8a; stroke-width: 2; stroke-dasharray: 7 5; }
+    .lead { stroke: #4a5563; stroke-width: 1; fill: none; }
+  </style>
+  <text x="16" y="40" class="t">予報円は大きさや強さでなく、中心が入る範囲を表す</text>
+
+  <circle cx="210" cy="340" r="34" class="fc"/>
+  <circle cx="330" cy="270" r="56" class="fc"/>
+  <circle cx="470" cy="200" r="86" class="fc"/>
+  <text x="238" y="394" class="s">24 時間後</text>
+  <text x="392" y="342" class="s">48 時間後</text>
+  <text x="548" y="112" class="s">72 時間後</text>
+
+  <circle cx="440" cy="170" r="4" fill="#1e2733"/>
+  <circle cx="500" cy="180" r="4" fill="#1e2733"/>
+  <circle cx="470" cy="230" r="4" fill="#1e2733"/>
+  <circle cx="420" cy="215" r="4" fill="#1e2733"/>
+  <circle cx="510" cy="240" r="4" fill="#1e2733"/>
+  <circle cx="455" cy="140" r="4" fill="#1e2733"/>
+  <circle cx="530" cy="200" r="4" fill="#1e2733"/>
+  <circle cx="575" cy="150" r="4" fill="#1e2733"/>
+  <circle cx="548" cy="272" r="4" fill="#1e2733"/>
+  <circle cx="418" cy="300" r="4" fill="#1e2733"/>
+
+  <circle cx="96" cy="410" r="24" fill="#fbeee5" stroke="#b35a1f" stroke-width="2"/>
+  <circle cx="96" cy="410" r="4" fill="#1e2733"/>
+  <text x="56" y="374" class="s">現在</text>
+
+  <text x="16" y="96" class="h" style="fill:#2b5c8a">予報円</text>
+  <text x="16" y="120" class="b">中心がこの円に入る</text>
+  <text x="16" y="140" class="b">確率は 70%</text>
+  <path d="M152,128 L397,155" class="lead"/>
+  <circle cx="397" cy="155" r="2.5" fill="#4a5563"/>
+
+  <text x="404" y="400" class="h">先の時刻ほど円が大きい</text>
+  <text x="404" y="424" class="s">点は説明のための模式</text>
+
+  <text x="136" y="440" class="h" style="fill:#9a4a14">台風の大きさは強風域で表す</text>
+  <path d="M120,418 L132,428" class="lead"/>
+</svg>

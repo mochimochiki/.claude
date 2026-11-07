@@ -15,6 +15,7 @@
 !/skills/task/**
 !/skills/writer/**
 !/skills/readable/**
+!/skills/diagram/**
 !/hooks/**
 !/scripts/**
 !/README.md

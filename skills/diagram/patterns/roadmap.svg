@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 392" width="640" height="392" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+  <title>今期は既存顧客の解約を減らす改良に絞る</title>
+  <desc>テーマ別ロードマップの作例。物流倉庫向けハンディターミナルの開発項目を、目的の帯(解約を減らす・新業種に広げる・保守の手間を減らす)と時期(今期・来期・その先)の格子に置く。今期は解約を減らす帯の、落下に強い筐体と駆動時間の延長だけを進める。来期は冷凍倉庫対応と遠隔での一括更新を進める。その先の消毒液への耐性と故障の予兆通知は見込みで、破線で示す。塗りの帯は確定、破線の帯は見込みを表す。</desc>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .bt { font-size: 14px; font-weight: 700; fill: #ffffff; }
+    .dt { font-size: 14px; font-weight: 700; fill: #4a5563; }
+    .done { fill: #2b5c8a; }
+    .maybe { fill: #fcfcfa; stroke: #7a8490; stroke-width: 2; stroke-dasharray: 6 4; }
+    .rule { stroke: #dfe2e6; stroke-width: 1.5; }
+  </style>
+  <rect x="0" y="0" width="640" height="392" fill="#f5f6f4"/>
+
+  <text x="16" y="42" class="title">今期は既存顧客の解約を減らす改良に絞る</text>
+
+  <!-- 時期の列 -->
+  <rect x="184" y="64" width="146" height="272" rx="8" fill="#e3ecf5"/>
+  <text x="257" y="90" class="h" text-anchor="middle" style="fill:#2b5c8a">今期</text>
+  <text x="403" y="90" class="h" text-anchor="middle">来期</text>
+  <text x="549" y="90" class="h" text-anchor="middle">その先</text>
+  <path d="M330,104 V328 M476,104 V328" class="rule"/>
+
+  <!-- 目的の帯 -->
+  <path d="M16,208 H622 M16,272 H622" class="rule"/>
+  <text x="16" y="161" class="h">解約を減らす</text>
+  <text x="16" y="245" class="h">新業種に広げる</text>
+  <text x="16" y="309" class="h">保守の手間を減らす</text>
+
+  <rect x="192" y="116" width="130" height="34" rx="6" class="done"/>
+  <text x="257" y="138" class="bt" text-anchor="middle">落下に強い筐体</text>
+  <rect x="192" y="162" width="130" height="34" rx="6" class="done"/>
+  <text x="257" y="184" class="bt" text-anchor="middle">駆動時間の延長</text>
+
+  <rect x="338" y="223" width="130" height="34" rx="6" class="done"/>
+  <text x="403" y="245" class="bt" text-anchor="middle">冷凍倉庫対応</text>
+  <rect x="485" y="223" width="128" height="34" rx="6" class="maybe"/>
+  <text x="549" y="245" class="dt" text-anchor="middle">消毒液への耐性</text>
+
+  <rect x="338" y="287" width="130" height="34" rx="6" class="done"/>
+  <text x="403" y="309" class="bt" text-anchor="middle">遠隔での一括更新</text>
+  <rect x="485" y="287" width="128" height="34" rx="6" class="maybe"/>
+  <text x="549" y="309" class="dt" text-anchor="middle">故障の予兆通知</text>
+
+  <!-- 凡例 -->
+  <rect x="380" y="356" width="28" height="18" rx="4" class="done"/>
+  <text x="416" y="370" class="s">確定</text>
+  <rect x="480" y="356" width="28" height="18" rx="4" class="maybe"/>
+  <text x="516" y="370" class="s">見込み</text>
+</svg>

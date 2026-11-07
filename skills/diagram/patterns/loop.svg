@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 352" width="640" height="352" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+  <title>人は計画と判断に集中し、残りは AI が繰り返す</title>
+  <desc>戻りのある流れの作例。PdcacacaJ(大文字は人、小文字は AI)では、人が P(計画)を書き、AI が d(実行)・c(評価)・a(改善)を繰り返す。評価も AI が自分で行う。最後に人が J(判断)を行い、判断のコメントがそのまま次の P になる。</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4a5563"/>
+    </marker>
+    <symbol id="person" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4" fill="currentColor"/><path d="M4,21 C4,15.5 7.5,13 12,13 C16.5,13 20,15.5 20,21 Z" fill="currentColor"/></symbol>
+    <symbol id="ai" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" fill="currentColor"/><text x="12" y="16.2" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo',sans-serif">AI</text></symbol>
+  </defs>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .human { fill: #fbeee5; stroke: #b35a1f; stroke-width: 2; }
+    .ai { fill: #fcfcfa; stroke: #2b5c8a; stroke-width: 1.5; }
+    .line { stroke: #4a5563; stroke-width: 1.8; fill: none; marker-end: url(#a); }
+  </style>
+  <rect x="0" y="0" width="640" height="352" fill="#f5f6f4"/>
+
+  <text x="16" y="42" class="title">人は計画と判断に集中し、残りは AI が繰り返す</text>
+
+  <rect x="16" y="144" width="96" height="60" rx="8" class="human"/>
+  <use href="#person" x="48" y="104" width="32" height="32" color="#b35a1f"/>
+  <text x="64" y="180" class="h" text-anchor="middle" style="fill:#9a4a14">P 計画</text>
+
+  <rect x="144" y="96" width="352" height="164" rx="10" fill="#e3ecf5" stroke="#2b5c8a" stroke-width="2"/>
+  <use href="#ai" x="160" y="104" width="24" height="24" color="#2b5c8a"/>
+  <text x="192" y="122" class="h" style="fill:#2b5c8a">AI が行う</text>
+  <rect x="160" y="144" width="96" height="60" rx="8" class="ai"/>
+  <text x="208" y="180" class="h" text-anchor="middle">d 実行</text>
+  <rect x="272" y="144" width="96" height="60" rx="8" class="ai"/>
+  <text x="320" y="180" class="h" text-anchor="middle">c 評価</text>
+  <rect x="384" y="144" width="96" height="60" rx="8" class="ai"/>
+  <text x="432" y="180" class="h" text-anchor="middle">a 改善</text>
+
+  <rect x="528" y="144" width="96" height="60" rx="8" class="human"/>
+  <use href="#person" x="560" y="104" width="32" height="32" color="#b35a1f"/>
+  <text x="576" y="180" class="h" text-anchor="middle" style="fill:#9a4a14">J 判断</text>
+
+  <path d="M112,174 H158" class="line"/>
+  <path d="M256,174 H270" class="line"/>
+  <path d="M368,174 H382" class="line"/>
+  <path d="M480,174 H526" class="line"/>
+  <path d="M432,204 V228 H208 V206" class="line"/>
+  <text x="320" y="248" class="s" text-anchor="middle">自分で評価して繰り返す</text>
+  <path d="M576,204 V292 H64 V206" class="line"/>
+  <text x="320" y="316" class="s" text-anchor="middle">判断のコメントが、そのまま次の計画になる</text>
+</svg>

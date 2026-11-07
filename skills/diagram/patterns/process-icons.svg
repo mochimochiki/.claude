@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 544" width="640" height="544" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+  <rect x="0" y="0" width="640" height="544" fill="#f5f6f4"/>
+  <title>汚れを落として出したものが、選別を経て原料に戻る</title>
+  <desc>工程図の作例。家庭のプラスチックごみが、家庭での分別、収集、選別と圧縮、原料への再生を経て新しい製品になるまでを上から下へ描く。家庭では中身を出し、汚れを落としてから出す。選別では異物や汚れたものが、原料への再生では原料にできない残りが取り除かれる。太い青の矢印は原料になるものの流れ、橙の破線は途中で取り除かれるもの。地域で違う細部は描かない。容器包装リサイクル法の流れでは、分別収集と選別・圧縮は市町村、原料に戻す再商品化は再商品化事業者が行う。再商品化のうち材料リサイクルを描き、高炉還元やガス化などのケミカルリサイクルは省いた。</desc>
+  <defs>
+    <marker id="f" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="16" markerHeight="16" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2b5c8a"/>
+    </marker>
+    <marker id="o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b35a1f"/>
+    </marker>
+    <symbol id="rinse" viewBox="0 0 24 24"><path d="M12,2.5 C8.5,7.5 5.5,11 5.5,14.5 A6.5,6.5 0 0 0 18.5,14.5 C18.5,11 15.5,7.5 12,2.5 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9,15 A3,3 0 0 0 12,18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="truck" viewBox="0 0 24 24"><path d="M2,6 H14 V16 H2 Z M14,9.5 H18.5 L22,13 V16 H14" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="6" cy="18" r="2" fill="#fcfcfa" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="18" r="2" fill="#fcfcfa" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="package" viewBox="0 0 24 24"><path d="M3,7.5 L12,3 L21,7.5 V17 L12,21.5 L3,17 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M3,7.5 L12,12 L21,7.5 M12,12 V21.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="pellets" viewBox="0 0 24 24"><circle cx="12" cy="7.5" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="6.5" cy="16.5" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="16.5" r="4" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="bottle" viewBox="0 0 24 24"><path d="M9.5,2.5 H14.5 V6 L17.5,9.5 V21.5 H6.5 V9.5 L9.5,6 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M6.5,13 H17.5" stroke="currentColor" stroke-width="2"/></symbol>
+  </defs>
+  <style>
+    .t { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .o { font-size: 14px; fill: #9a4a14; }
+    .node { fill: #fcfcfa; stroke: #2b5c8a; stroke-width: 2.5; }
+    .flow { stroke: #2b5c8a; stroke-width: 8; fill: none; marker-end: url(#f); }
+    .out { stroke: #b35a1f; stroke-width: 2; stroke-dasharray: 5 4; fill: none; marker-end: url(#o); }
+  </style>
+  <text x="16" y="40" class="t">汚れを落として出したものが、選別を経て原料に戻る</text>
+
+  <path d="M250,134 V168" class="flow"/>
+  <path d="M250,230 V264" class="flow"/>
+  <path d="M250,326 V360" class="flow"/>
+  <path d="M250,422 V456" class="flow"/>
+
+  <g color="#1e2733">
+    <circle cx="250" cy="104" r="30" class="node"/>
+    <use href="#rinse" x="234" y="88" width="32" height="32"/>
+    <circle cx="250" cy="200" r="30" class="node"/>
+    <use href="#truck" x="234" y="184" width="32" height="32"/>
+    <circle cx="250" cy="296" r="30" class="node"/>
+    <use href="#package" x="234" y="280" width="32" height="32"/>
+    <circle cx="250" cy="392" r="30" class="node"/>
+    <use href="#pellets" x="234" y="376" width="32" height="32"/>
+  </g>
+  <circle cx="250" cy="488" r="30" fill="#2b5c8a"/>
+  <use href="#bottle" x="234" y="472" width="32" height="32" color="#ffffff"/>
+
+  <text x="300" y="100" class="h">家庭で分けて出す</text>
+  <text x="300" y="122" class="s">中身を出し、汚れを落とす</text>
+  <text x="300" y="206" class="h">収集する</text>
+  <text x="300" y="302" class="h">選別して圧縮する</text>
+  <text x="300" y="388" class="h">原料に戻す</text>
+  <text x="300" y="410" class="s">砕いて溶かし、ペレットにする</text>
+  <text x="300" y="494" class="h">新しい製品になる</text>
+
+  <path d="M218,296 H160" class="out"/>
+  <text x="190" y="288" class="o" text-anchor="middle">取り除く</text>
+  <text x="150" y="301" class="o" text-anchor="end">異物・汚れたもの</text>
+  <path d="M218,392 H160" class="out"/>
+  <text x="190" y="384" class="o" text-anchor="middle">取り除く</text>
+  <text x="150" y="397" class="o" text-anchor="end">原料にできない残り</text>
+</svg>

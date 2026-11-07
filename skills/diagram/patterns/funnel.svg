@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+  <rect x="0" y="0" width="640" height="420" fill="#f5f6f4"/>
+  <title>比較検討での離脱は、移行の不安を解消して防ぐ</title>
+  <desc>中小企業向けの勤怠管理サービスの購買ファネル。認知、興味・関心、比較検討、導入、継続利用の 5 段を上から下へ絞り込む形で描き、各段の主な離脱理由(橙の破線)と、それに対する施策(青)を右に並べる。認知では自社に関係ないと思われ、業種別の導入事例で応える。興味・関心では料金が分からず、料金表を公開する。比較検討では移行の手間が不安で、無料で移行を代行する。導入では現場が使いこなせず、導入時の操作説明会を開く。比較検討の段を濃く塗り、ここが図の結論であることを示す。量の数値は載せない。</desc>
+  <defs>
+    <marker id="o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b35a1f"/>
+    </marker>
+  </defs>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .hw { font-size: 16px; font-weight: 700; fill: #ffffff; }
+    .col-o { font-size: 14px; font-weight: 700; fill: #9a4a14; }
+    .col-p { font-size: 14px; font-weight: 700; fill: #2b5c8a; }
+    .o { font-size: 14px; fill: #9a4a14; }
+    .p { font-size: 14px; fill: #2b5c8a; }
+    .band { fill: #e8eaed; }
+    .out { stroke: #b35a1f; stroke-width: 2; stroke-dasharray: 5 4; fill: none; marker-end: url(#o); }
+    .rule { stroke: #dfe2e6; stroke-width: 1.5; }
+  </style>
+  <text x="16" y="40" class="title">比較検討での離脱は、移行の不安を解消して防ぐ</text>
+
+  <text x="296" y="80" class="col-o">離脱理由</text>
+  <text x="472" y="80" class="col-p">施策</text>
+
+  <path d="M16,92 L256,92 L243.1,148 L28.9,148 Z" class="band"/>
+  <path d="M30.3,154 L241.7,154 L228.8,210 L43.2,210 Z" class="band"/>
+  <path d="M44.6,216 L227.4,216 L214.6,272 L57.4,272 Z" fill="#1e2733"/>
+  <path d="M58.9,278 L213.1,278 L200.3,334 L71.7,334 Z" class="band"/>
+  <path d="M73.1,340 L198.9,340 L186,396 L86,396 Z" class="band"/>
+
+  <text x="136" y="126" class="h" text-anchor="middle">認知</text>
+  <text x="136" y="188" class="h" text-anchor="middle">興味・関心</text>
+  <text x="136" y="250" class="hw" text-anchor="middle">比較検討</text>
+  <text x="136" y="312" class="h" text-anchor="middle">導入</text>
+  <text x="136" y="374" class="h" text-anchor="middle">継続利用</text>
+
+  <path d="M254,120 H286" class="out"/>
+  <path d="M240,182 H286" class="out"/>
+  <path d="M226,244 H286" class="out"/>
+  <path d="M212,306 H286" class="out"/>
+
+  <path d="M296,151 H624 M296,213 H624 M296,275 H624" class="rule"/>
+
+  <text x="296" y="125" class="o">自社に関係ないと思う</text>
+  <text x="472" y="125" class="p">業種別の導入事例</text>
+  <text x="296" y="187" class="o">料金が分からない</text>
+  <text x="472" y="187" class="p">料金表を公開する</text>
+  <text x="296" y="249" class="o">移行の手間が不安</text>
+  <text x="472" y="249" class="p">無料で移行を代行</text>
+  <text x="296" y="311" class="o">現場が使いこなせない</text>
+  <text x="472" y="311" class="p">導入時の操作説明会</text>
+</svg>

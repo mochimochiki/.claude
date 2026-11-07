@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 520" width="640" height="520" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+  <title>並行して変更しても、マージすれば両方の変更が残る</title>
+  <desc>路線図の形で描いた Git のコミット履歴。青い線は main、橙の線は feature で、丸はコミットを表し、時間は左から右へ進む。共通の先祖から feature ブランチを作成し、A さんは feature で手順 1 を、B さんは main で注意書きを変える。各コミットの上下に並べた 3 本の帯はその時点のファイルの行(手順 1・手順 2・注意書き)で、塗った帯が変更した行である。Git は共通の先祖と両方の先端を比べる 3-way マージで、マージコミットの内容には両方の変更が入る。同じ行か隣り合う行を両方が変えたときはコンフリクトになり、人がその行の内容を決めて解決する。</desc>
+  <defs>
+    <symbol id="person" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4" fill="currentColor"/><path d="M4,21 C4,15.5 7.5,13 12,13 C16.5,13 20,15.5 20,21 Z" fill="currentColor"/></symbol>
+    <symbol id="warning" viewBox="0 0 24 24"><path d="M12,3 L22,20.5 H2 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12,9.5 V14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="17.2" r="1.2" fill="currentColor"/></symbol>
+  </defs>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .b { font-size: 14px; fill: #1e2733; }
+    .row { fill: #e8eaed; }
+    .rowa { fill: #b35a1f; }
+    .rowb { fill: #2b5c8a; }
+    .main { stroke: #2b5c8a; stroke-width: 7; fill: none; stroke-linecap: round; }
+    .feature { stroke: #b35a1f; stroke-width: 7; fill: none; stroke-linecap: round; }
+    .cm { fill: #fcfcfa; stroke-width: 3.5; }
+    .lead { stroke: #7a8490; stroke-width: 1.5; stroke-dasharray: 2 3; fill: none; }
+  </style>
+  <rect x="0" y="0" width="640" height="520" fill="#f5f6f4"/>
+
+  <text x="16" y="40" class="title">並行して変更しても、マージすれば両方の変更が残る</text>
+
+  <!-- 路線 -->
+  <path d="M96,220 C130,220 130,330 166,330 L420,330 C460,330 460,220 496,220" class="feature"/>
+  <path d="M72,220 L612,220" class="main"/>
+  <text x="16" y="226" class="h" style="fill:#2b5c8a">main</text>
+  <text x="372" y="358" class="h" style="fill:#9a4a14">feature</text>
+  <text x="146" y="278" class="s" style="fill:#9a4a14">ブランチを作成する</text>
+  <text x="356" y="278" class="s" style="fill:#9a4a14">マージする</text>
+
+  <!-- コミット -->
+  <circle cx="96" cy="220" r="10" class="cm" stroke="#2b5c8a"/>
+  <circle cx="300" cy="220" r="10" class="cm" stroke="#2b5c8a"/>
+  <circle cx="300" cy="330" r="10" class="cm" stroke="#b35a1f"/>
+  <circle cx="500" cy="220" r="13" fill="#1e2733" stroke="#1e2733" stroke-width="3"/>
+  <text x="20" y="254" class="s">共通の先祖</text>
+  <text x="516" y="254" class="b" style="font-weight:700">マージコミット</text>
+
+  <!-- 共通の先祖のファイル -->
+  <text x="44" y="106" class="s">元の内容</text>
+  <rect x="44" y="118" width="104" height="18" class="row"/>
+  <text x="54" y="132" class="b">手順 1</text>
+  <rect x="44" y="142" width="104" height="18" class="row"/>
+  <text x="54" y="156" class="b">手順 2</text>
+  <rect x="44" y="166" width="104" height="18" class="row"/>
+  <text x="54" y="180" class="b">注意書き</text>
+  <path d="M96,186 V208" class="lead"/>
+
+  <!-- B さんが main で変える -->
+  <use href="#person" x="200" y="128" width="32" height="32" color="#2b5c8a"/>
+  <text x="216" y="178" class="b" text-anchor="middle">B さん</text>
+  <rect x="248" y="118" width="104" height="18" class="row"/>
+  <rect x="248" y="142" width="104" height="18" class="row"/>
+  <rect x="248" y="166" width="104" height="18" class="rowb"/>
+  <path d="M300,186 V208" class="lead"/>
+
+  <!-- A さんが feature で変える -->
+  <use href="#person" x="200" y="372" width="32" height="32" color="#b35a1f"/>
+  <text x="216" y="422" class="b" text-anchor="middle">A さん</text>
+  <path d="M300,342 V362" class="lead"/>
+  <rect x="248" y="364" width="104" height="18" class="rowa"/>
+  <rect x="248" y="388" width="104" height="18" class="row"/>
+  <rect x="248" y="412" width="104" height="18" class="row"/>
+
+  <!-- マージ後のファイル -->
+  <rect x="448" y="118" width="104" height="18" class="rowa"/>
+  <rect x="448" y="142" width="104" height="18" class="row"/>
+  <rect x="448" y="166" width="104" height="18" class="rowb"/>
+  <path d="M500,186 V205" class="lead"/>
+
+  <!-- 例外 -->
+  <use href="#warning" x="16" y="458" width="24" height="24" color="#4a5563"/>
+  <text x="48" y="470" class="b">同じ行か隣の行を両方が変えるとコンフリクトになる</text>
+  <text x="48" y="492" class="s">人がその行の内容を決めて解決する</text>
+</svg>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 424" width="640" height="424" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+  <rect x="0" y="0" width="640" height="424" fill="#f5f6f4"/>
+  <title>手入れが少なく中価格の空白地帯に、新製品を投入する</title>
+  <desc>ロボット掃除機のポジショニングマップ。横軸は価格(左が低価格、右が高価格)、縦軸は手入れの手間(上が少ない、下が多い)。競合(灰色)は、自動ゴミ収集の上位機が高価格で手入れが少ない位置、大手の標準機が中価格で手入れが多い位置、低価格の普及機が低価格で手入れが多い位置にある。自社(青)の現行機は中価格で手入れが多く、標準機の近くにある。中価格で手入れが少ない位置は競合のいない空白地帯で、新製品は手入れを減らしてここに投入する。位置は相対的なもので、数値の目盛りは無い。</desc>
+  <defs>
+    <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2b5c8a"/>
+    </marker>
+  </defs>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .hp { font-size: 16px; font-weight: 700; fill: #2b5c8a; }
+    .ax { font-size: 14px; font-weight: 700; fill: #4a5563; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .sp { font-size: 14px; fill: #2b5c8a; }
+    .axis { stroke: #7a8490; stroke-width: 1.5; }
+    .gap { fill: #e3ecf5; stroke: #2b5c8a; stroke-width: 1.5; stroke-dasharray: 5 4; }
+    .comp { fill: #7a8490; }
+    .own { fill: #2b5c8a; }
+    .move { stroke: #2b5c8a; stroke-width: 2.5; fill: none; marker-end: url(#b); }
+  </style>
+  <text x="16" y="40" class="title">手入れが少なく中価格の空白地帯に、新製品を投入する</text>
+
+  <path d="M96,236 H576" class="axis"/>
+  <path d="M336,86 V388" class="axis"/>
+  <text x="88" y="241" class="ax" text-anchor="end">低価格</text>
+  <text x="584" y="241" class="ax">高価格</text>
+  <text x="336" y="76" class="ax" text-anchor="middle">手入れが少ない</text>
+  <text x="336" y="408" class="ax" text-anchor="middle">手入れが多い</text>
+
+  <ellipse cx="400" cy="140" rx="84" ry="42" class="gap"/>
+  <text x="400" y="124" class="sp" text-anchor="middle">空白地帯</text>
+
+  <circle cx="560" cy="178" r="7" class="comp"/>
+  <text x="616" y="204" class="s" text-anchor="end">自動ゴミ収集の上位機</text>
+  <circle cx="290" cy="334" r="7" class="comp"/>
+  <text x="278" y="339" class="s" text-anchor="end">大手の標準機</text>
+  <circle cx="128" cy="366" r="7" class="comp"/>
+  <text x="140" y="371" class="s">低価格の普及機</text>
+
+  <path d="M400,292 V152" class="move"/>
+  <text x="410" y="262" class="sp">手入れを減らす</text>
+  <circle cx="400" cy="300" r="7" class="own"/>
+  <text x="412" y="305" class="sp">自社の現行機</text>
+  <circle cx="400" cy="144" r="7" class="own"/>
+  <text x="414" y="149" class="hp">新製品</text>
+
+  <circle cx="22" cy="403" r="6" class="comp"/>
+  <text x="34" y="408" class="s">競合</text>
+  <circle cx="84" cy="403" r="6" class="own"/>
+  <text x="96" y="408" class="s">自社</text>
+</svg>

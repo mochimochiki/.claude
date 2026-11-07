@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+  <rect x="0" y="0" width="640" height="400" fill="#f5f6f4"/>
+  <title>決定者に会う前に、現場と生産技術の賛成を固める</title>
+  <desc>工場に協働ロボットを売るときの、購買の意思決定に関わる役割(バイイングセンター)。Webster と Wind が挙げた使用者・影響者・購買担当者・決定者・ゲートキーパーの 5 つのうち、情報の流れを管理するゲートキーパーは省き、4 つを描く。決裁者の工場長は、何年で投資を回収できるかを見る。その下に、製造現場の使用者(段取り替えが楽か)、生産技術部の影響者(今のラインに組み込めるか)、調達部の購買担当者(保守まで含めた総額)の 3 人が並び、それぞれ決裁者に向けて、使えると推す、適合を評価する、条件を詰める。使用者と影響者を青で示し、決裁者に会う前に賛成を固める相手であることを表す。吹き出しは各役割が気にすることば。</desc>
+  <defs>
+    <symbol id="person" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4" fill="currentColor"/><path d="M4,21 C4,15.5 7.5,13 12,13 C16.5,13 20,15.5 20,21 Z" fill="currentColor"/></symbol>
+    <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2b5c8a"/>
+    </marker>
+    <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4a5563"/>
+    </marker>
+  </defs>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .hp { font-size: 16px; font-weight: 700; fill: #2b5c8a; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .t { font-size: 14px; fill: #1e2733; }
+    .lp { font-size: 14px; fill: #2b5c8a; }
+    .bub { fill: #fcfcfa; stroke: #7a8490; stroke-width: 1.5; stroke-linejoin: round; }
+    .ab { stroke: #2b5c8a; stroke-width: 2.5; fill: none; marker-end: url(#b); }
+    .ag { stroke: #4a5563; stroke-width: 2; fill: none; marker-end: url(#g); }
+  </style>
+  <text x="16" y="40" class="title">決定者に会う前に、現場と生産技術の賛成を固める</text>
+
+  <use href="#person" x="304" y="70" width="32" height="32" color="#1e2733"/>
+  <text x="320" y="126" class="h" text-anchor="middle">決定者</text>
+  <text x="320" y="146" class="s" text-anchor="middle">工場長</text>
+  <path d="M368,76 H616 V112 H368 V100 L358,94 L368,88 Z" class="bub"/>
+  <text x="380" y="99" class="t">何年で投資を回収できるか</text>
+
+  <path d="M126,226 L290,162" class="ab"/>
+  <text x="192" y="180" class="lp" text-anchor="end">使えると推す</text>
+  <path d="M320,226 V164" class="ab"/>
+  <text x="330" y="202" class="lp">適合を評価する</text>
+  <path d="M514,226 L350,162" class="ag"/>
+  <text x="452" y="180" class="s">条件を詰める</text>
+
+  <use href="#person" x="104" y="232" width="32" height="32" color="#2b5c8a"/>
+  <text x="120" y="286" class="hp" text-anchor="middle">使用者</text>
+  <text x="120" y="306" class="s" text-anchor="middle">製造現場</text>
+  <use href="#person" x="304" y="232" width="32" height="32" color="#2b5c8a"/>
+  <text x="320" y="286" class="hp" text-anchor="middle">影響者</text>
+  <text x="320" y="306" class="s" text-anchor="middle">生産技術部</text>
+  <use href="#person" x="504" y="232" width="32" height="32" color="#4a5563"/>
+  <text x="520" y="286" class="h" text-anchor="middle">購買担当者</text>
+  <text x="520" y="306" class="s" text-anchor="middle">調達部</text>
+
+  <path d="M30,326 H114 L120,318 L126,326 H210 V362 H30 Z" class="bub"/>
+  <text x="120" y="349" class="t" text-anchor="middle">段取り替えが楽か</text>
+  <path d="M230,326 H314 L320,318 L326,326 H410 V362 H230 Z" class="bub"/>
+  <text x="320" y="349" class="t" text-anchor="middle">今のラインに組み込めるか</text>
+  <path d="M430,326 H514 L520,318 L526,326 H610 V362 H430 Z" class="bub"/>
+  <text x="520" y="349" class="t" text-anchor="middle">保守まで含めた総額</text>
+</svg>

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 552" width="640" height="552" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+  <title>パスワードはアプリに渡らず、認可サーバーにだけ届く</title>
+  <desc>UML シーケンス図の作例。OAuth 2.0 の認可コードグラントで、アプリ(OAuth のクライアント)、利用者のブラウザ、認可サーバーの 3 者のやり取りを上から時間順に並べる。利用者はパスワードを認可サーバーの画面にだけ入力する。アプリが受け取るのは認可コードとアクセストークンで、パスワードは受け取らない。認可コードとアクセストークンの交換は、ブラウザを経由せず、アプリと認可サーバーが直接やり取りする。実線は要求、破線は応答、橙の太線はパスワードを含む通信、青は認可コードまたはトークンを含む通信。手順は RFC 6749 の 4.1 節に従う。ブラウザから認可エンドポイントへの要求と、利用者がアクセスを許可する同意の手順は省き、パスワードの入力にまとめた。</desc>
+  <defs>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#4a5563"/></marker>
+    <marker id="ap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#2b5c8a"/></marker>
+    <marker id="ac" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#b35a1f"/></marker>
+    <symbol id="person" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4" fill="currentColor"/><path d="M4,21 C4,15.5 7.5,13 12,13 C16.5,13 20,15.5 20,21 Z" fill="currentColor"/></symbol>
+    <symbol id="server" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="7.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13.5" width="18" height="7.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="7" cy="6.75" r="1.2" fill="currentColor"/><circle cx="7" cy="17.25" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="key" viewBox="0 0 24 24"><circle cx="7.5" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12,12 H21.5 M18.5,12 V15.5 M15.5,12 V14.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  </defs>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .t { font-size: 14px; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .tp { font-size: 14px; fill: #2b5c8a; font-weight: 700; }
+    .tc { font-size: 14px; fill: #9a4a14; font-weight: 700; }
+    .life { stroke: #7a8490; stroke-width: 1.5; }
+    .send { stroke: #4a5563; stroke-width: 1.5; fill: none; marker-end: url(#ag); }
+    .reply { stroke: #4a5563; stroke-width: 1.5; fill: none; stroke-dasharray: 6 4; marker-end: url(#ag); }
+    .sendp { stroke: #2b5c8a; stroke-width: 2; fill: none; marker-end: url(#ap); }
+    .replyp { stroke: #2b5c8a; stroke-width: 2; fill: none; stroke-dasharray: 6 4; marker-end: url(#ap); }
+    .pw { stroke: #b35a1f; stroke-width: 4; fill: none; marker-end: url(#ac); }
+    .mask { fill: #e8eaed; }
+  </style>
+  <rect x="0" y="0" width="640" height="552" fill="#f5f6f4"/>
+
+  <text x="16" y="40" class="title">パスワードはアプリに渡らず、認可サーバーにだけ届く</text>
+
+  <rect x="16" y="386" width="608" height="100" fill="#e8eaed"/>
+  <text x="112" y="406" class="s">ブラウザを経由しない</text>
+
+  <g color="#1e2733">
+    <use href="#server" x="80" y="62" width="32" height="32"/>
+    <use href="#person" x="304" y="62" width="32" height="32"/>
+    <use href="#server" x="528" y="62" width="32" height="32"/>
+  </g>
+  <text x="96" y="116" class="h" text-anchor="middle">アプリ</text>
+  <text x="320" y="116" class="h" text-anchor="middle">利用者のブラウザ</text>
+  <text x="544" y="116" class="h" text-anchor="middle">認可サーバー</text>
+
+  <line x1="96" y1="128" x2="96" y2="500" class="life"/>
+  <line x1="320" y1="128" x2="320" y2="500" class="life"/>
+  <line x1="544" y1="128" x2="544" y2="500" class="life"/>
+
+  <text x="208" y="162" class="t" text-anchor="middle">「ログイン」を押す</text>
+  <line x1="320" y1="170" x2="98" y2="170" class="send"/>
+
+  <text x="208" y="210" class="t" text-anchor="middle">リダイレクト</text>
+  <line x1="96" y1="218" x2="318" y2="218" class="reply"/>
+
+  <use href="#key" x="336" y="245" width="24" height="24" color="#b35a1f"/>
+  <text x="366" y="263" class="tc">パスワードを入力する</text>
+  <line x1="320" y1="276" x2="540" y2="276" class="pw"/>
+
+  <text x="432" y="316" class="tp" text-anchor="middle">認可コードを返す</text>
+  <line x1="544" y1="324" x2="322" y2="324" class="replyp"/>
+
+  <text x="208" y="364" class="tp" text-anchor="middle">認可コードを渡す</text>
+  <line x1="320" y1="372" x2="98" y2="372" class="sendp"/>
+
+  <rect x="262" y="418" width="116" height="18" class="mask"/>
+  <text x="320" y="432" class="tp" text-anchor="middle">認可コードを送る</text>
+  <line x1="96" y1="440" x2="542" y2="440" class="sendp"/>
+  <rect x="240" y="452" width="160" height="18" class="mask"/>
+  <text x="320" y="466" class="tp" text-anchor="middle">アクセストークンを返す</text>
+  <line x1="544" y1="474" x2="98" y2="474" class="replyp"/>
+
+  <line x1="16" y1="528" x2="56" y2="528" class="send"/>
+  <text x="64" y="533" class="s">要求</text>
+  <line x1="120" y1="528" x2="160" y2="528" class="reply"/>
+  <text x="168" y="533" class="s">応答</text>
+</svg>

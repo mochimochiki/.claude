@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 368" width="640" height="368" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+  <title>1 文字の改ざんでも、ハッシュ値は一致しなくなる</title>
+  <desc>並列比較の作例。受信者が行う電子署名の検証を、改ざんされていない文書と 1 文字だけ改ざんした文書で並べる。署名は、送信者が文書のハッシュ値と秘密鍵から作った署名値である。受信者は、受け取った文書から計算したハッシュ値と、署名を公開鍵で検証して取り出したハッシュ値を比べる。改ざんされていなければ両者は一致し、1 文字でも改ざんするとハッシュ値がまったく別の値になって一致しない。ハッシュ値は棒の並びで表した模式である。公開鍵でハッシュ値を取り出す説明は RSA 署名の場合で、ECDSA などは取り出さずに一致を判定する。</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4a5563"/>
+    </marker>
+    <symbol id="document" viewBox="0 0 24 24"><path d="M6,2.5 H14 L19,7.5 V21.5 H6 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14,2.5 V7.5 H19" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9,12 H16 M9,15.5 H16 M9,19 H13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="key" viewBox="0 0 24 24"><circle cx="7.5" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12,12 H21.5 M18.5,12 V15.5 M15.5,12 V14.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="ok" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2.5"/></symbol>
+    <symbol id="ng" viewBox="0 0 24 24"><path d="M5,5 L19,19 M19,5 L5,19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></symbol>
+  </defs>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .op { font-size: 24px; font-weight: 700; }
+    .line { stroke: #4a5563; stroke-width: 1.8; fill: none; marker-end: url(#a); }
+  </style>
+  <rect x="0" y="0" width="640" height="368" fill="#f5f6f4"/>
+
+  <text x="16" y="42" class="title">1 文字の改ざんでも、ハッシュ値は一致しなくなる</text>
+  <line x1="320" y1="72" x2="320" y2="352" stroke="#7a8490" stroke-width="1"/>
+
+  <!-- 改ざんされていない文書 -->
+  <text x="164" y="88" class="h" text-anchor="middle">改ざんされていない文書</text>
+  <use href="#document" x="66" y="100" width="48" height="48" color="#4a5563"/>
+  <circle cx="238" cy="124" r="24" fill="#2b5c8a"/>
+  <text x="238" y="129" class="s" text-anchor="middle" style="fill:#ffffff">署名</text>
+  <path d="M90,152 V222" class="line"/>
+  <path d="M238,152 V222" class="line"/>
+  <rect x="32" y="176" width="116" height="22" fill="#f5f6f4"/>
+  <text x="90" y="192" class="s" text-anchor="middle">ハッシュ値を計算</text>
+  <rect x="192" y="176" width="92" height="22" fill="#f5f6f4"/>
+  <text x="238" y="192" class="s" text-anchor="middle">公開鍵で検証</text>
+  <use href="#key" x="284" y="175" width="24" height="24" color="#2b5c8a"/>
+
+  <g fill="#1e2733">
+    <rect x="36" y="261" width="10" height="15"/><rect x="50" y="246" width="10" height="30"/><rect x="64" y="266" width="10" height="10"/><rect x="78" y="241" width="10" height="35"/>
+    <rect x="92" y="256" width="10" height="20"/><rect x="106" y="236" width="10" height="40"/><rect x="120" y="251" width="10" height="25"/><rect x="134" y="261" width="10" height="15"/>
+  </g>
+  <g fill="#2b5c8a">
+    <rect x="184" y="261" width="10" height="15"/><rect x="198" y="246" width="10" height="30"/><rect x="212" y="266" width="10" height="10"/><rect x="226" y="241" width="10" height="35"/>
+    <rect x="240" y="256" width="10" height="20"/><rect x="254" y="236" width="10" height="40"/><rect x="268" y="251" width="10" height="25"/><rect x="282" y="261" width="10" height="15"/>
+  </g>
+  <text x="164" y="270" class="op" text-anchor="middle" style="fill:#1e2733">=</text>
+
+  <use href="#ok" x="100" y="300" width="32" height="32" color="#2b5c8a"/>
+  <text x="140" y="314" class="h" style="fill:#2b5c8a">一致する</text>
+  <text x="140" y="336" class="s">改ざんなし</text>
+
+  <!-- 1 文字を改ざんした文書 -->
+  <text x="476" y="88" class="h" text-anchor="middle" style="fill:#9a4a14">1 文字を改ざんした文書</text>
+  <use href="#document" x="378" y="100" width="48" height="48" color="#4a5563"/>
+  <path d="M398,131 H408" stroke="#b35a1f" stroke-width="5"/>
+  <path d="M410,131 L436,116" stroke="#4a5563" stroke-width="1"/>
+  <text x="440" y="120" class="s" style="fill:#9a4a14">改ざん箇所</text>
+  <circle cx="550" cy="124" r="24" fill="#2b5c8a"/>
+  <text x="550" y="129" class="s" text-anchor="middle" style="fill:#ffffff">署名</text>
+  <path d="M402,152 V222" class="line"/>
+  <path d="M550,152 V222" class="line"/>
+  <rect x="344" y="176" width="116" height="22" fill="#f5f6f4"/>
+  <text x="402" y="192" class="s" text-anchor="middle">ハッシュ値を計算</text>
+  <rect x="504" y="176" width="92" height="22" fill="#f5f6f4"/>
+  <text x="550" y="192" class="s" text-anchor="middle">公開鍵で検証</text>
+  <use href="#key" x="596" y="175" width="24" height="24" color="#2b5c8a"/>
+
+  <g fill="#b35a1f">
+    <rect x="348" y="241" width="10" height="35"/><rect x="362" y="266" width="10" height="10"/><rect x="376" y="251" width="10" height="25"/><rect x="390" y="236" width="10" height="40"/>
+    <rect x="404" y="271" width="10" height="5"/><rect x="418" y="256" width="10" height="20"/><rect x="432" y="246" width="10" height="30"/><rect x="446" y="261" width="10" height="15"/>
+  </g>
+  <g fill="#2b5c8a">
+    <rect x="496" y="261" width="10" height="15"/><rect x="510" y="246" width="10" height="30"/><rect x="524" y="266" width="10" height="10"/><rect x="538" y="241" width="10" height="35"/>
+    <rect x="552" y="256" width="10" height="20"/><rect x="566" y="236" width="10" height="40"/><rect x="580" y="251" width="10" height="25"/><rect x="594" y="261" width="10" height="15"/>
+  </g>
+  <text x="476" y="270" class="op" text-anchor="middle" style="fill:#9a4a14">≠</text>
+
+  <use href="#ng" x="404" y="300" width="32" height="32" color="#b35a1f"/>
+  <text x="444" y="314" class="h" style="fill:#9a4a14">一致しない</text>
+  <text x="444" y="336" class="s">改ざんを検出</text>
+</svg>

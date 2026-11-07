@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 392" width="640" height="392" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+  <title>時期で支援者が変わり、バディだけが 1 か月支える</title>
+  <desc>従業員ジャーニーマップの作例。入社者の最初の 1 か月を、初日・1 週目・2〜3 週目・4 週目に分け、左から右へ時間順に並べる。ペインポイントは、初日のログイン、1 週目の申請先、2〜3 週目の質問のためらい、4 週目の期待値。支援者は、初日が情報システム部(アカウント発行)、1 週目が人事・総務(手続きの案内)、4 週目が上司(期待値を伝える)で、時期ごとに変わる。バディ(先輩)だけが 1 か月を通して質問に答え、担当部署へつなぐ。NN/g の定義の要素のうち、行為者・シナリオ・フェーズは描き、行動と感情はペインポイントに絞った。感情の起伏の線と、改善の機会の行は省いた。</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4a5563"/>
+    </marker>
+    <symbol id="person" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4" fill="currentColor"/><path d="M4,21 C4,15.5 7.5,13 12,13 C16.5,13 20,15.5 20,21 Z" fill="currentColor"/></symbol>
+  </defs>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .who { font-size: 14px; font-weight: 700; fill: #1e2733; }
+    .pain { font-size: 14px; font-weight: 700; fill: #9a4a14; }
+    .q { font-size: 16px; font-weight: 700; fill: #ffffff; }
+    .wt { font-size: 14px; font-weight: 700; fill: #ffffff; }
+    .guide { stroke: #dfe2e6; stroke-width: 1.5; }
+  </style>
+  <rect x="0" y="0" width="640" height="392" fill="#f5f6f4"/>
+
+  <text x="16" y="40" class="title">時期で支援者が変わり、バディだけが 1 か月支える</text>
+
+  <!-- 時間軸 -->
+  <path d="M196,198 V302 M316,198 V302 M436,198 V302 M556,198 V302" class="guide"/>
+  <text x="196" y="90" class="h" text-anchor="middle">初日</text>
+  <text x="316" y="90" class="h" text-anchor="middle">1 週目</text>
+  <text x="436" y="90" class="h" text-anchor="middle">2〜3 週目</text>
+  <text x="556" y="90" class="h" text-anchor="middle">4 週目</text>
+
+  <!-- 入社者のペインポイント -->
+  <use href="#person" x="20" y="116" width="32" height="32" color="#1e2733"/>
+  <text x="60" y="138" class="h">入社者</text>
+  <path d="M136,132 H620" stroke="#4a5563" stroke-width="1.8" fill="none" marker-end="url(#a)"/>
+  <circle cx="196" cy="132" r="13" fill="#b35a1f"/>
+  <text x="196" y="138" class="q" text-anchor="middle">?</text>
+  <circle cx="316" cy="132" r="13" fill="#b35a1f"/>
+  <text x="316" y="138" class="q" text-anchor="middle">?</text>
+  <circle cx="436" cy="132" r="13" fill="#b35a1f"/>
+  <text x="436" y="138" class="q" text-anchor="middle">?</text>
+  <circle cx="556" cy="132" r="13" fill="#b35a1f"/>
+  <text x="556" y="138" class="q" text-anchor="middle">?</text>
+  <text x="196" y="170" class="pain" text-anchor="middle">ログイン</text>
+  <text x="196" y="188" class="pain" text-anchor="middle">できない</text>
+  <text x="316" y="170" class="pain" text-anchor="middle">申請先が</text>
+  <text x="316" y="188" class="pain" text-anchor="middle">分からない</text>
+  <text x="436" y="170" class="pain" text-anchor="middle">質問を</text>
+  <text x="436" y="188" class="pain" text-anchor="middle">ためらう</text>
+  <text x="556" y="170" class="pain" text-anchor="middle">期待値が</text>
+  <text x="556" y="188" class="pain" text-anchor="middle">分からない</text>
+
+  <!-- 支援者 -->
+  <text x="20" y="236" class="s">支援者</text>
+  <use href="#person" x="20" y="252" width="32" height="32" color="#2b5c8a"/>
+  <text x="60" y="274" class="who" style="fill:#2b5c8a">バディ</text>
+  <rect x="140" y="254" width="472" height="28" rx="4" fill="#2b5c8a"/>
+  <text x="376" y="273" class="wt" text-anchor="middle">質問に答え、担当部署へつなぐ</text>
+
+  <use href="#person" x="180" y="306" width="32" height="32" color="#4a5563"/>
+  <text x="196" y="358" class="who" text-anchor="middle">情報システム部</text>
+  <use href="#person" x="300" y="306" width="32" height="32" color="#4a5563"/>
+  <text x="316" y="358" class="who" text-anchor="middle">人事・総務</text>
+  <use href="#person" x="540" y="306" width="32" height="32" color="#4a5563"/>
+  <text x="556" y="358" class="who" text-anchor="middle">上司</text>
+</svg>

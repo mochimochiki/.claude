@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 428" width="640" height="428" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+  <rect x="0" y="0" width="640" height="428" fill="#f5f6f4"/>
+  <title>テストの合否基準は、対になる開発工程で決める</title>
+  <desc>V 字モデルの作例。ロボット掃除機の制御ソフトウェアを例に、左の辺を要件定義、基本設計、詳細設計、実装と下り、右の辺を単体テスト、結合テスト、システムテスト、受け入れテストと上る。同じ高さの工程が対になり(要件定義と受け入れテスト、基本設計とシステムテスト、詳細設計と結合テスト、実装と単体テスト)、開発工程で決めた合否基準をテストで確かめる。対応は SQuBOK の V 字モデルによる。</desc>
+  <defs>
+    <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4a5563"/>
+    </marker>
+  </defs>
+  <style>
+    .t { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .cb { font-size: 14px; font-weight: 700; fill: #2b5c8a; }
+    .co { font-size: 14px; font-weight: 700; fill: #9a4a14; }
+    .w { font-size: 16px; font-weight: 700; fill: #ffffff; }
+    .d { fill: #e3ecf5; stroke: #2b5c8a; stroke-width: 2; }
+    .v { fill: #fbeee5; stroke: #b35a1f; stroke-width: 2; }
+    .step { stroke: #7a8490; stroke-width: 1.5; fill: none; marker-end: url(#g); }
+    .pass { stroke: #4a5563; stroke-width: 1.8; stroke-dasharray: 6 4; fill: none; marker-end: url(#g); }
+  </style>
+  <text x="16" y="40" class="t">テストの合否基準は、対になる開発工程で決める</text>
+
+  <text x="24" y="76" class="cb">開発工程</text>
+  <text x="616" y="76" class="co" text-anchor="end">テスト工程</text>
+
+  <rect x="24" y="88" width="160" height="56" rx="6" class="d"/>
+  <text x="104" y="111" class="h" text-anchor="middle">要件定義</text>
+  <text x="104" y="132" class="s" text-anchor="middle">家中を 1 回で掃除</text>
+  <rect x="56" y="160" width="160" height="56" rx="6" class="d"/>
+  <text x="136" y="194" class="h" text-anchor="middle">基本設計</text>
+  <rect x="88" y="232" width="160" height="56" rx="6" class="d"/>
+  <text x="168" y="266" class="h" text-anchor="middle">詳細設計</text>
+  <rect x="120" y="304" width="160" height="56" rx="6" class="d"/>
+  <text x="200" y="338" class="h" text-anchor="middle">実装</text>
+
+  <rect x="456" y="88" width="160" height="56" rx="6" class="v"/>
+  <text x="536" y="111" class="h" text-anchor="middle">受け入れテスト</text>
+  <text x="536" y="132" class="s" text-anchor="middle">実際の間取りで試す</text>
+  <rect x="424" y="160" width="160" height="56" rx="6" class="v"/>
+  <text x="504" y="194" class="h" text-anchor="middle">システムテスト</text>
+  <rect x="392" y="232" width="160" height="56" rx="6" class="v"/>
+  <text x="472" y="266" class="h" text-anchor="middle">結合テスト</text>
+  <rect x="360" y="304" width="160" height="56" rx="6" class="v"/>
+  <text x="440" y="338" class="h" text-anchor="middle">単体テスト</text>
+
+
+  <path d="M48,144 L66,158" class="step"/>
+  <path d="M80,216 L98,230" class="step"/>
+  <path d="M112,288 L130,302" class="step"/>
+  <path d="M200,360 V392 H440 V364" class="step"/>
+  <path d="M508,304 L526,290" class="step"/>
+  <path d="M540,232 L558,218" class="step"/>
+  <path d="M572,160 L590,146" class="step"/>
+
+  <path d="M184,116 H452" class="pass"/>
+  <text x="320" y="108" class="s" text-anchor="middle">合否基準を渡す</text>
+  <path d="M216,188 H420" class="pass"/>
+  <path d="M248,260 H388" class="pass"/>
+  <path d="M280,332 H356" class="pass"/>
+</svg>

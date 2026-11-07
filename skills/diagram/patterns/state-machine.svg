@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 532" width="640" height="532" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+  <title>注文は出荷前ならキャンセルでき、出荷後はできない</title>
+  <desc>UML ステートマシン図の作例。表記は UML 2.5.1 に従う。通販の注文は、作られると受付済みから始まり、受付済み、決済済み、出荷準備中、出荷済み、配達済みの順に状態が移る。出荷前の 3 つの状態を複合状態「出荷前」にまとめ、そこからキャンセル済みへ移れる。決済済みなら返金する。出荷後の状態にはキャンセルの遷移が無く、返品として別の手続きで扱う。開始状態からの遷移には、UML の制約に従いトリガーを書かない。キャンセル済みの entry / は、その状態に入ったときの振る舞いである。出荷後の帯と × の印は UML の記号ではなく注記である。キャンセルできる範囲は一例で、店によって異なる。</desc>
+  <defs>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#4a5563"/></marker>
+    <symbol id="ng" viewBox="0 0 24 24"><path d="M5,5 L19,19 M19,5 L5,19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></symbol>
+  </defs>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .t { font-size: 14px; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .st { fill: #fcfcfa; stroke: #1e2733; stroke-width: 1.5; }
+    .tr { stroke: #4a5563; stroke-width: 1.5; fill: none; marker-end: url(#ag); }
+  </style>
+  <rect x="0" y="0" width="640" height="532" fill="#f5f6f4"/>
+
+  <text x="16" y="40" class="title">注文は出荷前ならキャンセルでき、出荷後はできない</text>
+
+  <rect x="16" y="84" width="344" height="256" rx="16" fill="#e3ecf5" stroke="#2b5c8a" stroke-width="1.5"/>
+  <text x="32" y="110" class="h" style="fill:#2b5c8a">出荷前</text>
+  <rect x="16" y="348" width="608" height="168" fill="#fbeee5"/>
+  <text x="32" y="374" class="h" style="fill:#9a4a14">出荷後</text>
+
+  <circle cx="240" cy="66" r="7" fill="#1e2733"/>
+  <line x1="240" y1="73" x2="240" y2="116" class="tr"/>
+
+  <rect x="168" y="118" width="144" height="44" rx="22" class="st"/>
+  <text x="240" y="146" class="h" text-anchor="middle">受付済み</text>
+  <line x1="240" y1="162" x2="240" y2="196" class="tr"/>
+  <text x="252" y="185" class="s">決済する</text>
+
+  <rect x="168" y="198" width="144" height="44" rx="22" class="st"/>
+  <text x="240" y="226" class="h" text-anchor="middle">決済済み</text>
+  <line x1="240" y1="242" x2="240" y2="276" class="tr"/>
+  <text x="252" y="265" class="s">準備を始める</text>
+
+  <rect x="168" y="278" width="144" height="44" rx="22" class="st"/>
+  <text x="240" y="306" class="h" text-anchor="middle">出荷準備中</text>
+  <line x1="240" y1="322" x2="240" y2="374" class="tr"/>
+  <text x="252" y="366" class="t" font-weight="700">出荷する</text>
+
+  <rect x="168" y="376" width="144" height="44" rx="22" class="st"/>
+  <text x="240" y="404" class="h" text-anchor="middle">出荷済み</text>
+  <line x1="240" y1="420" x2="240" y2="454" class="tr"/>
+  <text x="252" y="443" class="s">配達する</text>
+
+  <rect x="168" y="456" width="144" height="44" rx="22" class="st"/>
+  <text x="240" y="484" class="h" text-anchor="middle">配達済み</text>
+
+  <line x1="360" y1="220" x2="478" y2="220" class="tr"/>
+  <text x="419" y="212" class="t" text-anchor="middle">キャンセルする</text>
+
+  <rect x="480" y="172" width="136" height="100" rx="22" fill="#fcfcfa" stroke="#7a8490" stroke-width="1.5"/>
+  <text x="548" y="204" class="h" text-anchor="middle">キャンセル済み</text>
+  <text x="548" y="232" class="s" text-anchor="middle">entry /</text>
+  <text x="548" y="252" class="s" text-anchor="middle">決済済みなら返金</text>
+
+  <use href="#ng" x="392" y="382" width="24" height="24" color="#b35a1f"/>
+  <text x="424" y="400" class="t" style="font-weight:700;fill:#9a4a14">キャンセルできない</text>
+  <text x="424" y="424" class="s">返品として別に扱う</text>
+</svg>

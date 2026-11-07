@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" width="640" height="440" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+  <rect x="0" y="0" width="640" height="440" fill="#f5f6f4"/>
+  <title>申請額は明細の合計で、直接は入力できない</title>
+  <desc>アナトミー図の作例。経費精算システムの「経費の申請」画面を単純化して描き、5 か所に引き出し線で注記する。状態の表示は、下書きのあいだは本人だけが見られることを示す。明細は領収書 1 枚につき 1 行で、領収書の画像は明細ごとに添付する。申請額は明細の金額から自動で計算され、直接は入力できない。「申請する」をクリックすると、申請が承認者に届く。注記のうち申請額だけを主の色で強調する。金額は灰色の帯で伏せ、具体的な値は書かない。</desc>
+  <defs>
+    <symbol id="clip" viewBox="0 0 24 24"><path d="M16.5,7 V15.5 C16.5,18.3 14.5,20.5 12,20.5 C9.5,20.5 7.5,18.3 7.5,15.5 V6.5 C7.5,4.6 8.8,3.5 10.5,3.5 C12.2,3.5 13.5,4.6 13.5,6.5 V15 C13.5,16 12.8,16.8 12,16.8 C11.2,16.8 10.5,16 10.5,15 V8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+  <style>
+    .t { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .u { font-size: 14px; fill: #1e2733; }
+    .bar { fill: #c4c9cf; }
+    .lead { stroke: #4a5563; stroke-width: 1; fill: none; }
+    .dot { fill: #4a5563; }
+  </style>
+  <text x="16" y="40" class="t">申請額は明細の合計で、直接は入力できない</text>
+
+  <rect x="176" y="72" width="288" height="344" rx="6" fill="#fcfcfa" stroke="#7a8490" stroke-width="1.5"/>
+  <path d="M176.75,104 V78 Q176.75,72.75 182,72.75 H458 Q463.25,72.75 463.25,78 V104 Z" fill="#e8eaed"/>
+  <line x1="176" y1="104" x2="464" y2="104" stroke="#7a8490" stroke-width="1"/>
+  <text x="192" y="93" class="u">経費の申請</text>
+
+  <text x="192" y="133" class="s">件名</text>
+  <rect x="228" y="116" width="148" height="24" fill="#fcfcfa" stroke="#7a8490" stroke-width="1"/>
+  <text x="236" y="133" class="u">大阪出張</text>
+  <rect x="392" y="116" width="56" height="24" rx="12" fill="#e8eaed" stroke="#7a8490" stroke-width="1"/>
+  <text x="420" y="133" class="u" text-anchor="middle">下書き</text>
+
+  <text x="192" y="168" class="s">日付</text>
+  <text x="256" y="168" class="s">内容</text>
+  <text x="376" y="168" class="s">金額</text>
+  <line x1="192" y1="178" x2="448" y2="178" stroke="#7a8490" stroke-width="1"/>
+  <g>
+    <rect x="192" y="192" width="44" height="8" rx="2" class="bar"/><rect x="256" y="192" width="96" height="8" rx="2" class="bar"/><rect x="376" y="192" width="36" height="8" rx="2" class="bar"/>
+    <use href="#clip" x="424" y="184" width="24" height="24" color="#4a5563"/>
+    <line x1="192" y1="212" x2="448" y2="212" stroke="#dfe2e6" stroke-width="1"/>
+    <rect x="192" y="224" width="44" height="8" rx="2" class="bar"/><rect x="256" y="224" width="80" height="8" rx="2" class="bar"/><rect x="376" y="224" width="36" height="8" rx="2" class="bar"/>
+    <use href="#clip" x="424" y="216" width="24" height="24" color="#4a5563"/>
+    <line x1="192" y1="244" x2="448" y2="244" stroke="#dfe2e6" stroke-width="1"/>
+    <rect x="192" y="256" width="44" height="8" rx="2" class="bar"/><rect x="256" y="256" width="104" height="8" rx="2" class="bar"/><rect x="376" y="256" width="36" height="8" rx="2" class="bar"/>
+    <use href="#clip" x="424" y="248" width="24" height="24" color="#4a5563"/>
+  </g>
+  <text x="192" y="300" class="s">＋ 明細を追加</text>
+  <line x1="192" y1="316" x2="448" y2="316" stroke="#7a8490" stroke-width="1"/>
+
+  <text x="192" y="348" class="h">申請額</text>
+  <rect x="352" y="328" width="96" height="28" rx="3" fill="#e3ecf5" stroke="#2b5c8a" stroke-width="2"/>
+  <text x="364" y="347" class="u" style="fill:#2b5c8a">¥</text>
+  <rect x="380" y="338" width="56" height="8" rx="2" fill="#2b5c8a"/>
+
+  <rect x="336" y="372" width="112" height="32" rx="4" fill="#e8eaed" stroke="#7a8490" stroke-width="1.5"/>
+  <text x="392" y="394" class="h" text-anchor="middle">申請する</text>
+
+  <circle cx="448" cy="128" r="2.5" class="dot"/><path d="M448,128 H480" class="lead"/>
+  <text x="488" y="124" class="h">状態</text>
+  <text x="488" y="146" class="s">下書きは本人のみ</text>
+
+  <circle cx="436" cy="228" r="2.5" class="dot"/><path d="M436,228 H480" class="lead"/>
+  <text x="488" y="224" class="h">領収書</text>
+  <text x="488" y="246" class="s">明細ごとに添付</text>
+
+  <circle cx="448" cy="342" r="2.5" fill="#2b5c8a"/><path d="M448,342 H480" stroke="#2b5c8a" stroke-width="1.5" fill="none"/>
+  <text x="488" y="338" class="h" style="fill:#2b5c8a">申請額</text>
+  <text x="488" y="360" class="s">明細から自動で計算</text>
+
+  <circle cx="196" cy="228" r="2.5" class="dot"/><path d="M160,228 H196" class="lead"/>
+  <text x="152" y="224" class="h" text-anchor="end">明細</text>
+  <text x="152" y="246" class="s" text-anchor="end">領収書 1 枚に 1 行</text>
+
+  <circle cx="336" cy="388" r="2.5" class="dot"/><path d="M160,388 H336" class="lead"/>
+  <text x="152" y="384" class="h" text-anchor="end">申請する</text>
+  <text x="152" y="406" class="s" text-anchor="end">承認者に届く</text>
+</svg>
