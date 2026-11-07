@@ -2,18 +2,6 @@
 
 Claude Codeの個人設定（スキル・ルール）をまとめたリポジトリ。
 
-## 外部スキルについて
-
-他の人が公開しているスキルは、このリポジトリには入れずに `apm.yml` へ名前だけ書いておく。
-apm（AIエージェント用の設定をまとめて管理するツール）が `apm.yml` を読んで、
-書かれたスキルを `~/.claude/skills/` に配置する。
-
-現在の対象は次のとおり。
-
-- [impeccable](https://github.com/pbakaus/impeccable): デザインまわりのスキル
-
-日本語を書くときの規範は、[yomiyasu](https://github.com/nanaism/yomiyasu) から書くときに使う部分を抜き出した `skills/readable/` にある（MIT License、出典は同じフォルダの `LICENSE`）。
-
 ## セットアップ
 
 環境構築時に実行するスクリプトとして、次の内容を登録する。
