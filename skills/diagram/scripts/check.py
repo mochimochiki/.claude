@@ -152,7 +152,7 @@ def check(svg_path):
     poster = num(vb[2]) >= 1000
     soft, hard = (100, 105) if poster else (120, 150)
     if chars > hard:
-        problems.append(f"字数 {chars} 字 > 上限 {hard} 字(目安 {soft} 字以下)")
+        problems.append(f"字数 {chars} 字 > 上限 {hard} 字(目安 {soft} 字以下)。要る説明は削らず、要素を減らすか図を分ける")
     long_labels = [t for t in texts if len(t) > 25]
     for t in long_labels:
         problems.append(f"1 行が長い({len(t)} 字)「{t[:20]}…」")
