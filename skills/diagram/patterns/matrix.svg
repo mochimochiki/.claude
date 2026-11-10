@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
   <title>影響が大きく直す工数が小さい負債から先に返す</title>
   <desc>技術的負債の優先順位を、放置したときの影響と直す工数の 2 軸で 4 つの象限に分けた 2×2 マトリクス。影響が大きく工数が小さい象限は先に返す(例: 手作業のリリース手順)。影響が大きく工数が大きい象限は計画して返す(例: サポート終了のフレームワーク)。影響が小さく工数が小さい象限はついでに返す(例: 使われていないコード)。影響が小さく工数が大きい象限は返さずに、記録して定期的に見直す(例: めったに変えない古い画面)。負債の例は典型的に当てはまる象限に置いたもので、実際の位置は案件ごとに見積もる。</desc>
   <defs>

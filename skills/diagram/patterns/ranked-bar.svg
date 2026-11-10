@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 352" width="640" height="352" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
-  <rect x="0" y="0" width="640" height="352" fill="#f5f6f4"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
+  <rect x="0" y="0" width="640" height="400" fill="#f5f6f4"/>
   <title>65 歳以上の割合は、日本が世界で最も高い</title>
   <desc>2026 年の総人口に占める 65 歳以上人口の割合の上位 8 か国を、高い順の横棒グラフで示す。日本の棒だけを青で塗り、ほかの 7 か国は灰色にする。日本 29.6%、イタリア 25.6%、ドイツ 24.2%、フランス 22.9%、スペイン 22.2%、韓国 21.4%、カナダ 20.7%、イギリス 19.9%。棒は 0 から始め、値は棒の先に書き、% は先頭の日本にだけ付ける。対象は人口 4000 万以上の 39 か国。日本は人口推計の 2026 年 9 月 15 日現在、他国は国連の World Population Prospects 2024 による 2026 年 7 月 1 日現在の推計値。出典は総務省統計局「統計からみた我が国の高齢者」(統計トピックス No.149)の表 3。</desc>
   <style>
@@ -14,30 +14,30 @@
   </style>
   <text x="16" y="40" class="title">65 歳以上の割合は、日本が世界で最も高い</text>
   <text x="80" y="82" class="hp" text-anchor="end">日本</text>
-  <rect x="92" y="66" width="473.6" height="20" fill="#2b5c8a"/>
+  <rect x="92" y="66" width="473.6" height="26" fill="#2b5c8a"/>
   <text x="573.6" y="81" class="p">29.6%</text>
-  <text x="80" y="110" class="t" text-anchor="end">イタリア</text>
-  <rect x="92" y="94" width="409.6" height="20" fill="#c9ced5"/>
-  <text x="509.6" y="109" class="s">25.6</text>
-  <text x="80" y="138" class="t" text-anchor="end">ドイツ</text>
-  <rect x="92" y="122" width="387.2" height="20" fill="#c9ced5"/>
-  <text x="487.2" y="137" class="s">24.2</text>
-  <text x="80" y="166" class="t" text-anchor="end">フランス</text>
-  <rect x="92" y="150" width="366.4" height="20" fill="#c9ced5"/>
-  <text x="466.4" y="165" class="s">22.9</text>
-  <text x="80" y="194" class="t" text-anchor="end">スペイン</text>
-  <rect x="92" y="178" width="355.2" height="20" fill="#c9ced5"/>
-  <text x="455.2" y="193" class="s">22.2</text>
-  <text x="80" y="222" class="t" text-anchor="end">韓国</text>
-  <rect x="92" y="206" width="342.4" height="20" fill="#c9ced5"/>
-  <text x="442.4" y="221" class="s">21.4</text>
-  <text x="80" y="250" class="t" text-anchor="end">カナダ</text>
-  <rect x="92" y="234" width="331.2" height="20" fill="#c9ced5"/>
-  <text x="431.2" y="249" class="s">20.7</text>
-  <text x="80" y="278" class="t" text-anchor="end">イギリス</text>
-  <rect x="92" y="262" width="318.4" height="20" fill="#c9ced5"/>
-  <text x="418.4" y="277" class="s">19.9</text>
-  <path d="M92,62 V286" stroke="#4a5563" stroke-width="1.5"/>
-  <text x="16" y="318" class="src">2026 年、人口 4000 万以上の 39 か国</text>
-  <text x="16" y="336" class="src">出典 総務省統計局 統計からみた我が国の高齢者</text>
+  <text x="80" y="116" class="t" text-anchor="end">イタリア</text>
+  <rect x="92" y="100" width="409.6" height="26" fill="#c9ced5"/>
+  <text x="509.6" y="115" class="s">25.6</text>
+  <text x="80" y="150" class="t" text-anchor="end">ドイツ</text>
+  <rect x="92" y="134" width="387.2" height="26" fill="#c9ced5"/>
+  <text x="487.2" y="149" class="s">24.2</text>
+  <text x="80" y="184" class="t" text-anchor="end">フランス</text>
+  <rect x="92" y="168" width="366.4" height="26" fill="#c9ced5"/>
+  <text x="466.4" y="183" class="s">22.9</text>
+  <text x="80" y="218" class="t" text-anchor="end">スペイン</text>
+  <rect x="92" y="202" width="355.2" height="26" fill="#c9ced5"/>
+  <text x="455.2" y="217" class="s">22.2</text>
+  <text x="80" y="252" class="t" text-anchor="end">韓国</text>
+  <rect x="92" y="236" width="342.4" height="26" fill="#c9ced5"/>
+  <text x="442.4" y="251" class="s">21.4</text>
+  <text x="80" y="286" class="t" text-anchor="end">カナダ</text>
+  <rect x="92" y="270" width="331.2" height="26" fill="#c9ced5"/>
+  <text x="431.2" y="285" class="s">20.7</text>
+  <text x="80" y="320" class="t" text-anchor="end">イギリス</text>
+  <rect x="92" y="304" width="318.4" height="26" fill="#c9ced5"/>
+  <text x="418.4" y="319" class="s">19.9</text>
+  <path d="M92,62 V334" stroke="#4a5563" stroke-width="1.5"/>
+  <text x="16" y="366" class="src">2026 年、人口 4000 万以上の 39 か国</text>
+  <text x="16" y="384" class="src">出典 総務省統計局 統計からみた我が国の高齢者</text>
 </svg>

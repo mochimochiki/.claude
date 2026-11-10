@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 372" width="640" height="372" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 372" width="640" height="372" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
   <rect x="0" y="0" width="640" height="372" fill="#f5f6f4"/>
   <title>ロックした項目を除き、個人の設定が優先される</title>
   <desc>設定の継承図の作例。組織・プロジェクト・個人の 3 層の設定を上から順に重ね、言語・通知メール・外部共有の 3 項目について、どの層の値が使われるかを示す。各項目では、値を設定したいちばん下の層の値が使われる。言語は組織が日本語、個人が英語なので英語が使われる。通知メールは組織が毎日、プロジェクトが即時で個人は未設定なので即時が使われる。外部共有は組織が禁止にしてロックしているため、個人が許可にしても使われず、禁止が使われる。使われる値を主の色、ロックのために使われない値を対の色で示す。</desc>

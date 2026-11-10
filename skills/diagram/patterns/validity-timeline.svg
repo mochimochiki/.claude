@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" width="640" height="340" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" width="640" height="340" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
   <rect x="0" y="0" width="640" height="340" fill="#f5f6f4"/>
   <title>ごみ箱を空にすると、どの方法でも戻せない</title>
   <desc>有効範囲の時間軸の作例。文書を編集する、保存して閉じる、削除する、ごみ箱を空にする、の 4 つの操作を時間軸に置き、その下に 3 つの戻し方が使える期間を帯で示す。元に戻す(Ctrl+Z)は編集してから閉じるまで使える。バージョン履歴は保存してから削除するまで使え、保存のたびにバージョンが残る。ごみ箱から復元は削除してからごみ箱を空にするまで使える。3 つの帯は切れ目なく続くが、ごみ箱を空にした後はどの方法でも戻せない。使える期間を主の色、戻せない期間を対の色で示す。</desc>

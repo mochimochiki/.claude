@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 404" width="640" height="404" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 404" width="640" height="404" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
   <rect x="0" y="0" width="640" height="404" fill="#f5f6f4"/>
   <title>利益率も成長率も高いのは、事業 C だけ</title>
   <desc>架空の会社の 5 つの事業を、横軸に営業利益率(0〜16%)、縦軸に売上高の伸び率(−4〜16%)、円の面積に売上高をとったバブルチャートで示す。事業 C(利益率 14%、伸び率 12%、売上高 180 億円)だけを主の色にし、ほかは灰色にする。円の面積を売上高に比例させ、半径には比例させない。数値は架空。</desc>

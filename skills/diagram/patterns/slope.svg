@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 336" width="640" height="336" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 336" width="640" height="336" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
   <rect x="0" y="0" width="640" height="336" fill="#f5f6f4"/>
   <title>35 年で、死亡数と出生数の多さが入れ替わった</title>
   <desc>1990 年と 2025 年の出生数と死亡数を、2 つの時点を線で結ぶ slope chart で示す。死亡数は 82.0 万人から 159.0 万人に増え(橙)、出生数は 122.2 万人から 67.1 万人に減った(青)。2 本の線が交わり、多さが入れ替わったことを示す。線の交点は 2 つの時点を結んだ結果で、実際に入れ替わった年を表さない。縦軸は 0 から始めず、60 万から 160 万の範囲で描く。出典は厚生労働省「令和 7(2025)年人口動態統計(確定数)の概況」の第 2 表。</desc>

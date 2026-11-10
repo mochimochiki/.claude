@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 368" width="640" height="368" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 368" width="640" height="368" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
   <title>1 文字の改ざんでも、ハッシュ値は一致しなくなる</title>
   <desc>並列比較の作例。受信者が行う電子署名の検証を、改ざんされていない文書と 1 文字だけ改ざんした文書で並べる。署名は、送信者が文書のハッシュ値と秘密鍵から作った署名値である。受信者は、受け取った文書から計算したハッシュ値と、署名を公開鍵で検証して取り出したハッシュ値を比べる。改ざんされていなければ両者は一致し、1 文字でも改ざんするとハッシュ値がまったく別の値になって一致しない。ハッシュ値は棒の並びで表した模式である。公開鍵でハッシュ値を取り出す説明は RSA 署名の場合で、ECDSA などは取り出さずに一致を判定する。</desc>
   <defs>

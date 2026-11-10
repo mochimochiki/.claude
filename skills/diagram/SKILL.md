@@ -130,7 +130,7 @@ description: 構成・境界・分類・流れ・比較などを、本質が一�
 - 手書きの静的 SVG にする。Mermaid・HTML・`foreignObject`・外部の画像や書体の読み込みは使わない。
 - 最初の要素に全面の背景の矩形を描く。GitHub のダークテーマでも読めるようにするためである。
 - `<title>` に題を、`<desc>` に図の中身を文で書く。
-- `font-family` は `'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif` にする。
+- `font-family` は `'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif` にする。Linux で日本語の書体が無いと、中国語の書体で描かれて字形がおかしくなる。PNG で確かめるときは、日本語の書体で描かれているかも見る。
 - 意味を持たない影・グラデーション・背景の絵を使わない。意味を表す絵記号(人・書類・鍵など)は、単純な図形で描くなら使ってよい。
 
 ## 描いたあとの確認

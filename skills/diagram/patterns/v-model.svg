@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 428" width="640" height="428" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 428" width="640" height="428" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
   <rect x="0" y="0" width="640" height="428" fill="#f5f6f4"/>
   <title>テストの合否基準は、対になる開発工程で決める</title>
   <desc>V 字モデルの作例。ロボット掃除機の制御ソフトウェアを例に、左の辺を要件定義、基本設計、詳細設計、実装と下り、右の辺を単体テスト、結合テスト、システムテスト、受け入れテストと上る。同じ高さの工程が対になり(要件定義と受け入れテスト、基本設計とシステムテスト、詳細設計と結合テスト、実装と単体テスト)、開発工程で決めた合否基準をテストで確かめる。対応は SQuBOK の V 字モデルによる。</desc>

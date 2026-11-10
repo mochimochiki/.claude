@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" width="640" height="380" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" width="640" height="380" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
   <rect x="0" y="0" width="640" height="380" fill="#f5f6f4"/>
   <title>出生と婚姻は 1970 年代から減り、死亡は増えた</title>
   <desc>1947 年から 2025 年までの出生数・婚姻件数・死亡数を、縦軸を 0 から 300 万にそろえた 3 つの小さな折れ線グラフで横に並べる(small multiples)。出生数は 1949 年の 269.7 万人を最多に、1973 年の 209.2 万人のあとは減り続け、2025 年は 67.1 万人。婚姻件数は 1972 年の 110.0 万組が最多で、2025 年は 48.9 万組。死亡数は 1966 年の 67.0 万人が最少で、2025 年は 159.0 万人。各パネルの見出しの下に、2025 年の値だけを書く。出典は厚生労働省「令和 7(2025)年人口動態統計(確定数)の概況」第 2 表。1972 年までは沖縄県を含まない。</desc>

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 524" width="640" height="524" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 524" width="640" height="524" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
   <title>顧客が待つあいだの仕事は、すべて可視ラインの下</title>
   <desc>サービスブループリントの作例。製品の問い合わせから回答までを、左から右へ時間順に描く。列は受付・調査・回答の 3 段階、行は上から顧客の行動、窓口(フロントステージ)、技術担当(バックステージ)、社内システム(サポートプロセス)。行の境目は上からインタラクションライン、可視ライン、内部インタラクションラインで、可視ラインより下は顧客から見えない。行とラインは NN/g の定義に従い、証拠(顧客が目にする物や場所)の行は省いた。顧客が問い合わせると窓口が受け付け、問い合わせ管理システムに登録して技術担当に調査を依頼する。技術担当は過去事例を探し、原因を調べ、回答案を窓口に渡す。窓口は回答を送る。調査の段階では顧客は待つだけで、その間の仕事はすべて可視ラインより下にある。</desc>
   <defs>
