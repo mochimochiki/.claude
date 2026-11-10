@@ -251,6 +251,8 @@ def check(svg_path):
     vb = (root.get("viewBox") or "0 0 640 0").split()
     poster = num(vb[2]) >= 1000
     soft, hard = (100, 105) if poster else (120, 150)
+    if root.get("data-char-limit"):
+        hard = int(root.get("data-char-limit"))  # 多段のサンキーなど、numbers.md が認める図だけが上限を上げる
     if chars > hard:
         problems.append(f"字数 {chars} 字 > 上限 {hard} 字(目安 {soft} 字以下)。要る説明は削らず、要素を減らすか図を分ける")
     long_labels = [t for t in texts if len(t) > 25]

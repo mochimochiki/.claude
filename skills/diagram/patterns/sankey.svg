@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 444" width="640" height="444" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
-  <rect x="0" y="0" width="640" height="444" fill="#f5f6f4"/>
+<svg data-char-limit="200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 548" width="640" height="548" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
+  <rect x="0" y="0" width="640" height="548" fill="#f5f6f4"/>
   <title>国の予算は、新たな借金と元利払いがほぼ同じ</title>
-  <desc>令和 8 年度一般会計予算の歳入と歳出をサンキーダイアグラムで示す。左に歳入の 3 区分(租税及び印紙収入 83.7 兆円、公債金 29.6 兆円、その他収入 9.0 兆円)、中央に総額 122.3 兆円、右に歳出の 5 区分(社会保障 39.1 兆円、国債費 31.3 兆円、地方交付税交付金等 20.9 兆円、防衛関係費 9.0 兆円、その他 22.1 兆円)を置き、帯の太さを金額に比例させる。公債金と国債費の節点を主の色、その帯を淡い主の色にし、ほかの帯は薄い灰にする。総額の節点は、部分の節点より 1 段濃い灰にする。新たな借金で賄う額と、過去の借金の元本の返済と利払いに充てる額がほぼ同じことを示す。歳出のその他は、公共事業 6.1 兆円、文教及び科学振興 6.0 兆円、その他 10.0 兆円を合計した。出典は財務省「令和 8 年度一般会計予算 歳出・歳入の構成」。</desc>
+  <desc>令和 8 年度一般会計予算の歳入と歳出を、5 列のサンキーダイアグラムで示す。左から、税目と公債の種類(所得税 25.3 兆円、法人税 20.7 兆円、消費税 26.7 兆円、その他の税 11.0 兆円、特例公債 22.9 兆円、建設公債 6.7 兆円、その他収入 9.0 兆円)、歳入の区分(租税及び印紙収入 83.7 兆円、公債金 29.6 兆円)、総額 122.3 兆円、歳出の区分(一般歳出 70.2 兆円、国債費 31.3 兆円、地方交付税交付金等 20.9 兆円)、歳出の内訳(社会保障 39.1 兆円、防衛関係費 9.0 兆円、一般歳出のその他 22.1 兆円、債務償還費 18.2 兆円、利払費等 13.1 兆円)の順に並べる。収入は緑、支出は赤で塗り、公債金と国債費につながる帯と節点だけを濃くする。帯の太さは金額に比例する。一般歳出のその他は、公共事業・文教及び科学振興・その他の合計で、資料の一般歳出の合計から社会保障と防衛関係費を引いた値。租税等は租税及び印紙収入、地方交付税等は地方交付税交付金等の略。出典は財務省「令和 8 年度一般会計予算 歳出・歳入の構成」。</desc>
   <style>
     .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
     .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
@@ -11,43 +11,85 @@
     .p { font-size: 14px; font-weight: 700; fill: #2b5c8a; }
     .o { font-size: 14px; font-weight: 700; fill: #9a4a14; }
     .src { font-size: 12px; fill: #4a5563; }
+    .g { font-size: 14px; fill: #1d5233; }
+    .gb { font-size: 14px; font-weight: 700; fill: #1d5233; }
+    .r { font-size: 14px; fill: #8e2a22; }
+    .rb { font-size: 14px; font-weight: 700; fill: #8e2a22; }
   </style>
   <text x="16" y="40" class="title">国の予算は、新たな借金と元利払いがほぼ同じ</text>
-  <text x="188" y="64" class="s" text-anchor="end">歳入</text>
-  <text x="450" y="64" class="s">歳出</text>
-  <path d="M188,76.0 C247.0,76.0 247.0,92.0 306,92.0 V275.5 C247.0,275.5 247.0,259.5 188,259.5 Z" fill="#e3e6ea"/>
-  <rect x="168" y="76.0" width="20" height="183.5" fill="#a7b0ba"/>
-  <text x="160" y="168.7" class="t" text-anchor="end">租税及び印紙収入</text>
-  <text x="160" y="186.7" class="s" text-anchor="end">83.7</text>
-  <path d="M188,275.5 C247.0,275.5 247.0,275.5 306,275.5 V340.3 C247.0,340.3 247.0,340.3 188,340.3 Z" fill="#c9d9ea"/>
-  <rect x="168" y="275.5" width="20" height="64.8" fill="#2b5c8a"/>
-  <text x="160" y="308.9" class="hp" text-anchor="end">公債金(借金)</text>
-  <text x="160" y="326.9" class="p" text-anchor="end">29.6</text>
-  <path d="M188,356.3 C247.0,356.3 247.0,340.3 306,340.3 V360.0 C247.0,360.0 247.0,376.0 188,376.0 Z" fill="#e3e6ea"/>
-  <rect x="168" y="356.3" width="20" height="19.7" fill="#a7b0ba"/>
-  <text x="160" y="367.2" class="t" text-anchor="end">その他収入</text>
-  <text x="160" y="385.2" class="s" text-anchor="end">9.0</text>
-  <path d="M326,92.0 C388.0,92.0 388.0,76.0 450,76.0 V161.6 C388.0,161.6 388.0,177.6 326,177.6 Z" fill="#e3e6ea"/>
-  <rect x="450" y="76.0" width="20" height="85.6" fill="#a7b0ba"/>
-  <text x="478" y="115.8" class="t">社会保障</text>
-  <text x="478" y="133.8" class="s">39.1</text>
-  <path d="M326,177.6 C388.0,177.6 388.0,169.6 450,169.6 V238.1 C388.0,238.1 388.0,246.1 326,246.1 Z" fill="#c9d9ea"/>
-  <rect x="450" y="169.6" width="20" height="68.5" fill="#2b5c8a"/>
-  <text x="478" y="200.8" class="hp">国債費(元利払い)</text>
-  <text x="478" y="218.8" class="p">31.3</text>
-  <path d="M326,246.1 C388.0,246.1 388.0,246.1 450,246.1 V291.9 C388.0,291.9 388.0,291.9 326,291.9 Z" fill="#e3e6ea"/>
-  <rect x="450" y="246.1" width="20" height="45.7" fill="#a7b0ba"/>
-  <text x="478" y="266.0" class="t">地方交付税交付金等</text>
-  <text x="478" y="284.0" class="s">20.9</text>
-  <path d="M326,291.9 C388.0,291.9 388.0,299.9 450,299.9 V319.5 C388.0,319.5 388.0,311.5 326,311.5 Z" fill="#e3e6ea"/>
-  <rect x="450" y="299.9" width="20" height="19.7" fill="#a7b0ba"/>
-  <text x="478" y="314.7" class="t">防衛関係費 9.0</text>
-  <path d="M326,311.5 C388.0,311.5 388.0,327.5 450,327.5 V376.0 C388.0,376.0 388.0,360.0 326,360.0 Z" fill="#e3e6ea"/>
-  <rect x="450" y="327.5" width="20" height="48.5" fill="#a7b0ba"/>
-  <text x="478" y="348.8" class="t">その他</text>
-  <text x="478" y="366.8" class="s">22.1</text>
-  <rect x="306" y="92.0" width="20" height="268.0" fill="#7a8490"/>
-  <text x="316.0" y="382.0" class="h" text-anchor="middle">122.3 兆円</text>
-  <text x="16" y="410" class="src">令和 8 年度一般会計予算、単位は兆円</text>
-  <text x="16" y="428" class="src">出典 財務省「歳出・歳入の構成」</text>
+  <text x="114" y="76" class="g" text-anchor="end">歳入</text>
+  <text x="476" y="76" class="r">歳出</text>
+  <path d="M114.0,88.0 C154.0,88.0 154.0,100.0 194.0,100.0 V173.7 C154.0,173.7 154.0,161.7 114.0,161.7 Z" fill="#d3e8da"/>
+  <path d="M114.0,167.7 C154.0,167.7 154.0,173.7 194.0,173.7 V234.0 C154.0,234.0 154.0,228.0 114.0,228.0 Z" fill="#d3e8da"/>
+  <path d="M114.0,234.0 C154.0,234.0 154.0,234.0 194.0,234.0 V311.6 C154.0,311.6 154.0,311.6 114.0,311.6 Z" fill="#d3e8da"/>
+  <path d="M114.0,317.6 C154.0,317.6 154.0,311.6 194.0,311.6 V343.7 C154.0,343.7 154.0,349.7 114.0,349.7 Z" fill="#d3e8da"/>
+  <path d="M114.0,355.7 C154.0,355.7 154.0,349.7 194.0,349.7 V416.3 C154.0,416.3 154.0,422.3 114.0,422.3 Z" fill="#a6d1b4"/>
+  <path d="M114.0,428.3 C154.0,428.3 154.0,416.3 194.0,416.3 V435.8 C154.0,435.8 154.0,447.8 114.0,447.8 Z" fill="#a6d1b4"/>
+  <path d="M114.0,453.8 C154.0,453.8 154.0,441.8 194.0,441.8 V468.0 C154.0,468.0 154.0,480.0 114.0,480.0 Z" fill="#d3e8da"/>
+  <path d="M208.0,100.0 C248.0,100.0 248.0,106.0 288.0,106.0 V349.7 C248.0,349.7 248.0,343.7 208.0,343.7 Z" fill="#d3e8da"/>
+  <path d="M208.0,349.7 C248.0,349.7 248.0,349.7 288.0,349.7 V435.8 C248.0,435.8 248.0,435.8 208.0,435.8 Z" fill="#a6d1b4"/>
+  <path d="M208.0,441.8 C248.0,441.8 248.0,435.8 288.0,435.8 V462.0 C248.0,462.0 248.0,468.0 208.0,468.0 Z" fill="#d3e8da"/>
+  <path d="M302.0,106.0 C342.0,106.0 342.0,100.0 382.0,100.0 V304.2 C342.0,304.2 342.0,310.2 302.0,310.2 Z" fill="#f6d9d6"/>
+  <path d="M302.0,310.2 C342.0,310.2 342.0,310.2 382.0,310.2 V401.2 C342.0,401.2 342.0,401.2 302.0,401.2 Z" fill="#f1bbb5"/>
+  <path d="M302.0,401.2 C342.0,401.2 342.0,407.2 382.0,407.2 V468.0 C342.0,468.0 342.0,462.0 302.0,462.0 Z" fill="#f6d9d6"/>
+  <path d="M396.0,100.0 C436.0,100.0 436.0,91.0 476.0,91.0 V204.7 C436.0,204.7 436.0,213.7 396.0,213.7 Z" fill="#f6d9d6"/>
+  <path d="M396.0,213.7 C436.0,213.7 436.0,210.7 476.0,210.7 V236.8 C436.0,236.8 436.0,239.8 396.0,239.8 Z" fill="#f6d9d6"/>
+  <path d="M396.0,239.8 C436.0,239.8 436.0,242.8 476.0,242.8 V307.2 C436.0,307.2 436.0,304.2 396.0,304.2 Z" fill="#f6d9d6"/>
+  <path d="M396.0,310.2 C436.0,310.2 436.0,313.2 476.0,313.2 V366.2 C436.0,366.2 436.0,363.2 396.0,363.2 Z" fill="#f1bbb5"/>
+  <path d="M396.0,363.2 C436.0,363.2 436.0,372.2 476.0,372.2 V410.2 C436.0,410.2 436.0,401.2 396.0,401.2 Z" fill="#f1bbb5"/>
+  <path d="M396.0,407.2 C436.0,407.2 436.0,416.2 476.0,416.2 V477.0 C436.0,477.0 436.0,468.0 396.0,468.0 Z" fill="#f6d9d6"/>
+  <rect x="100" y="88.0" width="14" height="73.7" fill="#8fbf9f"/>
+  <rect x="100" y="167.7" width="14" height="60.2" fill="#8fbf9f"/>
+  <rect x="100" y="234.0" width="14" height="77.7" fill="#8fbf9f"/>
+  <rect x="100" y="317.6" width="14" height="32.1" fill="#8fbf9f"/>
+  <rect x="100" y="355.7" width="14" height="66.6" fill="#287048"/>
+  <rect x="100" y="428.3" width="14" height="19.5" fill="#287048"/>
+  <rect x="100" y="453.8" width="14" height="26.2" fill="#8fbf9f"/>
+  <rect x="194" y="100.0" width="14" height="243.7" fill="#8fbf9f"/>
+  <rect x="194" y="349.7" width="14" height="86.1" fill="#287048"/>
+  <rect x="194" y="441.8" width="14" height="26.2" fill="#8fbf9f"/>
+  <rect x="288" y="106.0" width="14" height="356.0" fill="#7a8490"/>
+  <rect x="382" y="100.0" width="14" height="204.2" fill="#e7a19b"/>
+  <rect x="382" y="310.2" width="14" height="91.0" fill="#d9534f"/>
+  <rect x="382" y="407.2" width="14" height="60.8" fill="#e7a19b"/>
+  <rect x="476" y="91.0" width="14" height="113.7" fill="#e7a19b"/>
+  <rect x="476" y="210.7" width="14" height="26.2" fill="#e7a19b"/>
+  <rect x="476" y="242.8" width="14" height="64.4" fill="#e7a19b"/>
+  <rect x="476" y="313.2" width="14" height="53.0" fill="#d9534f"/>
+  <rect x="476" y="372.2" width="14" height="38.0" fill="#d9534f"/>
+  <rect x="476" y="416.2" width="14" height="60.8" fill="#e7a19b"/>
+  <text x="94" y="122.9" class="g" text-anchor="end">所得税</text>
+  <text x="94" y="139.9" class="g" text-anchor="end">25.3</text>
+  <text x="94" y="195.8" class="g" text-anchor="end">法人税</text>
+  <text x="94" y="212.8" class="g" text-anchor="end">20.7</text>
+  <text x="94" y="270.8" class="g" text-anchor="end">消費税</text>
+  <text x="94" y="287.8" class="g" text-anchor="end">26.7</text>
+  <text x="94" y="331.7" class="g" text-anchor="end">その他の税</text>
+  <text x="94" y="348.7" class="g" text-anchor="end">11.0</text>
+  <text x="94" y="387.0" class="gb" text-anchor="end">特例公債</text>
+  <text x="94" y="404.0" class="gb" text-anchor="end">22.9</text>
+  <text x="94" y="443.1" class="gb" text-anchor="end">建設公債 6.7</text>
+  <text x="94" y="471.9" class="g" text-anchor="end">その他 9.0</text>
+  <text x="212" y="219.9" class="g">租税等</text>
+  <text x="212" y="236.9" class="g">83.7</text>
+  <text x="212" y="390.8" class="gb">公債金</text>
+  <text x="212" y="407.8" class="gb">29.6</text>
+  <text x="295.0" y="482.0" class="h" text-anchor="middle">総額 122.3</text>
+  <text x="378" y="200.1" class="r" text-anchor="end">一般歳出</text>
+  <text x="378" y="217.1" class="r" text-anchor="end">70.2</text>
+  <text x="378" y="353.7" class="rb" text-anchor="end">国債費</text>
+  <text x="378" y="370.7" class="rb" text-anchor="end">31.3</text>
+  <text x="496" y="145.8" class="r">社会保障</text>
+  <text x="496" y="162.8" class="r">39.1</text>
+  <text x="496" y="228.8" class="r">防衛関係費 9.0</text>
+  <text x="496" y="273.0" class="r">その他</text>
+  <text x="496" y="290.0" class="r">22.1</text>
+  <text x="496" y="337.7" class="rb">債務償還費</text>
+  <text x="496" y="354.7" class="rb">18.2</text>
+  <text x="496" y="389.2" class="rb">利払費等</text>
+  <text x="496" y="406.2" class="rb">13.1</text>
+  <text x="496" y="444.6" class="r">地方交付税等</text>
+  <text x="496" y="461.6" class="r">20.9</text>
+  <text x="16" y="514" class="src">令和 8 年度一般会計予算、単位は兆円</text>
+  <text x="16" y="532" class="src">出典 財務省「歳出・歳入の構成」</text>
 </svg>
