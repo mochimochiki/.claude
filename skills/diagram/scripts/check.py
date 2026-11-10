@@ -151,12 +151,12 @@ def text_box(el, rules, parents):
 
 
 def data_segments(el, rules, parents):
-    """太さ 1.5 以上の線(データの線と軸)を線分の列にする。細い罫線や目盛りの線は除く。"""
+    """線(データの線・軸・罫線・引き出し線)を線分の列にする。"""
     tag = el.tag.replace(NS, "")
     if tag not in ("polyline", "path", "line"):
         return []
     stroke = resolve(el, "stroke", rules, parents)
-    if not stroke or stroke == "none" or num(resolve(el, "stroke-width", rules, parents) or "1") < 1.5:
+    if not stroke or stroke == "none" or num(resolve(el, "stroke-width", rules, parents) or "1") <= 0:
         return []
     if tag == "line":
         pts = [(num(el.get("x1")), num(el.get("y1"))), (num(el.get("x2")), num(el.get("y2")))]
@@ -203,7 +203,10 @@ def overlaps(root, rules, parents):
     線と文字のあいだに塗りの図形(文字の下に敷いた矩形など)があるときは、線が隠れるので重なりとしない。"""
     skip = lambda el: any(a.tag in (NS + "defs", NS + "symbol", NS + "marker", NS + "clipPath") for a in parents.get(el, []))
     order = {el: i for i, el in enumerate(root.iter())}
-    texts = [(order[el], text_box(el, rules, parents)) for el in root.iter(NS + "text") if not skip(el)]
+    text_els = [el for el in root.iter(NS + "text") if not skip(el)]
+    texts = [(order[el], text_box(el, rules, parents)) for el in text_els]
+    halos = [(resolve(el, "paint-order", rules, parents) or "").startswith("stroke") and
+             (resolve(el, "stroke", rules, parents) or "none") != "none" for el in text_els]
     segs = [(order[el], s) for el in root.iter() if not skip(el) for s in data_segments(el, rules, parents)]
     fills = []
     for el in root.iter():
@@ -223,6 +226,8 @@ def overlaps(root, rules, parents):
             if a[0] < b[0] + b[2] - 1 and b[0] < a[0] + a[2] - 1 and a[1] < b[1] + b[3] - 1 and b[1] < a[1] + a[3] - 1:
                 found.append(f"文字が重なる「{a[4][:12]}」と「{b[4][:12]}」")
         cx, cy = a[0] + a[2] / 2, a[1] + a[3] / 2
+        if halos[i]:
+            continue  # 背景色の縁取りで、下の線を切っている文字
         for ol, seg in segs:
             if not seg_hits_box(seg, a[:4]):
                 continue
