@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 428" width="640" height="428" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
+  <rect x="0" y="0" width="640" height="428" fill="#f5f6f4"/>
+  <title>10 都道府県とも、出生数が 2 割以上減った</title>
+  <desc>2025 年の出生数が多い順に 10 都道府県を並べ、2015 年の出生数から 2025 年の出生数へ矢印を引く arrow plot。どの都道府県も矢印は左向きで、減少率は東京都の 24.8% から北海道の 40.6% まで。横軸は 0 から 12 万人。凡例は置かず、先頭の東京都の点と矢じりの上に年を書く。値は 2015 年が平成 27 年人口動態統計(確定数)、2025 年が令和 7 年人口動態統計(確定数)の都道府県別の出生数。</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2b5c8a"/></marker>
+  </defs>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .t { font-size: 16px; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .hp { font-size: 16px; font-weight: 700; fill: #2b5c8a; }
+    .p { font-size: 14px; font-weight: 700; fill: #2b5c8a; }
+    .o { font-size: 14px; font-weight: 700; fill: #9a4a14; }
+    .d { font-size: 14px; fill: #1e2733; }
+    .b { font-size: 14px; font-weight: 700; fill: #1e2733; }
+    .src { font-size: 12px; fill: #4a5563; }
+    .halo { paint-order: stroke; stroke: #f5f6f4; stroke-width: 6px; stroke-linejoin: round; }
+  </style>
+  <text x="16" y="40" class="title">10 都道府県とも、出生数が 2 割以上減った</text>
+  <path d="M92.0,86 V344" stroke="#dfe2e6" stroke-width="1"/>
+  <text x="92.0" y="362" class="s" text-anchor="middle">0</text>
+  <path d="M253.3,86 V344" stroke="#dfe2e6" stroke-width="1"/>
+  <text x="253.3" y="362" class="s" text-anchor="middle">4</text>
+  <path d="M414.7,86 V344" stroke="#dfe2e6" stroke-width="1"/>
+  <text x="414.7" y="362" class="s" text-anchor="middle">8</text>
+  <path d="M576.0,86 V344" stroke="#dfe2e6" stroke-width="1"/>
+  <text x="576.0" y="362" class="s" text-anchor="middle">12</text>
+  <text x="588.0" y="362" class="s">万人</text>
+  <text x="80" y="99" class="t" text-anchor="end">東京都</text>
+  <circle cx="548.5" cy="94" r="4" fill="#7a8490"/>
+  <path d="M542.5,94 H435.2" stroke="#2b5c8a" stroke-width="2.5" marker-end="url(#a)"/>
+  <text x="558.5" y="99" class="s halo">−25%</text>
+  <text x="548.5" y="80" class="s" text-anchor="middle">2015 年</text>
+  <text x="439.2" y="80" class="p" text-anchor="middle">2025 年</text>
+  <text x="80" y="125" class="t" text-anchor="end">大阪府</text>
+  <circle cx="376.7" cy="120" r="4" fill="#7a8490"/>
+  <path d="M370.7,120 H304.1" stroke="#2b5c8a" stroke-width="2.5" marker-end="url(#a)"/>
+  <text x="386.7" y="125" class="s halo">−25%</text>
+  <text x="80" y="151" class="t" text-anchor="end">神奈川県</text>
+  <circle cx="388.3" cy="146" r="4" fill="#7a8490"/>
+  <path d="M382.3,146 H294.5" stroke="#2b5c8a" stroke-width="2.5" marker-end="url(#a)"/>
+  <text x="398.3" y="151" class="s halo">−32%</text>
+  <text x="80" y="177" class="t" text-anchor="end">愛知県</text>
+  <circle cx="356.6" cy="172" r="4" fill="#7a8490"/>
+  <path d="M350.6,172 H270.6" stroke="#2b5c8a" stroke-width="2.5" marker-end="url(#a)"/>
+  <text x="366.6" y="177" class="s halo">−33%</text>
+  <text x="80" y="203" class="t" text-anchor="end">埼玉県</text>
+  <circle cx="318.2" cy="198" r="4" fill="#7a8490"/>
+  <path d="M312.2,198 H248.5" stroke="#2b5c8a" stroke-width="2.5" marker-end="url(#a)"/>
+  <text x="328.2" y="203" class="s halo">−31%</text>
+  <text x="80" y="229" class="t" text-anchor="end">千葉県</text>
+  <circle cx="281.6" cy="224" r="4" fill="#7a8490"/>
+  <path d="M275.6,224 H225.1" stroke="#2b5c8a" stroke-width="2.5" marker-end="url(#a)"/>
+  <text x="291.6" y="229" class="s halo">−30%</text>
+  <text x="80" y="255" class="t" text-anchor="end">福岡県</text>
+  <circle cx="274.4" cy="250" r="4" fill="#7a8490"/>
+  <path d="M268.4,250 H219.9" stroke="#2b5c8a" stroke-width="2.5" marker-end="url(#a)"/>
+  <text x="284.4" y="255" class="s halo">−30%</text>
+  <text x="80" y="281" class="t" text-anchor="end">兵庫県</text>
+  <circle cx="269.5" cy="276" r="4" fill="#7a8490"/>
+  <path d="M263.5,276 H213.4" stroke="#2b5c8a" stroke-width="2.5" marker-end="url(#a)"/>
+  <text x="279.5" y="281" class="s halo">−32%</text>
+  <text x="80" y="307" class="t" text-anchor="end">北海道</text>
+  <circle cx="240.0" cy="302" r="4" fill="#7a8490"/>
+  <path d="M234.0,302 H179.9" stroke="#2b5c8a" stroke-width="2.5" marker-end="url(#a)"/>
+  <text x="250.0" y="307" class="s halo">−41%</text>
+  <text x="80" y="333" class="t" text-anchor="end">静岡県</text>
+  <circle cx="206.4" cy="328" r="4" fill="#7a8490"/>
+  <path d="M200.4,328 H160.9" stroke="#2b5c8a" stroke-width="2.5" marker-end="url(#a)"/>
+  <text x="216.4" y="333" class="s halo">−40%</text>
+  <text x="16" y="394" class="src">2025 年の出生数が多い 10 都道府県</text>
+  <text x="16" y="412" class="src">出典 厚生労働省「人口動態統計」</text>
+</svg>

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 520" width="640" height="520" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 520" width="640" height="520" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
   <title>並行して変更しても、マージすれば両方の変更が残る</title>
   <desc>路線図の形で描いた Git のコミット履歴。青い線は main、橙の線は feature で、丸はコミットを表し、時間は左から右へ進む。共通の先祖から feature ブランチを作成し、A さんは feature で手順 1 を、B さんは main で注意書きを変える。各コミットの上下に並べた 3 本の帯はその時点のファイルの行(手順 1・手順 2・注意書き)で、塗った帯が変更した行である。Git は共通の先祖と両方の先端を比べる 3-way マージで、マージコミットの内容には両方の変更が入る。同じ行か隣り合う行を両方が変えたときはコンフリクトになり、人がその行の内容を決めて解決する。</desc>
   <defs>

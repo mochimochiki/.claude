@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 392" width="640" height="392" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 392" width="640" height="392" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
   <title>各ゲートで、次へ進めるかを基準で決める</title>
   <desc>ステージゲートの作例。業務用コーヒーマシンの開発を企画・設計・試作・量産準備の 4 段階と発売に分け、段階の間にゲート G1〜G4 を置く。各ゲートは課題の実在、目標原価、信頼性試験、量産品質の安定を基準に、進める・差し戻す・保留する・中止するのどれかを決める。ゲートと判断は Cooper の Stage-Gate に従う。原典の標準形は発見と 5 段階・5 ゲートで、段階の数は案件に合わせて変えてよいとされており、この図の段階の名前と数は一例である。保留は、基準は満たすが資源の都合で開発を一時止める判断である。</desc>
   <defs>

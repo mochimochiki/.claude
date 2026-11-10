@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 528" width="640" height="528" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 528" width="640" height="528" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
   <title>許可しない操作のツールは AI に渡さない</title>
   <desc>区分の段の作例。AnswerScout の AI(Copilot CLI)に許す操作を 3 段に分ける。常に許可するのはファイルの閲覧・検索、作業フォルダへの書き込み、ワークフローの読み込みで、渡すツールを名前で指定する。組織の設定で選ぶのは Python の実行と添付の解析(既定で有効)、指定した実行ファイルの起動と指定した社内サイトの閲覧(既定で無効)で、変えられるのは PC の管理者権限を持つユーザーだけである。許可しないのは任意のコマンドの実行、インターネットへの接続、作業フォルダ外への書き込み、メール送信とチケット更新、MCP 連携で、これらの手段は渡さず、許可していない操作は拒否して記録する。</desc>
   <defs>

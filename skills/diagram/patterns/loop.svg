@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 352" width="640" height="352" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 352" width="640" height="352" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
   <title>人は計画と判断に集中し、残りは AI が繰り返す</title>
   <desc>戻りのある流れの作例。PdcacacaJ(大文字は人、小文字は AI)では、人が P(計画)を書き、AI が d(実行)・c(評価)・a(改善)を繰り返す。評価も AI が自分で行う。最後に人が J(判断)を行い、判断のコメントがそのまま次の P になる。</desc>
   <defs>

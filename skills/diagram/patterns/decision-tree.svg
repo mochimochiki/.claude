@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 432" width="640" height="432" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 432" width="640" height="432" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
   <title>画面が結果を待つ処理だけを同期で呼ぶ</title>
   <desc>決定木の作例。注文確定のあとに行う処理の呼び出し方を、2 つの問いで決める。画面が結果を待つ処理は同期 API で呼ぶ(例は在庫の引当)。待たない処理のうち、1 件ずつすぐ処理するものはメッセージキューに入れる(例は確認メールの送信)。そうでないものは夜間バッチでまとめて処理する(例は売上の集計)。</desc>
   <defs>

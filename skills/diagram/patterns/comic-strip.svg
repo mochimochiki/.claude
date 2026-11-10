@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 564" width="640" height="564" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 564" width="640" height="564" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
   <title>答える前に社内文書を検索し、結果を AI に渡す</title>
   <desc>4 コマ形式の説明図。RAG(検索拡張生成)で 1 つの質問に答えるまでを上から順に描く。1 コマ目で人が社内の決まりを尋ねる。AI は社内文書を学習していない。2 コマ目で AI とは別の検索の仕組みが、質問をもとに社内文書を検索し、質問に近いチャンク(文書を分けた一部)を見つける。3 コマ目で質問とチャンクを 1 つのプロンプトにまとめて AI に渡す。4 コマ目で AI がチャンクの内容をもとに答え、出典の文書名を添える。橙は質問、青は社内文書から見つけたチャンクを表し、同じ色がコマをまたいで受け渡される。</desc>
   <defs>

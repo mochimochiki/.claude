@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 552" width="640" height="552" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 552" width="640" height="552" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
   <title>パスワードはアプリに渡らず、認可サーバーにだけ届く</title>
   <desc>UML シーケンス図の作例。OAuth 2.0 の認可コードグラントで、アプリ(OAuth のクライアント)、利用者のブラウザ、認可サーバーの 3 者のやり取りを上から時間順に並べる。利用者はパスワードを認可サーバーの画面にだけ入力する。アプリが受け取るのは認可コードとアクセストークンで、パスワードは受け取らない。認可コードとアクセストークンの交換は、ブラウザを経由せず、アプリと認可サーバーが直接やり取りする。実線は要求、破線は応答、橙の太線はパスワードを含む通信、青は認可コードまたはトークンを含む通信。手順は RFC 6749 の 4.1 節に従う。ブラウザから認可エンドポイントへの要求と、利用者がアクセスを許可する同意の手順は省き、パスワードの入力にまとめた。</desc>
   <defs>
