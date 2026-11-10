@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 336" width="640" height="336" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
   <rect x="0" y="0" width="640" height="336" fill="#f5f6f4"/>
-  <title>65 歳以上は日本が 10 人に 3 人で、最も多い</title>
+  <title>日本は 10 人に 3 人が 65 歳以上で最多</title>
   <desc>2026 年の総人口に占める 65 歳以上人口の割合を、4 か国それぞれ人の記号 10 個の行で示す。記号 1 つが 10% に当たり、割合の分だけ青く塗る。端数は記号を途中まで塗る。日本 29.6%、イタリア 25.6%、ドイツ 24.2%、アメリカ 18.8%。日本の行だけ国名と値を青で書く。日本は人口推計の 2026 年 9 月 15 日現在、他国は国連の World Population Prospects 2024 による 2026 年 7 月 1 日現在の推計値。出典は総務省統計局「統計からみた我が国の高齢者」(統計トピックス No.149)の表 3。</desc>
   <defs>
     <symbol id="person" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4" fill="currentColor"/><path d="M4,21 C4,15.5 7.5,13 12,13 C16.5,13 20,15.5 20,21 Z" fill="currentColor"/></symbol>
@@ -18,7 +18,7 @@
     .o { font-size: 14px; font-weight: 700; fill: #9a4a14; }
     .src { font-size: 12px; fill: #4a5563; }
   </style>
-  <text x="16" y="40" class="title">65 歳以上は日本が 10 人に 3 人で、最も多い</text>
+  <text x="16" y="40" class="title">日本は 10 人に 3 人が 65 歳以上で最多</text>
   <text x="106" y="94" class="p" text-anchor="end">日本</text>
   <use href="#person" x="120" y="72" width="32" height="32" color="#c9ced5"/>
   <use href="#person" x="156" y="72" width="32" height="32" color="#c9ced5"/>
