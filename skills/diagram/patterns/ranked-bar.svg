@@ -10,7 +10,10 @@
     .hp { font-size: 16px; font-weight: 700; fill: #2b5c8a; }
     .p { font-size: 14px; font-weight: 700; fill: #2b5c8a; }
     .o { font-size: 14px; font-weight: 700; fill: #9a4a14; }
+    .d { font-size: 14px; fill: #1e2733; }
+    .b { font-size: 14px; font-weight: 700; fill: #1e2733; }
     .src { font-size: 12px; fill: #4a5563; }
+    .halo { paint-order: stroke; stroke: #f5f6f4; stroke-width: 6px; stroke-linejoin: round; }
   </style>
   <text x="16" y="40" class="title">65 歳以上の割合は、日本が世界で最も高い</text>
   <text x="80" y="82" class="hp" text-anchor="end">日本</text>
@@ -39,5 +42,5 @@
   <text x="418.4" y="319" class="s">19.9</text>
   <path d="M92,62 V334" stroke="#4a5563" stroke-width="1.5"/>
   <text x="16" y="366" class="src">2026 年、人口 4000 万以上の 39 か国</text>
-  <text x="16" y="384" class="src">出典 総務省統計局 統計からみた我が国の高齢者</text>
+  <text x="16" y="384" class="src">出典 総務省統計局「統計からみた我が国の高齢者」</text>
 </svg>

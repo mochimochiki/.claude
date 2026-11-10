@@ -13,7 +13,10 @@
     .hp { font-size: 16px; font-weight: 700; fill: #2b5c8a; }
     .p { font-size: 14px; font-weight: 700; fill: #2b5c8a; }
     .o { font-size: 14px; font-weight: 700; fill: #9a4a14; }
+    .d { font-size: 14px; fill: #1e2733; }
+    .b { font-size: 14px; font-weight: 700; fill: #1e2733; }
     .src { font-size: 12px; fill: #4a5563; }
+    .halo { paint-order: stroke; stroke: #f5f6f4; stroke-width: 6px; stroke-linejoin: round; }
   </style>
   <text x="16" y="40" class="title">日本の人口の 10 人に 3 人が 65 歳以上</text>
   <use href="#person" x="12" y="92" width="24" height="24" color="#2b5c8a"/>
@@ -122,5 +125,5 @@
   <text x="320" y="238" class="t">3624 万人</text>
   <text x="320" y="260" class="s">2026 年 9 月 15 日現在</text>
   <text x="16" y="379" class="src">記号 1 つ = 総人口の 1%</text>
-  <text x="16" y="397" class="src">出典 総務省統計局 統計からみた我が国の高齢者</text>
+  <text x="16" y="397" class="src">出典 総務省統計局「統計からみた我が国の高齢者」</text>
 </svg>

@@ -10,12 +10,15 @@
     .hp { font-size: 16px; font-weight: 700; fill: #2b5c8a; }
     .p { font-size: 14px; font-weight: 700; fill: #2b5c8a; }
     .o { font-size: 14px; font-weight: 700; fill: #9a4a14; }
+    .d { font-size: 14px; fill: #1e2733; }
+    .b { font-size: 14px; font-weight: 700; fill: #1e2733; }
     .src { font-size: 12px; fill: #4a5563; }
+    .halo { paint-order: stroke; stroke: #f5f6f4; stroke-width: 6px; stroke-linejoin: round; }
   </style>
   <text x="16" y="40" class="title">35 年で、死亡数と出生数の多さが入れ替わった</text>
   <text x="144" y="80" class="h" text-anchor="middle">1990 年</text>
   <text x="512" y="80" class="h" text-anchor="middle">2025 年</text>
-  <path d="M144,96 V287.5 M512,96 V287.5" stroke="#dfe2e6" stroke-width="1.5"/>
+  <path d="M144,96 V287.5 M512,96 V287.5" stroke="#dfe2e6" stroke-width="1"/>
   <path d="M144,178.5 L512,275.5" stroke="#2b5c8a" stroke-width="4" stroke-linecap="round"/>
   <circle cx="144" cy="178.5" r="5" fill="#2b5c8a"/>
   <circle cx="512" cy="275.5" r="5" fill="#2b5c8a"/>

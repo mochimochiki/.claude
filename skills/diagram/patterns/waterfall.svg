@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 392" width="640" height="392" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
-  <rect x="0" y="0" width="640" height="392" fill="#f5f6f4"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
+  <rect x="0" y="0" width="640" height="400" fill="#f5f6f4"/>
   <title>増益 30 億円の最大の要因は販売数量</title>
   <desc>架空の会社の営業利益の増減要因の図。左端の前期 120 億円から、販売数量 +40、価格改定 +25、為替 +10、原材料費 △30、人件費 △15 を階段状に積み、右端の今期 150 億円に至る。色相は増減の向きを、濃さは強調を表す。増益の要因は主の色相、減益の要因は対の色相にし、題の主役である販売数量だけを濃い主の色で塗り、ほかの要因は淡くする。前期は比べる基準として薄い灰、今期は結果の水準として前期より濃い灰で、ともに 0 から立てる。棒どうしは細い破線でつなぐ。減益は日本の決算資料の慣例に合わせて △ で書く。数値は架空。</desc>
   <style>
@@ -10,38 +10,41 @@
     .hp { font-size: 16px; font-weight: 700; fill: #2b5c8a; }
     .p { font-size: 14px; font-weight: 700; fill: #2b5c8a; }
     .o { font-size: 14px; font-weight: 700; fill: #9a4a14; }
+    .d { font-size: 14px; fill: #1e2733; }
+    .b { font-size: 14px; font-weight: 700; fill: #1e2733; }
     .src { font-size: 12px; fill: #4a5563; }
+    .halo { paint-order: stroke; stroke: #f5f6f4; stroke-width: 6px; stroke-linejoin: round; }
   </style>
   <text x="16" y="40" class="title">増益 30 億円の最大の要因は販売数量</text>
   <rect x="46.0" y="178.7" width="56" height="133.3" fill="#c9ced5"/>
-  <text x="74.0" y="170.7" class="t" text-anchor="middle">120</text>
+  <text x="74.0" y="170.7" class="s" text-anchor="middle">120</text>
   <text x="74.0" y="334" class="t" text-anchor="middle">前期</text>
   <path d="M102.0,178.7 H130.0" stroke="#4a5563" stroke-width="1" stroke-dasharray="3 3"/>
   <rect x="130.0" y="134.2" width="56" height="44.4" fill="#2b5c8a"/>
   <text x="158.0" y="126.2" class="p" text-anchor="middle">+40</text>
-  <text x="158.0" y="334" class="p" text-anchor="middle">販売数量</text>
+  <text x="158.0" y="334" class="hp" text-anchor="middle">販売数量</text>
   <path d="M186.0,134.2 H214.0" stroke="#4a5563" stroke-width="1" stroke-dasharray="3 3"/>
   <rect x="214.0" y="106.4" width="56" height="27.8" fill="#c9d9ea"/>
   <text x="242.0" y="98.4" class="s" text-anchor="middle">+25</text>
-  <text x="242.0" y="334" class="s" text-anchor="middle">価格改定</text>
+  <text x="242.0" y="334" class="t" text-anchor="middle">価格改定</text>
   <path d="M270.0,106.4 H298.0" stroke="#4a5563" stroke-width="1" stroke-dasharray="3 3"/>
   <rect x="298.0" y="95.3" width="56" height="11.1" fill="#c9d9ea"/>
   <text x="326.0" y="87.3" class="s" text-anchor="middle">+10</text>
-  <text x="326.0" y="334" class="s" text-anchor="middle">為替</text>
+  <text x="326.0" y="334" class="t" text-anchor="middle">為替</text>
   <path d="M354.0,95.3 H382.0" stroke="#4a5563" stroke-width="1" stroke-dasharray="3 3"/>
   <rect x="382.0" y="95.3" width="56" height="33.3" fill="#f2d5c2"/>
   <text x="410.0" y="87.3" class="s" text-anchor="middle">△30</text>
-  <text x="410.0" y="334" class="s" text-anchor="middle">原材料費</text>
+  <text x="410.0" y="334" class="t" text-anchor="middle">原材料費</text>
   <path d="M438.0,128.7 H466.0" stroke="#4a5563" stroke-width="1" stroke-dasharray="3 3"/>
   <rect x="466.0" y="128.7" width="56" height="16.7" fill="#f2d5c2"/>
   <text x="494.0" y="120.7" class="s" text-anchor="middle">△15</text>
-  <text x="494.0" y="334" class="s" text-anchor="middle">人件費</text>
+  <text x="494.0" y="334" class="t" text-anchor="middle">人件費</text>
   <path d="M522.0,145.3 H550.0" stroke="#4a5563" stroke-width="1" stroke-dasharray="3 3"/>
   <rect x="550.0" y="145.3" width="56" height="166.7" fill="#7a8490"/>
-  <text x="578.0" y="137.3" class="h" text-anchor="middle">150</text>
+  <text x="578.0" y="137.3" class="b" text-anchor="middle">150</text>
   <text x="578.0" y="334" class="h" text-anchor="middle">今期</text>
   <path d="M16,312 H624" stroke="#4a5563" stroke-width="1.5"/>
-  <text x="16" y="80" class="s">営業利益(億円)</text>
-  <text x="16" y="358" class="src">△ は減益の要因</text>
-  <text x="16" y="376" class="src">数値は架空</text>
+  <text x="16" y="80" class="s">営業利益（億円）</text>
+  <text x="16" y="366" class="src">△ は減益の要因</text>
+  <text x="16" y="384" class="src">数値は架空</text>
 </svg>

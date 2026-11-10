@@ -10,7 +10,10 @@
     .hp { font-size: 16px; font-weight: 700; fill: #2b5c8a; }
     .p { font-size: 14px; font-weight: 700; fill: #2b5c8a; }
     .o { font-size: 14px; font-weight: 700; fill: #9a4a14; }
+    .d { font-size: 14px; fill: #1e2733; }
+    .b { font-size: 14px; font-weight: 700; fill: #1e2733; }
     .src { font-size: 12px; fill: #4a5563; }
+    .halo { paint-order: stroke; stroke: #f5f6f4; stroke-width: 6px; stroke-linejoin: round; }
   </style>
   <text x="16" y="40" class="title">出生数は 10 年続けて減り、67 万人になった</text>
   <path d="M50,344.0 H600" stroke="#dfe2e6" stroke-width="1"/>
