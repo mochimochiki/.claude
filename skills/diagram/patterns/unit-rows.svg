@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 332" width="640" height="332" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
   <rect x="0" y="0" width="640" height="332" fill="#f5f6f4"/>
   <title>日本は 10 人に 3 人が 65 歳以上で最多</title>
-  <desc>2026 年の総人口に占める 65 歳以上人口の割合を、4 か国それぞれ人の記号 10 個の行で示す。記号 1 つが 10% に当たり、割合の分だけ青く塗る。端数は記号を途中まで塗る。日本 29.6%、イタリア 25.6%、ドイツ 24.2%、アメリカ 18.8%。日本の行だけ国名と値を青で書く。日本は人口推計の 2026 年 9 月 15 日現在、他国は国連の World Population Prospects 2024 による 2026 年 7 月 1 日現在の推計値。出典は総務省統計局「統計からみた我が国の高齢者」(統計トピックス No.149)の表 3。</desc>
+  <desc>2026 年の総人口に占める 65 歳以上人口の割合を、4 か国それぞれ人の記号 10 個の行で示す。記号 1 つが 10% に当たり、割合の分を、日本の行は青、ほかの 3 か国は濃い灰で塗り、残りは薄い灰にする。端数は記号を途中まで塗る。日本 29.6%、イタリア 25.6%、ドイツ 24.2%、アメリカ 18.8%。日本の行だけ国名と値を青で書く。日本は人口推計の 2026 年 9 月 15 日現在、他国は国連の World Population Prospects 2024 による 2026 年 7 月 1 日現在の推計値。出典は総務省統計局「統計からみた我が国の高齢者」(統計トピックス No.149)の表 3。</desc>
   <defs>
     <symbol id="person" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4" fill="currentColor"/><path d="M4,21 C4,15.5 7.5,13 12,13 C16.5,13 20,15.5 20,21 Z" fill="currentColor"/></symbol>
     <clipPath id="c0"><rect x="94" y="62" width="107.4" height="34"/></clipPath>
@@ -56,16 +56,16 @@
   <use href="#person" x="414" y="114" width="34" height="34" color="#c9ced5"/>
   <use href="#person" x="454" y="114" width="34" height="34" color="#c9ced5"/>
   <g clip-path="url(#c1)">
-    <use href="#person" x="94" y="114" width="34" height="34" color="#2b5c8a"/>
-    <use href="#person" x="134" y="114" width="34" height="34" color="#2b5c8a"/>
-    <use href="#person" x="174" y="114" width="34" height="34" color="#2b5c8a"/>
-    <use href="#person" x="214" y="114" width="34" height="34" color="#2b5c8a"/>
-    <use href="#person" x="254" y="114" width="34" height="34" color="#2b5c8a"/>
-    <use href="#person" x="294" y="114" width="34" height="34" color="#2b5c8a"/>
-    <use href="#person" x="334" y="114" width="34" height="34" color="#2b5c8a"/>
-    <use href="#person" x="374" y="114" width="34" height="34" color="#2b5c8a"/>
-    <use href="#person" x="414" y="114" width="34" height="34" color="#2b5c8a"/>
-    <use href="#person" x="454" y="114" width="34" height="34" color="#2b5c8a"/>
+    <use href="#person" x="94" y="114" width="34" height="34" color="#7a8490"/>
+    <use href="#person" x="134" y="114" width="34" height="34" color="#7a8490"/>
+    <use href="#person" x="174" y="114" width="34" height="34" color="#7a8490"/>
+    <use href="#person" x="214" y="114" width="34" height="34" color="#7a8490"/>
+    <use href="#person" x="254" y="114" width="34" height="34" color="#7a8490"/>
+    <use href="#person" x="294" y="114" width="34" height="34" color="#7a8490"/>
+    <use href="#person" x="334" y="114" width="34" height="34" color="#7a8490"/>
+    <use href="#person" x="374" y="114" width="34" height="34" color="#7a8490"/>
+    <use href="#person" x="414" y="114" width="34" height="34" color="#7a8490"/>
+    <use href="#person" x="454" y="114" width="34" height="34" color="#7a8490"/>
   </g>
   <text x="494" y="136" class="s">25.6%</text>
   <text x="80" y="189" class="t" text-anchor="end">ドイツ</text>
@@ -80,16 +80,16 @@
   <use href="#person" x="414" y="166" width="34" height="34" color="#c9ced5"/>
   <use href="#person" x="454" y="166" width="34" height="34" color="#c9ced5"/>
   <g clip-path="url(#c2)">
-    <use href="#person" x="94" y="166" width="34" height="34" color="#2b5c8a"/>
-    <use href="#person" x="134" y="166" width="34" height="34" color="#2b5c8a"/>
-    <use href="#person" x="174" y="166" width="34" height="34" color="#2b5c8a"/>
-    <use href="#person" x="214" y="166" width="34" height="34" color="#2b5c8a"/>
-    <use href="#person" x="254" y="166" width="34" height="34" color="#2b5c8a"/>
-    <use href="#person" x="294" y="166" width="34" height="34" color="#2b5c8a"/>
-    <use href="#person" x="334" y="166" width="34" height="34" color="#2b5c8a"/>
-    <use href="#person" x="374" y="166" width="34" height="34" color="#2b5c8a"/>
-    <use href="#person" x="414" y="166" width="34" height="34" color="#2b5c8a"/>
-    <use href="#person" x="454" y="166" width="34" height="34" color="#2b5c8a"/>
+    <use href="#person" x="94" y="166" width="34" height="34" color="#7a8490"/>
+    <use href="#person" x="134" y="166" width="34" height="34" color="#7a8490"/>
+    <use href="#person" x="174" y="166" width="34" height="34" color="#7a8490"/>
+    <use href="#person" x="214" y="166" width="34" height="34" color="#7a8490"/>
+    <use href="#person" x="254" y="166" width="34" height="34" color="#7a8490"/>
+    <use href="#person" x="294" y="166" width="34" height="34" color="#7a8490"/>
+    <use href="#person" x="334" y="166" width="34" height="34" color="#7a8490"/>
+    <use href="#person" x="374" y="166" width="34" height="34" color="#7a8490"/>
+    <use href="#person" x="414" y="166" width="34" height="34" color="#7a8490"/>
+    <use href="#person" x="454" y="166" width="34" height="34" color="#7a8490"/>
   </g>
   <text x="494" y="188" class="s">24.2%</text>
   <text x="80" y="241" class="t" text-anchor="end">アメリカ</text>
@@ -104,16 +104,16 @@
   <use href="#person" x="414" y="218" width="34" height="34" color="#c9ced5"/>
   <use href="#person" x="454" y="218" width="34" height="34" color="#c9ced5"/>
   <g clip-path="url(#c3)">
-    <use href="#person" x="94" y="218" width="34" height="34" color="#2b5c8a"/>
-    <use href="#person" x="134" y="218" width="34" height="34" color="#2b5c8a"/>
-    <use href="#person" x="174" y="218" width="34" height="34" color="#2b5c8a"/>
-    <use href="#person" x="214" y="218" width="34" height="34" color="#2b5c8a"/>
-    <use href="#person" x="254" y="218" width="34" height="34" color="#2b5c8a"/>
-    <use href="#person" x="294" y="218" width="34" height="34" color="#2b5c8a"/>
-    <use href="#person" x="334" y="218" width="34" height="34" color="#2b5c8a"/>
-    <use href="#person" x="374" y="218" width="34" height="34" color="#2b5c8a"/>
-    <use href="#person" x="414" y="218" width="34" height="34" color="#2b5c8a"/>
-    <use href="#person" x="454" y="218" width="34" height="34" color="#2b5c8a"/>
+    <use href="#person" x="94" y="218" width="34" height="34" color="#7a8490"/>
+    <use href="#person" x="134" y="218" width="34" height="34" color="#7a8490"/>
+    <use href="#person" x="174" y="218" width="34" height="34" color="#7a8490"/>
+    <use href="#person" x="214" y="218" width="34" height="34" color="#7a8490"/>
+    <use href="#person" x="254" y="218" width="34" height="34" color="#7a8490"/>
+    <use href="#person" x="294" y="218" width="34" height="34" color="#7a8490"/>
+    <use href="#person" x="334" y="218" width="34" height="34" color="#7a8490"/>
+    <use href="#person" x="374" y="218" width="34" height="34" color="#7a8490"/>
+    <use href="#person" x="414" y="218" width="34" height="34" color="#7a8490"/>
+    <use href="#person" x="454" y="218" width="34" height="34" color="#7a8490"/>
   </g>
   <text x="494" y="240" class="s">18.8%</text>
   <text x="16" y="280" class="src">記号 1 つ = 10%</text>

@@ -15,7 +15,7 @@
   <text x="16" y="40" class="title">2025 年の出生率 1.14 は過去最低</text>
   <text x="16" y="80" class="s">合計特殊出生率(2025 年)</text>
   <text x="10" y="184" font-size="104" font-weight="700" fill="#2b5c8a">1.14</text>
-  <text x="16" y="224" class="o">統計を取り始めてから最低</text>
+  <text x="16" y="224" class="p">統計を取り始めてから最低</text>
   <path d="M296,64 V230" stroke="#dfe2e6" stroke-width="1"/>
   <text x="320" y="80" class="t">前年(2024 年)</text>
   <text x="317" y="122" font-size="40" font-weight="700" fill="#4a5563">1.15</text>

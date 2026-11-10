@@ -32,11 +32,11 @@
   <text x="466.0" y="340" class="s" text-anchor="middle">12%</text>
   <text x="600.0" y="340" class="s" text-anchor="middle">16%</text>
   <text x="600" y="360" class="s" text-anchor="end">営業利益率</text>
-  <circle cx="265.0" cy="248.0" r="44.0" fill="#c9ced5" fill-opacity="0.8" stroke="#f5f6f4" stroke-width="2"/>
-  <circle cx="164.5" cy="284.0" r="34.6" fill="#c9ced5" fill-opacity="0.8" stroke="#f5f6f4" stroke-width="2"/>
-  <circle cx="533.0" cy="128.0" r="28.8" fill="#2b5c8a" fill-opacity="1" stroke="#f5f6f4" stroke-width="2"/>
-  <circle cx="365.5" cy="236.0" r="20.4" fill="#c9ced5" fill-opacity="0.8" stroke="#f5f6f4" stroke-width="2"/>
-  <circle cx="131.0" cy="188.0" r="16.6" fill="#c9ced5" fill-opacity="0.8" stroke="#f5f6f4" stroke-width="2"/>
+  <circle cx="265.0" cy="248.0" r="44.0" fill="#c9ced5" stroke="#f5f6f4" stroke-width="2"/>
+  <circle cx="164.5" cy="284.0" r="34.6" fill="#c9ced5" stroke="#f5f6f4" stroke-width="2"/>
+  <circle cx="533.0" cy="128.0" r="28.8" fill="#2b5c8a" stroke="#f5f6f4" stroke-width="2"/>
+  <circle cx="365.5" cy="236.0" r="20.4" fill="#c9ced5" stroke="#f5f6f4" stroke-width="2"/>
+  <circle cx="131.0" cy="188.0" r="16.6" fill="#c9ced5" stroke="#f5f6f4" stroke-width="2"/>
   <text x="315.0" y="253.0" class="t">事業 A</text>
   <text x="205.1" y="289.0" class="t">事業 B</text>
   <text x="567.8" y="133.0" class="hp">事業 C</text>
