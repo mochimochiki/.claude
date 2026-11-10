@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 424" width="640" height="424" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
-  <rect x="0" y="0" width="640" height="424" fill="#f5f6f4"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" width="640" height="440" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+  <rect x="0" y="0" width="640" height="440" fill="#f5f6f4"/>
   <title>10 都道府県とも、出生数が 2 割以上減った</title>
   <desc>2025 年の出生数が多い順に 10 都道府県を並べ、2015 年の出生数から 2025 年の出生数へ矢印を引く arrow plot。どの都道府県も矢印は左向きで、減少率は東京都の 24.8% から北海道の 40.6% まで。横軸は 0 から 12 万人。値は 2015 年が平成 27 年人口動態統計(確定数)、2025 年が令和 7 年人口動態統計(確定数)の都道府県別の出生数。</desc>
   <defs>
@@ -65,6 +65,6 @@
   <circle cx="224.0" cy="346" r="4" fill="#7a8490"/>
   <path d="M218.0,346 H184.7" stroke="#2b5c8a" stroke-width="2.5" marker-end="url(#a)"/>
   <text x="234.0" y="351" class="s">−40%</text>
-  <text x="16" y="392" class="src">2025 年の出生数が多い 10 都道府県</text>
-  <text x="16" y="410" class="src">出典 厚生労働省「人口動態統計」</text>
+  <text x="16" y="408" class="src">2025 年の出生数が多い 10 都道府県</text>
+  <text x="16" y="426" class="src">出典 厚生労働省「人口動態統計」</text>
 </svg>

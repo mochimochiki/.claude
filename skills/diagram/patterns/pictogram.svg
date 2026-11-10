@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 392" width="640" height="392" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
-  <rect x="0" y="0" width="640" height="392" fill="#f5f6f4"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 404" width="640" height="404" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+  <rect x="0" y="0" width="640" height="404" fill="#f5f6f4"/>
   <title>日本の人口の 10 人に 3 人が 65 歳以上</title>
-  <desc>総人口に占める 65 歳以上の割合を、人の記号 100 個で示す絵グラフ。記号 1 つが総人口の 1% に当たり、29.6% を四捨五入した 30 個を青く塗り、残る 70 個を薄い灰色にして後ろに下げる。塗った記号は左の 3 列にまとめ、数えやすくする。記号の上に「65 歳以上」「65 歳未満」と直接書き、凡例は置かない。右に 29.6% と 3624 万人を添える。2026 年 9 月 15 日現在の推計で、出典は総務省統計局「統計からみた我が国の高齢者」(統計トピックス No.149)。</desc>
+  <desc>総人口に占める 65 歳以上の割合を、人の記号 100 個で示す絵グラフ。記号 1 つが総人口の 1% に当たり、29.6% を四捨五入した 30 個を青く塗り、残る 70 個を薄い灰色にして後ろに下げる。塗った記号は左の 3 列にまとめ、数えやすくする。記号の上に「65 歳以上」「65 歳未満」と直接書き、凡例は置かず、出典の上に小さく「記号 1 つ = 総人口の 1%」と書く。右に 29.6% と 3624 万人を添える。2026 年 9 月 15 日現在の推計で、出典は総務省統計局「統計からみた我が国の高齢者」(統計トピックス No.149)。</desc>
   <defs>
     <symbol id="person" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4" fill="currentColor"/><path d="M4,21 C4,15.5 7.5,13 12,13 C16.5,13 20,15.5 20,21 Z" fill="currentColor"/></symbol>
   </defs>
@@ -120,5 +120,6 @@
   <text x="312" y="168" font-size="56" font-weight="700" fill="#2b5c8a">29.6<tspan font-size="32">%</tspan></text>
   <text x="316" y="198" class="t">3624 万人</text>
   <text x="316" y="220" class="s">2026 年 9 月 15 日現在</text>
-  <text x="16" y="378" class="src">出典 総務省統計局 統計からみた我が国の高齢者</text>
+  <text x="16" y="372" class="src">記号 1 つ = 総人口の 1%</text>
+  <text x="16" y="390" class="src">出典 総務省統計局 統計からみた我が国の高齢者</text>
 </svg>

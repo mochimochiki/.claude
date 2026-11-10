@@ -136,6 +136,106 @@ def collect(root):
     return parents
 
 
+def text_box(el, rules, parents):
+    """文字の外接矩形を字の大きさと字数から見積もる。"""
+    size = num(re.sub(r"px$", "", resolve(el, "font-size", rules, parents) or "16"), 16)
+    label = "".join(el.itertext())
+    width = sum(size * (0.3 if c == " " else 1.0 if ord(c) > 0x2E7F else 0.6) for c in label)
+    x, y = num(el.get("x")), num(el.get("y"))
+    anchor = resolve(el, "text-anchor", rules, parents) or "start"
+    if anchor == "middle":
+        x -= width / 2
+    elif anchor == "end":
+        x -= width
+    return x, y - size * 0.8, width, size * 0.95, label.strip()
+
+
+def data_segments(el, rules, parents):
+    """太さ 1.5 以上の線(データの線と軸)を線分の列にする。細い罫線や目盛りの線は除く。"""
+    tag = el.tag.replace(NS, "")
+    if tag not in ("polyline", "path", "line"):
+        return []
+    stroke = resolve(el, "stroke", rules, parents)
+    if not stroke or stroke == "none" or num(resolve(el, "stroke-width", rules, parents) or "1") < 1.5:
+        return []
+    if tag == "line":
+        pts = [(num(el.get("x1")), num(el.get("y1"))), (num(el.get("x2")), num(el.get("y2")))]
+    elif tag == "polyline":
+        nums = [float(n) for n in re.findall(r"-?[\d.]+", el.get("points") or "")]
+        pts = list(zip(nums[0::2], nums[1::2]))
+    else:
+        d = el.get("d") or ""
+        if re.search(r"[CcQqSsTtAaZz]", d):
+            return []
+        pts, cx, cy = [], 0.0, 0.0
+        for cmd, arg in re.findall(r"([MLHVmlhv])([^MLHVmlhv]*)", d):
+            a = [float(n) for n in re.findall(r"-?[\d.]+", arg)]
+            rel = cmd.islower()
+            if cmd in "Hh":
+                cx = cx + a[0] if rel else a[0]
+            elif cmd in "Vv":
+                cy = cy + a[0] if rel else a[0]
+            else:
+                cx, cy = (cx + a[0], cy + a[1]) if rel else (a[0], a[1])
+            if cmd in "Mm" and pts:
+                pts.append(None)
+            pts.append((cx, cy))
+    segs = []
+    for a, b in zip(pts, pts[1:]):
+        if a and b:
+            segs.append((a, b))
+    return segs
+
+
+def seg_hits_box(seg, box):
+    (x1, y1), (x2, y2) = seg
+    bx, by, bw, bh = box
+    for i in range(21):
+        t = i / 20
+        x, y = x1 + (x2 - x1) * t, y1 + (y2 - y1) * t
+        if bx < x < bx + bw and by < y < by + bh:
+            return True
+    return False
+
+
+def overlaps(root, rules, parents):
+    """文字どうし、文字と記号、文字とデータの線の重なりを見つける。
+    線と文字のあいだに塗りの図形(文字の下に敷いた矩形など)があるときは、線が隠れるので重なりとしない。"""
+    skip = lambda el: any(a.tag in (NS + "defs", NS + "symbol", NS + "marker", NS + "clipPath") for a in parents.get(el, []))
+    order = {el: i for i, el in enumerate(root.iter())}
+    texts = [(order[el], text_box(el, rules, parents)) for el in root.iter(NS + "text") if not skip(el)]
+    segs = [(order[el], s) for el in root.iter() if not skip(el) for s in data_segments(el, rules, parents)]
+    fills = []
+    for el in root.iter():
+        box = shape_box(el)
+        fill = resolve(el, "fill", rules, parents)
+        if box and not skip(el) and fill and fill != "none":
+            fills.append((order[el], box))
+    icons = [(num(el.get("x")), num(el.get("y")), num(el.get("width")), num(el.get("height")))
+             for el in root.iter(NS + "use") if not skip(el)]
+    found = []
+    for i, (oa, a) in enumerate(texts):
+        for ix, iy, iw, ih in icons:
+            if a[0] < ix + iw and ix < a[0] + a[2] and a[1] < iy + ih and iy < a[1] + a[3]:
+                found.append(f"文字が記号に重なる「{a[4][:12]}」")
+                break
+        for ob, b in texts[i + 1:]:
+            if a[0] < b[0] + b[2] - 1 and b[0] < a[0] + a[2] - 1 and a[1] < b[1] + b[3] - 1 and b[1] < a[1] + a[3] - 1:
+                found.append(f"文字が重なる「{a[4][:12]}」と「{b[4][:12]}」")
+        cx, cy = a[0] + a[2] / 2, a[1] + a[3] / 2
+        for ol, seg in segs:
+            if not seg_hits_box(seg, a[:4]):
+                continue
+            (x1, y1), (x2, y2) = seg
+            if y1 == y2 and a[0] - 6 <= min(x1, x2) and max(x1, x2) <= a[0] + a[2] + 6:
+                continue  # 文字に合わせて引いた取り消し線
+            hidden = any(ol < of < oa and fx <= cx <= fx + fw and fy <= cy <= fy + fh for of, (fx, fy, fw, fh) in fills)
+            if not hidden:
+                found.append(f"文字が線に重なる「{a[4][:12]}」")
+                break
+    return found
+
+
 def check(svg_path):
     tree = ET.parse(svg_path)
     root = tree.getroot()
@@ -156,6 +256,7 @@ def check(svg_path):
     long_labels = [t for t in texts if len(t) > 25]
     for t in long_labels:
         problems.append(f"1 行が長い({len(t)} 字)「{t[:20]}…」")
+    problems += overlaps(root, rules, parents)
     stats = f"字数 {chars} 字・ラベル {len(texts)} 個"
     rects = []
     order = 0
@@ -250,7 +351,7 @@ def main():
         for p in problems:
             print("  NG", p)
         if not problems:
-            print("  OK コントラストと背景")
+            print("  OK コントラスト・背景・字数・重なり")
         failed |= bool(problems)
         if args.png:
             out = Path(args.out) if args.out else Path(svg).parent
