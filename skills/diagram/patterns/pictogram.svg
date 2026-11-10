@@ -117,7 +117,7 @@
   <use href="#person" x="250" y="326" width="24" height="24" color="#c9ced5"/>
   <text x="16" y="80" class="p">65 歳以上</text>
   <text x="94" y="80" class="s">65 歳未満</text>
-  <text x="312" y="168" font-size="56" font-weight="700" fill="#2b5c8a">29.6%</text>
+  <text x="312" y="168" font-size="56" font-weight="700" fill="#2b5c8a">29.6<tspan font-size="32">%</tspan></text>
   <text x="316" y="198" class="t">3624 万人</text>
   <text x="316" y="220" class="s">2026 年 9 月 15 日現在</text>
   <text x="16" y="378" class="src">出典 総務省統計局 統計からみた我が国の高齢者</text>

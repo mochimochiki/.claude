@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 336" width="640" height="336" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
   <rect x="0" y="0" width="640" height="336" fill="#f5f6f4"/>
   <title>65 歳以上の割合は、女性が 6 ポイント高い</title>
-  <desc>2026 年 9 月 15 日現在の年齢 3 区分別人口の割合を、男女計・男性・女性の 3 本の帯グラフで示す。65 歳以上を左端にそろえて青で塗り、15～64 歳と 15 歳未満は灰色にする。帯と帯のあいだに、65 歳以上の右端を結ぶ補助線を引く。65 歳以上は男女計 29.6%、男性 26.3%、女性 32.6% で、女性が男性より 6.3 ポイント高い。出典は総務省統計局「統計からみた我が国の高齢者」(統計トピックス No.149)の表 1。</desc>
+  <desc>2026 年 9 月 15 日現在の年齢 3 区分別人口の割合を、男女計・男性・女性の 3 本の帯グラフで示す。65 歳以上を左端にそろえて青で塗り、15～64 歳と 15 歳未満は灰色にする。男性と女性の 65 歳以上の右端を橙の線で結び、差の 6.3 ポイントを書く。65 歳以上は男女計 29.6%、男性 26.3%、女性 32.6% で、女性が男性より 6.3 ポイント高い。出典は総務省統計局「統計からみた我が国の高齢者」(統計トピックス No.149)の表 1。</desc>
   <style>
     .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
     .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
@@ -29,7 +29,6 @@
   <text x="106" y="192.0" font-size="16" font-weight="700" fill="#ffffff">26.3%</text>
   <text x="242.8" y="192.0" class="t">62.4%</text>
   <text x="586.6" y="192.0" class="s" text-anchor="middle">11.3%</text>
-  <path d="M249.9,140 L232.8,168" stroke="#4a5563" stroke-width="1" stroke-dasharray="3 3"/>
   <text x="84" y="256.0" class="h" text-anchor="end">女性</text>
   <rect x="96" y="232" width="168.5" height="36" fill="#2b5c8a"/>
   <rect x="266.5" y="232" width="295.4" height="36" fill="#c9ced5"/>
@@ -37,7 +36,8 @@
   <text x="106" y="256.0" font-size="16" font-weight="700" fill="#ffffff">32.6%</text>
   <text x="275.5" y="256.0" class="t">57.2%</text>
   <text x="589.5" y="256.0" class="s" text-anchor="middle">10.2%</text>
-  <path d="M232.8,204 L265.5,232" stroke="#4a5563" stroke-width="1" stroke-dasharray="3 3"/>
+  <path d="M232.8,208.0 V216.0 H265.5 V228.0" fill="none" stroke="#b35a1f" stroke-width="1.5"/>
+  <text x="273.5" y="224.0" class="o">6.3 ポイント</text>
   <text x="16" y="302" class="src">2026 年 9 月 15 日現在</text>
   <text x="16" y="320" class="src">出典 総務省統計局 統計からみた我が国の高齢者</text>
 </svg>
