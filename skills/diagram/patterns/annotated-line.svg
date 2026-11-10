@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 408" width="640" height="408" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+  <rect x="0" y="0" width="640" height="408" fill="#f5f6f4"/>
+  <title>出生数は 10 年続けて減り、67 万人になった</title>
+  <desc>1947 年から 2025 年までの出生数の折れ線グラフ。縦軸は 0 から 300 万人。2015 年から 2025 年までの 10 年続けて減った区間を青い太線で、それより前を灰色の細線で描く。注釈は 3 つで、最多の 1949 年(269.7 万人)、ひのえうまで前年より 25% 減った 1966 年(136.1 万人)、最新の 2025 年(67.1 万人)。1972 年までは沖縄県を含まない。出典は厚生労働省「令和 7(2025)年人口動態統計(確定数)の概況」第 2 表。</desc>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .t { font-size: 16px; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .p { font-size: 14px; font-weight: 700; fill: #2b5c8a; }
+    .o { font-size: 14px; font-weight: 700; fill: #9a4a14; }
+    .src { font-size: 12px; fill: #4a5563; }
+  </style>
+  <text x="16" y="40" class="title">出生数は 10 年続けて減り、67 万人になった</text>
+  <path d="M64,336.0 H600" stroke="#dfe2e6" stroke-width="1"/>
+  <text x="58" y="341.0" class="s" text-anchor="end">0</text>
+  <path d="M64,248.0 H600" stroke="#dfe2e6" stroke-width="1"/>
+  <text x="58" y="253.0" class="s" text-anchor="end">100 万</text>
+  <path d="M64,160.0 H600" stroke="#dfe2e6" stroke-width="1"/>
+  <text x="58" y="165.0" class="s" text-anchor="end">200 万</text>
+  <path d="M64,72.0 H600" stroke="#dfe2e6" stroke-width="1"/>
+  <text x="58" y="77.0" class="s" text-anchor="end">300 万</text>
+  <path d="M64,336 H600" stroke="#4a5563" stroke-width="1.5"/>
+  <text x="84.6" y="356" class="s" text-anchor="middle">1950</text>
+  <text x="256.4" y="356" class="s" text-anchor="middle">1975</text>
+  <text x="428.2" y="356" class="s" text-anchor="middle">2000</text>
+  <text x="600.0" y="356" class="s" text-anchor="middle">2025</text>
+  <polyline points="64.0,100.3 70.9,100.0 77.7,98.7 84.6,130.3 91.5,147.9 98.4,159.5 105.2,171.6 112.1,180.3 119.0,183.7 125.8,189.5 132.7,198.1 139.6,190.5 146.5,192.9 153.3,194.7 160.2,196.1 167.1,193.6 173.9,190.0 180.8,184.9 187.7,175.5 194.6,216.2 201.4,165.7 208.3,171.3 215.2,169.7 222.1,165.8 228.9,159.9 235.8,156.6 242.7,151.9 249.5,157.4 256.4,168.7 263.3,174.7 270.2,181.6 277.0,185.6 283.9,191.5 290.8,197.2 297.6,201.4 304.5,202.6 311.4,203.2 318.3,204.9 325.1,210.0 332.0,214.3 338.9,217.5 345.7,220.4 352.6,226.3 359.5,228.5 366.4,228.4 373.2,229.6 380.1,231.4 387.0,227.0 393.8,231.5 400.7,229.8 407.6,231.1 414.5,230.1 421.3,232.4 428.2,231.2 435.1,233.0 441.9,234.5 448.8,237.1 455.7,238.3 462.6,242.5 469.4,239.8 476.3,240.1 483.2,240.0 490.1,241.8 496.9,241.7 503.8,243.5 510.7,244.7 517.5,245.4 524.4,247.7 531.3,247.5" fill="none" stroke="#7a8490" stroke-width="2" stroke-linejoin="round"/>
+  <polyline points="531.3,247.5 538.2,250.0 545.0,252.7 551.9,255.2 558.8,259.9 565.6,262.0 572.5,264.6 579.4,268.2 586.3,272.0 593.1,275.6 600.0,276.9" fill="none" stroke="#2b5c8a" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="77.7" cy="98.7" r="4" fill="#4a5563"/>
+  <text x="87.7" y="90.7" class="s">1949 年 最多の 269.7 万人</text>
+  <circle cx="194.6" cy="216.2" r="4" fill="#4a5563"/>
+  <path d="M194.6,222.2 V262.2" stroke="#4a5563" stroke-width="1"/>
+  <text x="188.6" y="280.2" class="s">1966 年 ひのえうま</text>
+  <text x="188.6" y="300.2" class="s">前年より 25% 減った</text>
+  <circle cx="600.0" cy="276.9" r="5" fill="#2b5c8a"/>
+  <text x="600.0" y="306.9" class="p" text-anchor="end">2025 年 67.1 万人</text>
+  <text x="16" y="380" class="src">1972 年までは沖縄県を含まない</text>
+  <text x="16" y="396" class="src">出典 厚生労働省「人口動態統計」2025 年</text>
+</svg>
