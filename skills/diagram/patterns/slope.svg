@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+  <rect x="0" y="0" width="640" height="400" fill="#f5f6f4"/>
+  <title>35 年で、死亡数と出生数の多さが入れ替わった</title>
+  <desc>1990 年と 2025 年の出生数・死亡数・婚姻件数を、2 つの時点を線で結ぶ slope chart で示す。死亡数は 82.0 万人から 159.0 万人に増え(橙)、出生数は 122.2 万人から 67.1 万人に減った(青)。2 本の線が交わり、多さが入れ替わったことを示す。婚姻件数は 72.2 万組から 48.9 万組に減り、灰色で後ろに下げる。縦軸は 0 から始めず、40 万から 170 万の範囲で描く。出典は厚生労働省「令和 7(2025)年人口動態統計(確定数)の概況」の第 2 表と第 4 表。</desc>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .t { font-size: 16px; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .p { font-size: 14px; font-weight: 700; fill: #2b5c8a; }
+    .o { font-size: 14px; font-weight: 700; fill: #9a4a14; }
+    .src { font-size: 12px; fill: #4a5563; }
+  </style>
+  <text x="16" y="40" class="title">35 年で、死亡数と出生数の多さが入れ替わった</text>
+  <text x="232" y="80" class="h" text-anchor="middle">1990 年</text>
+  <text x="408" y="80" class="h" text-anchor="middle">2025 年</text>
+  <path d="M232,92 V340 M408,92 V340" stroke="#dfe2e6" stroke-width="1.5"/>
+  <path d="M232,276.6 L408,319.6" stroke="#7a8490" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="232" cy="276.6" r="5" fill="#7a8490"/>
+  <circle cx="408" cy="319.6" r="5" fill="#7a8490"/>
+  <text x="218" y="281.6" class="s" text-anchor="end">婚姻件数 72.2 万組</text>
+  <text x="422" y="324.6" class="s">48.9 万組</text>
+  <path d="M232,184.2 L408,286.0" stroke="#2b5c8a" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="232" cy="184.2" r="5" fill="#2b5c8a"/>
+  <circle cx="408" cy="286.0" r="5" fill="#2b5c8a"/>
+  <text x="218" y="189.2" class="p" text-anchor="end">出生数 122.2 万人</text>
+  <text x="422" y="291.0" class="p">67.1 万人</text>
+  <path d="M232,258.5 L408,116.3" stroke="#b35a1f" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="232" cy="258.5" r="5" fill="#b35a1f"/>
+  <circle cx="408" cy="116.3" r="5" fill="#b35a1f"/>
+  <text x="218" y="263.5" class="o" text-anchor="end">死亡数 82.0 万人</text>
+  <text x="422" y="121.3" class="o">159.0 万人</text>
+  <text x="16" y="384" class="src">出典 厚生労働省「人口動態統計」2025 年</text>
+</svg>
