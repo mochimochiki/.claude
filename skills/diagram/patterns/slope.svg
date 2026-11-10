@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 352" width="640" height="352" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
-  <rect x="0" y="0" width="640" height="352" fill="#f5f6f4"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 336" width="640" height="336" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+  <rect x="0" y="0" width="640" height="336" fill="#f5f6f4"/>
   <title>35 年で、死亡数と出生数の多さが入れ替わった</title>
   <desc>1990 年と 2025 年の出生数と死亡数を、2 つの時点を線で結ぶ slope chart で示す。死亡数は 82.0 万人から 159.0 万人に増え(橙)、出生数は 122.2 万人から 67.1 万人に減った(青)。2 本の線が交わり、多さが入れ替わったことを示す。線の交点は 2 つの時点を結んだ結果で、実際に入れ替わった年を表さない。縦軸は 0 から始めず、60 万から 160 万の範囲で描く。出典は厚生労働省「令和 7(2025)年人口動態統計(確定数)の概況」の第 2 表。</desc>
   <style>
@@ -7,23 +7,24 @@
     .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
     .t { font-size: 16px; fill: #1e2733; }
     .s { font-size: 14px; fill: #4a5563; }
+    .hp { font-size: 16px; font-weight: 700; fill: #2b5c8a; }
     .p { font-size: 14px; font-weight: 700; fill: #2b5c8a; }
     .o { font-size: 14px; font-weight: 700; fill: #9a4a14; }
     .src { font-size: 12px; fill: #4a5563; }
   </style>
   <text x="16" y="40" class="title">35 年で、死亡数と出生数の多さが入れ替わった</text>
-  <text x="232" y="80" class="h" text-anchor="middle">1990 年</text>
-  <text x="408" y="80" class="h" text-anchor="middle">2025 年</text>
-  <path d="M232,100 V300 M408,100 V300" stroke="#dfe2e6" stroke-width="1.5"/>
-  <path d="M232,176.6 L408,282.4" stroke="#2b5c8a" stroke-width="4" stroke-linecap="round"/>
-  <circle cx="232" cy="176.6" r="5" fill="#2b5c8a"/>
-  <circle cx="408" cy="282.4" r="5" fill="#2b5c8a"/>
-  <text x="218" y="181.6" class="p" text-anchor="end">出生数 122.2 万人</text>
-  <text x="422" y="287.4" class="p">67.1 万人</text>
-  <path d="M232,253.8 L408,105.9" stroke="#b35a1f" stroke-width="4" stroke-linecap="round"/>
-  <circle cx="232" cy="253.8" r="5" fill="#b35a1f"/>
-  <circle cx="408" cy="105.9" r="5" fill="#b35a1f"/>
-  <text x="218" y="258.8" class="o" text-anchor="end">死亡数 82.0 万人</text>
-  <text x="422" y="110.9" class="o">159.0 万人</text>
-  <text x="16" y="336" class="src">出典 厚生労働省「人口動態統計」2025 年</text>
+  <text x="144" y="80" class="h" text-anchor="middle">1990 年</text>
+  <text x="512" y="80" class="h" text-anchor="middle">2025 年</text>
+  <path d="M144,96 V287.5 M512,96 V287.5" stroke="#dfe2e6" stroke-width="1.5"/>
+  <path d="M144,178.5 L512,275.5" stroke="#2b5c8a" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="144" cy="178.5" r="5" fill="#2b5c8a"/>
+  <circle cx="512" cy="275.5" r="5" fill="#2b5c8a"/>
+  <text x="130" y="183.5" class="p" text-anchor="end">出生数 122.2 万人</text>
+  <text x="526" y="280.5" class="p">67.1 万人</text>
+  <path d="M144,249.3 L512,113.8" stroke="#b35a1f" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="144" cy="249.3" r="5" fill="#b35a1f"/>
+  <circle cx="512" cy="113.8" r="5" fill="#b35a1f"/>
+  <text x="130" y="254.3" class="o" text-anchor="end">死亡数 82.0 万人</text>
+  <text x="526" y="118.8" class="o">159.0 万人</text>
+  <text x="16" y="320" class="src">出典 厚生労働省「人口動態統計」2025 年</text>
 </svg>
