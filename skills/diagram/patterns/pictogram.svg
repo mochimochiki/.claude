@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 413" width="640" height="413" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
+  <rect x="0" y="0" width="640" height="413" fill="#f5f6f4"/>
+  <title>日本の人口の 10 人に 3 人が 65 歳以上</title>
+  <desc>総人口に占める 65 歳以上の割合を、人の記号 100 個で示す絵グラフ。記号 1 つが総人口の 1% に当たり、29.6% を四捨五入した 30 個を青く塗り、残る 70 個を薄い灰色にして後ろに下げる。塗った記号は左の 3 列にまとめ、数えやすくする。記号の上に「65 歳以上」「65 歳未満」と直接書き、凡例は置かず、出典の上に小さく「記号 1 つ = 総人口の 1%」と書く。右に 29.6% と 3624 万人を添える。2026 年 9 月 15 日現在の推計で、出典は総務省統計局「統計からみた我が国の高齢者」(統計トピックス No.149)。</desc>
+  <defs>
+    <symbol id="person" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4" fill="currentColor"/><path d="M4,21 C4,15.5 7.5,13 12,13 C16.5,13 20,15.5 20,21 Z" fill="currentColor"/></symbol>
+  </defs>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .t { font-size: 16px; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .hp { font-size: 16px; font-weight: 700; fill: #2b5c8a; }
+    .p { font-size: 14px; font-weight: 700; fill: #2b5c8a; }
+    .o { font-size: 14px; font-weight: 700; fill: #9a4a14; }
+    .d { font-size: 14px; fill: #1e2733; }
+    .b { font-size: 14px; font-weight: 700; fill: #1e2733; }
+    .src { font-size: 12px; fill: #4a5563; }
+    .halo { paint-order: stroke; stroke: #f5f6f4; stroke-width: 6px; stroke-linejoin: round; }
+  </style>
+  <text x="16" y="40" class="title">日本の人口の 10 人に 3 人が 65 歳以上</text>
+  <use href="#person" x="12" y="92" width="24" height="24" color="#2b5c8a"/>
+  <use href="#person" x="12" y="118" width="24" height="24" color="#2b5c8a"/>
+  <use href="#person" x="12" y="144" width="24" height="24" color="#2b5c8a"/>
+  <use href="#person" x="12" y="170" width="24" height="24" color="#2b5c8a"/>
+  <use href="#person" x="12" y="196" width="24" height="24" color="#2b5c8a"/>
+  <use href="#person" x="12" y="222" width="24" height="24" color="#2b5c8a"/>
+  <use href="#person" x="12" y="248" width="24" height="24" color="#2b5c8a"/>
+  <use href="#person" x="12" y="274" width="24" height="24" color="#2b5c8a"/>
+  <use href="#person" x="12" y="300" width="24" height="24" color="#2b5c8a"/>
+  <use href="#person" x="12" y="326" width="24" height="24" color="#2b5c8a"/>
+  <use href="#person" x="38" y="92" width="24" height="24" color="#2b5c8a"/>
+  <use href="#person" x="38" y="118" width="24" height="24" color="#2b5c8a"/>
+  <use href="#person" x="38" y="144" width="24" height="24" color="#2b5c8a"/>
+  <use href="#person" x="38" y="170" width="24" height="24" color="#2b5c8a"/>
+  <use href="#person" x="38" y="196" width="24" height="24" color="#2b5c8a"/>
+  <use href="#person" x="38" y="222" width="24" height="24" color="#2b5c8a"/>
+  <use href="#person" x="38" y="248" width="24" height="24" color="#2b5c8a"/>
+  <use href="#person" x="38" y="274" width="24" height="24" color="#2b5c8a"/>
+  <use href="#person" x="38" y="300" width="24" height="24" color="#2b5c8a"/>
+  <use href="#person" x="38" y="326" width="24" height="24" color="#2b5c8a"/>
+  <use href="#person" x="64" y="92" width="24" height="24" color="#2b5c8a"/>
+  <use href="#person" x="64" y="118" width="24" height="24" color="#2b5c8a"/>
+  <use href="#person" x="64" y="144" width="24" height="24" color="#2b5c8a"/>
+  <use href="#person" x="64" y="170" width="24" height="24" color="#2b5c8a"/>
+  <use href="#person" x="64" y="196" width="24" height="24" color="#2b5c8a"/>
+  <use href="#person" x="64" y="222" width="24" height="24" color="#2b5c8a"/>
+  <use href="#person" x="64" y="248" width="24" height="24" color="#2b5c8a"/>
+  <use href="#person" x="64" y="274" width="24" height="24" color="#2b5c8a"/>
+  <use href="#person" x="64" y="300" width="24" height="24" color="#2b5c8a"/>
+  <use href="#person" x="64" y="326" width="24" height="24" color="#2b5c8a"/>
+  <use href="#person" x="90" y="92" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="90" y="118" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="90" y="144" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="90" y="170" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="90" y="196" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="90" y="222" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="90" y="248" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="90" y="274" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="90" y="300" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="90" y="326" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="116" y="92" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="116" y="118" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="116" y="144" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="116" y="170" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="116" y="196" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="116" y="222" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="116" y="248" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="116" y="274" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="116" y="300" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="116" y="326" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="142" y="92" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="142" y="118" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="142" y="144" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="142" y="170" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="142" y="196" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="142" y="222" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="142" y="248" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="142" y="274" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="142" y="300" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="142" y="326" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="168" y="92" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="168" y="118" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="168" y="144" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="168" y="170" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="168" y="196" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="168" y="222" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="168" y="248" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="168" y="274" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="168" y="300" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="168" y="326" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="194" y="92" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="194" y="118" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="194" y="144" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="194" y="170" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="194" y="196" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="194" y="222" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="194" y="248" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="194" y="274" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="194" y="300" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="194" y="326" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="220" y="92" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="220" y="118" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="220" y="144" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="220" y="170" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="220" y="196" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="220" y="222" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="220" y="248" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="220" y="274" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="220" y="300" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="220" y="326" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="246" y="92" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="246" y="118" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="246" y="144" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="246" y="170" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="246" y="196" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="246" y="222" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="246" y="248" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="246" y="274" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="246" y="300" width="24" height="24" color="#c9ced5"/>
+  <use href="#person" x="246" y="326" width="24" height="24" color="#c9ced5"/>
+  <text x="16" y="80" class="p">65 歳以上</text>
+  <text x="94" y="80" class="s">65 歳未満</text>
+  <text x="316" y="206" font-size="56" font-weight="700" fill="#2b5c8a">29.6<tspan font-size="32">%</tspan></text>
+  <text x="320" y="238" class="t">3624 万人</text>
+  <text x="320" y="260" class="s">2026 年 9 月 15 日現在</text>
+  <text x="16" y="379" class="src">記号 1 つ = 総人口の 1%</text>
+  <text x="16" y="397" class="src">出典 総務省統計局「統計からみた我が国の高齢者」</text>
+</svg>

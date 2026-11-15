@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 560" width="640" height="560" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 560" width="640" height="560" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
   <title>AI が書いたコードは隔離して実行する</title>
   <desc>構成と境界の作例。AnswerScout が利用者の PC で動く範囲を示す。入力データはランナーに取り込まれ、ランナーが Copilot CLI に依頼を渡す。Copilot CLI は読んだ内容を PC の外の推論サーバーへ送り、作業フォルダに書き込み、ランチャーを起動する。書き込めるのは作業フォルダだけである。ランチャーは AI が書いたコードを AppContainer の中で実行する。AppContainer は OS が隔離し、通信できない。</desc>
   <defs>

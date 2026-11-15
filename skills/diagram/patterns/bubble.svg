@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 450" width="640" height="450" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
+  <rect x="0" y="0" width="640" height="450" fill="#f5f6f4"/>
+  <title>利益率も成長率も高いのは、事業 C だけ</title>
+  <desc>架空の会社の 5 つの事業を、横軸に営業利益率(0〜16%)、縦軸に売上高の伸び率(−4〜16%)、円の面積に売上高をとったバブルチャートで示す。事業 C(利益率 14%、伸び率 12%、売上高 180 億円)だけを主の色にし、ほかは灰色にする。円の面積を売上高に比例させ、半径には比例させない。数値は架空。</desc>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .t { font-size: 16px; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .hp { font-size: 16px; font-weight: 700; fill: #2b5c8a; }
+    .p { font-size: 14px; font-weight: 700; fill: #2b5c8a; }
+    .o { font-size: 14px; font-weight: 700; fill: #9a4a14; }
+    .d { font-size: 14px; fill: #1e2733; }
+    .b { font-size: 14px; font-weight: 700; fill: #1e2733; }
+    .src { font-size: 12px; fill: #4a5563; }
+    .halo { paint-order: stroke; stroke: #f5f6f4; stroke-width: 6px; stroke-linejoin: round; }
+  </style>
+  <text x="16" y="40" class="title">利益率も成長率も高いのは、事業 C だけ</text>
+  <text x="16" y="80" class="s">売上高の伸び率</text>
+  <path d="M64,344.0 H600" stroke="#dfe2e6" stroke-width="1"/>
+  <text x="56" y="349.0" class="s" text-anchor="end">−4%</text>
+  <path d="M64,296.0 H600" stroke="#4a5563" stroke-width="1.5"/>
+  <text x="56" y="301.0" class="s" text-anchor="end">0%</text>
+  <path d="M64,248.0 H600" stroke="#dfe2e6" stroke-width="1"/>
+  <text x="56" y="253.0" class="s" text-anchor="end">4%</text>
+  <path d="M64,200.0 H600" stroke="#dfe2e6" stroke-width="1"/>
+  <text x="56" y="205.0" class="s" text-anchor="end">8%</text>
+  <path d="M64,152.0 H600" stroke="#dfe2e6" stroke-width="1"/>
+  <text x="56" y="157.0" class="s" text-anchor="end">12%</text>
+  <path d="M64,104.0 H600" stroke="#dfe2e6" stroke-width="1"/>
+  <text x="56" y="109.0" class="s" text-anchor="end">16%</text>
+  <text x="64.0" y="364" class="s" text-anchor="middle">0%</text>
+  <text x="198.0" y="364" class="s" text-anchor="middle">4%</text>
+  <text x="332.0" y="364" class="s" text-anchor="middle">8%</text>
+  <text x="466.0" y="364" class="s" text-anchor="middle">12%</text>
+  <text x="600.0" y="364" class="s" text-anchor="middle">16%</text>
+  <text x="600" y="384" class="s" text-anchor="end">営業利益率</text>
+  <circle cx="265.0" cy="272.0" r="44.0" fill="#c9ced5" stroke="#f5f6f4" stroke-width="2"/>
+  <circle cx="164.5" cy="308.0" r="34.6" fill="#c9ced5" stroke="#f5f6f4" stroke-width="2"/>
+  <circle cx="533.0" cy="152.0" r="28.8" fill="#2b5c8a" stroke="#f5f6f4" stroke-width="2"/>
+  <circle cx="365.5" cy="260.0" r="20.4" fill="#c9ced5" stroke="#f5f6f4" stroke-width="2"/>
+  <circle cx="131.0" cy="212.0" r="16.6" fill="#c9ced5" stroke="#f5f6f4" stroke-width="2"/>
+  <text x="265.0" y="278.0" class="t" text-anchor="middle">事業 A</text>
+  <text x="123.9" y="316.0" class="t" text-anchor="end">事業 B</text>
+  <text x="567.8" y="157.0" class="hp halo">事業 C</text>
+  <text x="391.9" y="265.0" class="t halo">事業 D</text>
+  <text x="153.6" y="217.0" class="t halo">事業 E</text>
+  <text x="16" y="416" class="src">円の面積 = 売上高</text>
+  <text x="16" y="434" class="src">数値は架空</text>
+</svg>

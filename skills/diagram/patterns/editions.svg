@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 392" width="640" height="392" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 392" width="640" height="392" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
   <title>上位プランを選ぶ理由を、1 段ごとに 1 つ足す</title>
   <desc>エディション構成の作例。経費精算クラウドを、スタンダード・ビジネス・エンタープライズの 3 つのプランに分ける。上位プランは下位プランの機能をすべて含み、1 段上がるごとに上位を選ぶ理由になる機能を 1 つ足す。スタンダードは少人数で使う会社向けで、領収書の読み取りを提供する。ビジネスは部門で使う会社向けで、多段階承認を足す。エンタープライズは全社で使う会社向けで、シングルサインオンを足す。月額の価格は空欄の枠にしてある。</desc>
   <defs>

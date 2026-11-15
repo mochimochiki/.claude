@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" width="640" height="440" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" width="640" height="440" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
   <rect x="0" y="0" width="640" height="440" fill="#f5f6f4"/>
   <title>申請額は明細の合計で、直接は入力できない</title>
   <desc>アナトミー図の作例。経費精算システムの「経費の申請」画面を単純化して描き、5 か所に引き出し線で注記する。状態の表示は、下書きのあいだは本人だけが見られることを示す。明細は領収書 1 枚につき 1 行で、領収書の画像は明細ごとに添付する。申請額は明細の金額から自動で計算され、直接は入力できない。「申請する」をクリックすると、申請が承認者に届く。注記のうち申請額だけを主の色で強調する。金額は灰色の帯で伏せ、具体的な値は書かない。</desc>

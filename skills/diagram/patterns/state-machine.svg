@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 532" width="640" height="532" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 532" width="640" height="532" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
   <title>注文は出荷前ならキャンセルでき、出荷後はできない</title>
   <desc>UML ステートマシン図の作例。表記は UML 2.5.1 に従う。通販の注文は、作られると受付済みから始まり、受付済み、決済済み、出荷準備中、出荷済み、配達済みの順に状態が移る。出荷前の 3 つの状態を複合状態「出荷前」にまとめ、そこからキャンセル済みへ移れる。決済済みなら返金する。出荷後の状態にはキャンセルの遷移が無く、返品として別の手続きで扱う。開始状態からの遷移には、UML の制約に従いトリガーを書かない。キャンセル済みの entry / は、その状態に入ったときの振る舞いである。出荷後の帯と × の印は UML の記号ではなく注記である。キャンセルできる範囲は一例で、店によって異なる。</desc>
   <defs>

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 500" width="640" height="500" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 500" width="640" height="500" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
   <title>手前の層のキャッシュで返せるほど、レスポンスが速い</title>
   <desc>レイヤー図にリクエストの経路を重ねた作例。Web のリクエストは、ブラウザのキャッシュ、CDN、アプリのキャッシュ、データベースの順に奥へ進む。線は行きと帰りの経路で、キャッシュがある層で折り返してレスポンスを返す。手前で返すほど経路が短く、レスポンスが速い。ブラウザのキャッシュで返せば通信しない。CDN で返せばオリジンサーバーまでリクエストが届かない。アプリのキャッシュで返せばデータベースに問い合わせない。どこにも無ければデータベースまで届く。キャッシュが新しい(fresh)場合を描き、古くなったキャッシュを条件付きリクエストで再検証する経路は省いた。アプリのキャッシュは HTTP キャッシュ(RFC 9111)ではなく、アプリ側の仕組みである。</desc>
   <defs>

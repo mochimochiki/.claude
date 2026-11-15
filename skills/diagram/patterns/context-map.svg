@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
   <title>「顧客」が指すものは、コンテキストごとに違う</title>
   <desc>コンテキストマップの作例。営業・請求・サポートの 3 つのコンテキストで、同じ「顧客」という語が別のものを指す。営業では見込み客を含む商談中の会社、請求では契約済みの法人で請求書の送り先、サポートでは問い合わせてきた担当者個人を指す。営業は受注のときに請求へ顧客を登録し、請求はサポートに契約情報を共有する。コンテキスト間の関係は Evans の表記にならい、上流を U、下流を D で示す。Customer/Supplier などの関係のパターン名は省いた。</desc>
   <defs>

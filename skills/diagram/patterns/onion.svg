@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 560" width="640" height="560" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 560" width="640" height="560" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
   <title>依存は外側から内側へだけ向ける</title>
   <desc>同心の層で依存の向きを示す作例。クリーンアーキテクチャにならい、受注管理を内側からエンティティ、ユースケース、インターフェースアダプターの 3 層に分ける。Robert C. Martin の原典の 4 つの円のうち、最も外側のフレームワークとドライバーは省いた。原典は円の数を 4 つに限らないとしている。外側の Web API は注文確定のユースケースを呼び出し、ユースケースは注文・在庫のルールを使う。ユースケースは在庫リポジトリのインターフェースを使い、外側の在庫リポジトリ実装がそのインターフェースを実装する。ユースケースは外側の実装を直接呼び出さない。実線の矢印はすべて内側を向く。</desc>
   <defs>

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 744" width="640" height="744" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 744" width="640" height="744" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
   <title>返金の可否は検品で決まり、受付時点では決まらない</title>
   <desc>スイムレーン図の作例で、表記は BPMN 2.0.2 に従う。EC の返品申請から結果の確認までを描く。顧客とショップを別のプールに分け、ショップはサポート窓口・倉庫・経理のレーンに分ける。顧客が返品を申請すると、サポート窓口は返品を受け付けて返送方法を案内する。顧客が商品を返送すると、倉庫が検品し、返品可能かで分岐する。可なら経理が返金処理をし、不可ならサポート窓口が返品不可を連絡する。どちらの場合も顧客は結果を確認して終わる。実線の矢印はプールの中の順序を示すシーケンスフロー、始点に白丸を付けた破線の矢印はプール間のやり取りを示すメッセージフロー。</desc>
   <defs>

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 392" width="640" height="392" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 392" width="640" height="392" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
   <rect x="0" y="0" width="640" height="392" fill="#f5f6f4"/>
   <title>4M で要因を洗い出し、重要要因から検証する</title>
   <desc>特性要因図の作例。基板実装の不良「はんだブリッジ」を特性として右端に置き、人・機械・材料・方法の 4M を大骨にして要因を 2 つずつ挙げる。人は作業者の熟練差とメタルマスクの清掃漏れ、機械はリフロー温度の変動と印刷位置のずれ、材料はペーストの粘度低下と狭ピッチの部品、方法はメタルマスク開口が広いこととスキージ圧が不適切なこと。はんだがパッドの外へはみ出す原因になる 2 つを重要要因として橙で示す。</desc>

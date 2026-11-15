@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 424" width="640" height="424" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 424" width="640" height="424" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
   <rect x="0" y="0" width="640" height="424" fill="#f5f6f4"/>
   <title>手入れが少なく中価格の空白地帯に、新製品を投入する</title>
   <desc>ロボット掃除機のポジショニングマップ。横軸は価格(左が低価格、右が高価格)、縦軸は手入れの手間(上が少ない、下が多い)。競合(灰色)は、自動ゴミ収集の上位機が高価格で手入れが少ない位置、大手の標準機が中価格で手入れが多い位置、低価格の普及機が低価格で手入れが多い位置にある。自社(青)の現行機は中価格で手入れが多く、標準機の近くにある。中価格で手入れが少ない位置は競合のいない空白地帯で、新製品は手入れを減らしてここに投入する。位置は相対的なもので、数値の目盛りは無い。</desc>
