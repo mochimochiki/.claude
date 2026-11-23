@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 764" width="640" height="764" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
+  <title>信頼境界をまたぐ 4 本の流れで脅威を洗い出す</title>
+  <desc>データフロー図(DFD)と信頼境界の作例(架空の経費精算システム)。記号は DeMarco と Yourdon の DFD に従い、外部エンティティを矩形、プロセスを円、データストアを上下 2 本の線、データフローを矢印で描く。データフローのラベルは、DFD の慣例どおり流れるデータの名前(名詞)である。信頼境界は Microsoft Threat Modeling Tool と OWASP の慣例どおり破線で描く。インターネットの申請者が申請内容と画像を送り、社内の 1 のプロセスが受付番号を返して領収書画像を D1 に保存する。2 のプロセスが D1 の画像を外部の OCR サービスへ送り、読み取り結果から金額と日付を D2 に保存する。信頼境界をまたぐ 4 本の流れに番号を付け、それぞれについて STRIDE で検討する脅威を下の一覧に書いた。どの脅威を挙げるかは作例としての一例である。</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4a5563"/>
+    </marker>
+  </defs>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .t { font-size: 14px; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .ent { fill: #fcfcfa; stroke: #1e2733; stroke-width: 1.5; }
+    .proc { fill: #fcfcfa; stroke: #1e2733; stroke-width: 1.5; }
+    .store { stroke: #1e2733; stroke-width: 1.5; }
+    .flow { stroke: #4a5563; stroke-width: 1.8; fill: none; marker-end: url(#a); }
+    .tb { stroke: #b35a1f; stroke-width: 2; stroke-dasharray: 8 5; fill: none; }
+    .badge { fill: #b35a1f; }
+    .bn { font-size: 14px; font-weight: 700; fill: #ffffff; }
+  </style>
+  <rect x="0" y="0" width="640" height="764" fill="#f5f6f4"/>
+
+  <text x="16" y="40" class="title">信頼境界をまたぐ 4 本の流れで脅威を洗い出す</text>
+
+  <!-- 区画 -->
+  <rect x="16" y="60" width="608" height="116" fill="#dfe2e6"/>
+  <rect x="16" y="476" width="608" height="92" fill="#dfe2e6"/>
+  <text x="608" y="88" class="s" text-anchor="end">インターネット</text>
+  <text x="608" y="204" class="s" text-anchor="end">社内ネットワーク</text>
+  <text x="608" y="504" class="s" text-anchor="end">外部サービス</text>
+  <line x1="16" y1="176" x2="624" y2="176" class="tb"/>
+  <line x1="16" y1="476" x2="624" y2="476" class="tb"/>
+
+  <!-- 外部エンティティ -->
+  <rect x="152" y="84" width="96" height="48" class="ent"/>
+  <text x="200" y="114" class="h" text-anchor="middle">申請者</text>
+  <rect x="392" y="504" width="96" height="52" class="ent"/>
+  <text x="440" y="526" class="h" text-anchor="middle">OCR</text>
+  <text x="440" y="546" class="h" text-anchor="middle">サービス</text>
+
+  <!-- プロセス -->
+  <circle cx="200" cy="268" r="52" class="proc"/>
+  <text x="200" y="250" class="s" text-anchor="middle">1</text>
+  <text x="200" y="274" class="h" text-anchor="middle">申請を</text>
+  <text x="200" y="294" class="h" text-anchor="middle">受け付ける</text>
+  <circle cx="440" cy="379" r="52" class="proc"/>
+  <text x="440" y="361" class="s" text-anchor="middle">2</text>
+  <text x="440" y="385" class="h" text-anchor="middle">文字を</text>
+  <text x="440" y="405" class="h" text-anchor="middle">読み取る</text>
+
+  <!-- データストア -->
+  <line x1="140" y1="360" x2="260" y2="360" class="store"/>
+  <line x1="140" y1="398" x2="260" y2="398" class="store"/>
+  <text x="200" y="385" class="h" text-anchor="middle">D1 領収書画像</text>
+  <line x1="380" y1="234" x2="500" y2="234" class="store"/>
+  <line x1="380" y1="272" x2="500" y2="272" class="store"/>
+  <text x="440" y="259" class="h" text-anchor="middle">D2 申請データ</text>
+
+  <!-- データフロー -->
+  <path d="M188,132 V215" class="flow"/>
+  <text x="180" y="204" class="s" text-anchor="end">申請内容と画像</text>
+  <path d="M212,217 V134" class="flow"/>
+  <text x="220" y="204" class="s">受付番号</text>
+  <path d="M200,320 V358" class="flow"/>
+  <text x="208" y="344" class="s">領収書画像</text>
+  <path d="M262,379 H386" class="flow"/>
+  <text x="323" y="370" class="s" text-anchor="middle">領収書画像</text>
+  <path d="M440,327 V274" class="flow"/>
+  <text x="448" y="306" class="s">金額と日付</text>
+  <path d="M428,429 V502" class="flow"/>
+  <text x="420" y="458" class="s" text-anchor="end">領収書画像</text>
+  <path d="M452,504 V431" class="flow"/>
+  <text x="460" y="458" class="s">読み取り結果</text>
+
+  <!-- 境界をまたぐ流れの番号 -->
+  <circle cx="168" cy="176" r="10" class="badge"/><text x="168" y="181" class="bn" text-anchor="middle">1</text>
+  <circle cx="232" cy="176" r="10" class="badge"/><text x="232" y="181" class="bn" text-anchor="middle">2</text>
+  <circle cx="408" cy="476" r="10" class="badge"/><text x="408" y="481" class="bn" text-anchor="middle">3</text>
+  <circle cx="472" cy="476" r="10" class="badge"/><text x="472" y="481" class="bn" text-anchor="middle">4</text>
+
+  <!-- 脅威の一覧 -->
+  <text x="16" y="604" class="h">境界をまたぐ流れと、検討する脅威(STRIDE)</text>
+  <circle cx="26" cy="627" r="10" class="badge"/><text x="26" y="632" class="bn" text-anchor="middle">1</text>
+  <text x="44" y="632" class="t">申請内容と画像: なりすまし(S)・改ざん(T)</text>
+  <circle cx="26" cy="651" r="10" class="badge"/><text x="26" y="656" class="bn" text-anchor="middle">2</text>
+  <text x="44" y="656" class="t">受付番号: 情報漏えい(I)</text>
+  <circle cx="26" cy="675" r="10" class="badge"/><text x="26" y="680" class="bn" text-anchor="middle">3</text>
+  <text x="44" y="680" class="t">領収書画像: 情報漏えい(I)</text>
+  <circle cx="26" cy="699" r="10" class="badge"/><text x="26" y="704" class="bn" text-anchor="middle">4</text>
+  <text x="44" y="704" class="t">読み取り結果: 改ざん(T)・サービス拒否(D)</text>
+
+  <!-- 凡例 -->
+  <rect x="16" y="730" width="32" height="20" class="ent"/>
+  <text x="56" y="745" class="s">外部エンティティ</text>
+  <circle cx="196" cy="740" r="10" class="proc"/>
+  <text x="214" y="745" class="s">プロセス</text>
+  <line x1="290" y1="732" x2="322" y2="732" class="store"/>
+  <line x1="290" y1="748" x2="322" y2="748" class="store"/>
+  <text x="330" y="745" class="s">データストア</text>
+  <line x1="438" y1="740" x2="478" y2="740" class="tb"/>
+  <text x="486" y="745" class="s">信頼境界</text>
+</svg>

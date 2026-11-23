@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 536" width="640" height="536" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
+  <title>通知サービスはインターフェースだけに依存する</title>
+  <desc>UML クラス図の作例(架空の通知機能)。題の通知サービスは NotificationService を指す。表記は UML 2.5.1 に従う。クラスは名前・属性・操作の 3 つの区画で描き、+ は public、- は private を表す。NotificationService は INotificationChannel との関連を 1 つ以上持ち(多重度 1..*、矢印の向きに参照できる)、具体的な送信方法のクラスを知らない。EmailChannel と SmsChannel は INotificationChannel を実現する(破線と白抜きの三角)。NotificationService は MessageTemplate を 1 つコンポジションで持つ(黒いひし形)。«interface» はインターフェースを示すキーワードである。属性と操作は説明に要るものだけを載せた。</desc>
+  <defs>
+    <marker id="open" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10" fill="none" stroke="#1e2733" stroke-width="1.5"/>
+    </marker>
+  </defs>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .t { font-size: 14px; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .cls { fill: #fcfcfa; stroke: #1e2733; stroke-width: 1.5; }
+    .rule { stroke: #1e2733; stroke-width: 1.5; }
+    .assoc { stroke: #1e2733; stroke-width: 1.5; fill: none; marker-end: url(#open); }
+    .real { stroke: #1e2733; stroke-width: 1.5; stroke-dasharray: 6 4; fill: none; }
+    .line { stroke: #1e2733; stroke-width: 1.5; fill: none; }
+  </style>
+  <rect x="0" y="0" width="640" height="536" fill="#f5f6f4"/>
+
+  <text x="16" y="40" class="title">通知サービスはインターフェースだけに依存する</text>
+
+  <!-- NotificationService -->
+  <rect x="16" y="80" width="232" height="88" class="cls"/>
+  <line x1="16" y1="112" x2="248" y2="112" class="rule"/>
+  <line x1="16" y1="140" x2="248" y2="140" class="rule"/>
+  <text x="132" y="102" class="h" text-anchor="middle">NotificationService</text>
+  <text x="28" y="131" class="t">- retryCount: int</text>
+  <text x="28" y="159" class="t">+ Send(message: Message)</text>
+
+  <!-- INotificationChannel -->
+  <rect x="368" y="80" width="256" height="48" fill="#e3ecf5"/>
+  <rect x="368" y="80" width="256" height="76" fill="none" stroke="#2b5c8a" stroke-width="2.5"/>
+  <line x1="368" y1="128" x2="624" y2="128" stroke="#2b5c8a" stroke-width="1.5"/>
+  <text x="496" y="99" class="s" text-anchor="middle">«interface»</text>
+  <text x="496" y="120" class="h" text-anchor="middle" style="fill:#2b5c8a">INotificationChannel</text>
+  <text x="380" y="147" class="t">+ Deliver(message: Message)</text>
+
+  <!-- 関連 -->
+  <path d="M248,104 H366" class="assoc"/>
+  <text x="360" y="96" class="s" text-anchor="end">1..*</text>
+  <text x="304" y="124" class="s" text-anchor="middle">送信を任せる</text>
+
+  <!-- 実現 -->
+  <path d="M496,157 L487,172 H505 Z" fill="#fcfcfa" stroke="#1e2733" stroke-width="1.5"/>
+  <path d="M496,172 V220 M344,220 H536 M344,220 V300 M536,220 V300" class="real"/>
+  <text x="504" y="200" class="s">実装する</text>
+
+  <!-- EmailChannel -->
+  <rect x="256" y="300" width="176" height="88" class="cls"/>
+  <line x1="256" y1="332" x2="432" y2="332" class="rule"/>
+  <line x1="256" y1="360" x2="432" y2="360" class="rule"/>
+  <text x="344" y="322" class="h" text-anchor="middle">EmailChannel</text>
+  <text x="266" y="351" class="t">- smtpHost: string</text>
+  <text x="266" y="379" class="t">+ Deliver(message)</text>
+
+  <!-- SmsChannel -->
+  <rect x="448" y="300" width="176" height="88" class="cls"/>
+  <line x1="448" y1="332" x2="624" y2="332" class="rule"/>
+  <line x1="448" y1="360" x2="624" y2="360" class="rule"/>
+  <text x="536" y="322" class="h" text-anchor="middle">SmsChannel</text>
+  <text x="458" y="351" class="t">- endpoint: Uri</text>
+  <text x="458" y="379" class="t">+ Deliver(message)</text>
+
+  <!-- コンポジション -->
+  <path d="M132,168 L125,180 L132,192 L139,180 Z" fill="#1e2733"/>
+  <path d="M132,192 V300" class="line"/>
+  <text x="140" y="250" class="s">持つ</text>
+  <text x="140" y="294" class="s">1</text>
+
+  <!-- MessageTemplate -->
+  <rect x="16" y="300" width="200" height="112" class="cls"/>
+  <line x1="16" y1="332" x2="216" y2="332" class="rule"/>
+  <line x1="16" y1="384" x2="216" y2="384" class="rule"/>
+  <text x="116" y="322" class="h" text-anchor="middle">MessageTemplate</text>
+  <text x="28" y="351" class="t">- subject: string</text>
+  <text x="28" y="375" class="t">- body: string</text>
+  <text x="28" y="403" class="t">+ Render(values)</text>
+
+  <!-- 凡例 -->
+  <line x1="16" y1="436" x2="624" y2="436" stroke="#7a8490" stroke-width="1"/>
+  <path d="M16,460 H62" class="assoc"/>
+  <text x="76" y="465" class="s">関連(矢印の向きに参照できる)</text>
+  <path d="M16,488 H50" class="real"/><path d="M64,488 L50,481 V495 Z" fill="#fcfcfa" stroke="#1e2733" stroke-width="1.5"/>
+  <text x="76" y="493" class="s">実現(インターフェースを実装する)</text>
+  <path d="M16,516 L26,511 L36,516 L26,521 Z" fill="#1e2733"/><path d="M36,516 H64" class="line"/>
+  <text x="76" y="521" class="s">コンポジション(全体が部分を持つ)</text>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
+  <title>打ち切った要求も、API 側では処理が続く</title>
+  <desc>UML タイミング図の作例(架空の外部 API 呼び出し、秒数も架空)。表記は UML 2.5.1 のタイミング図(状態を縦に並べる形)に従う。横軸が経過時間で、各ライフラインの線の高さがその時点の状態を表す。縦の矢印はメッセージである。呼び出し側は 1 秒の時点で要求を送り、10 秒応答が無いので打ち切って再試行待ちに移る。2 秒待って 13 秒の時点で再要求を送り、16 秒の時点で応答を受けて完了する。外部 API は最初の要求を打ち切られたあとも 12 秒の時点まで処理を続け、その応答は呼び出し側が破棄する。橙の区間が、打ち切ったあとも処理が続いている時間である。継続時間制約は {10 秒} のように区間を省略した形で書いた。</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4a5563"/>
+    </marker>
+  </defs>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .t { font-size: 14px; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .frame { fill: none; stroke: #4a5563; stroke-width: 1.5; }
+    .sep { stroke: #7a8490; stroke-width: 1; }
+    .state { stroke: #1e2733; stroke-width: 2; fill: none; }
+    .msg { stroke: #4a5563; stroke-width: 1.5; fill: none; marker-end: url(#a); }
+    .dim { stroke: #4a5563; stroke-width: 1.2; fill: none; }
+  </style>
+  <rect x="0" y="0" width="640" height="420" fill="#f5f6f4"/>
+
+  <text x="16" y="40" class="title">打ち切った要求も、API 側では処理が続く</text>
+
+  <!-- 枠 -->
+  <rect x="16" y="64" width="608" height="336" class="frame"/>
+  <path d="M16,64 H236 V80 L226,90 H16 Z" fill="#e8eaed" stroke="#4a5563" stroke-width="1.5"/>
+  <text x="24" y="82" class="t">sd 外部 API の呼び出し</text>
+  <line x1="140" y1="90" x2="140" y2="344" class="sep"/>
+  <line x1="16" y1="248" x2="624" y2="248" class="sep"/>
+  <line x1="16" y1="344" x2="624" y2="344" class="sep"/>
+
+  <!-- ライフラインと状態 -->
+  <text x="28" y="182" class="h">呼び出し側</text>
+  <text x="236" y="133" class="s" text-anchor="end">完了</text>
+  <text x="236" y="165" class="s" text-anchor="end">再試行待ち</text>
+  <text x="236" y="197" class="s" text-anchor="end">応答待ち</text>
+  <text x="236" y="229" class="s" text-anchor="end">待機</text>
+  <text x="28" y="308" class="h">外部 API</text>
+  <text x="236" y="289" class="s" text-anchor="end">処理中</text>
+  <text x="236" y="325" class="s" text-anchor="end">待機</text>
+
+  <path d="M248,224 H268 V192 H468 V160 H508 V192 H568 V128 H608" class="state"/>
+  <path d="M248,320 H268 V284 H488 V320 H508 V284 H568 V320 H608" class="state"/>
+  <path d="M468,284 H488" stroke="#b35a1f" stroke-width="5" fill="none"/>
+  <text x="460" y="308" class="s" text-anchor="end" style="fill:#9a4a14;font-weight:700">打ち切ったあとも処理が続く</text>
+
+  <!-- メッセージ -->
+  <path d="M268,226 V282" class="msg"/>
+  <text x="274" y="236" class="s">要求</text>
+  <path d="M488,282 V162" class="msg"/>
+  <text x="482" y="236" class="s" text-anchor="end">応答を破棄</text>
+  <path d="M508,194 V282" class="msg"/>
+  <text x="514" y="272" class="s">再要求</text>
+  <path d="M568,282 V194" class="msg"/>
+  <text x="574" y="236" class="s">応答</text>
+
+  <!-- 継続時間制約 -->
+  <path d="M268,110 V122 M268,116 H468 M468,110 V122" class="dim"/>
+  <text x="368" y="104" class="t" text-anchor="middle">{10 秒}</text>
+  <path d="M468,116 H508 M508,110 V122" class="dim"/>
+  <text x="488" y="104" class="t" text-anchor="middle">{2 秒}</text>
+
+  <!-- 時間軸 -->
+  <line x1="248" y1="372" x2="608" y2="372" stroke="#4a5563" stroke-width="1.2"/>
+  <path d="M248,368 V376 M348,368 V376 M448,368 V376 M548,368 V376" stroke="#4a5563" stroke-width="1.2"/>
+  <text x="248" y="392" class="s" text-anchor="middle">0</text>
+  <text x="348" y="392" class="s" text-anchor="middle">5</text>
+  <text x="448" y="392" class="s" text-anchor="middle">10</text>
+  <text x="548" y="392" class="s" text-anchor="middle">15</text>
+  <text x="236" y="377" class="s" text-anchor="end">経過時間(秒)</text>
+</svg>

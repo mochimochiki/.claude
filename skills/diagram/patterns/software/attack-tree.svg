@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 488" width="640" height="488" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
+  <title>成立する経路は SQL インジェクションだけ</title>
+  <desc>攻撃ツリーの作例(架空の経費精算システム、対策の有無も架空)。Bruce Schneier の攻撃ツリー(1999)にならい、根に攻撃者の目標を置き、子に目標を達する手段を置く。子を結ぶ線に弧を描いた節点は AND(子がすべて成立すると成立する)、それ以外は OR(子のどれか 1 つが成立すると成立する)である。承認済みの申請を改ざんするには、管理者になりすますか、DB に直接書き込む。管理者になりすますには、パスワードの入手と多要素認証の突破の両方が要り、多要素認証には対策があるので成立しない。DB に直接書き込むには、接続情報を盗むか SQL インジェクションを使う。SQL インジェクションに対策が無いため、この経路だけが根まで成立する。成立する経路を橙で示した。図の左から右へ、目標から手段へ分解する向きに描いた。</desc>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .t { font-size: 14px; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .k { font-size: 14px; font-weight: 700; fill: #4a5563; }
+    .node { fill: #fcfcfa; stroke: #4a5563; stroke-width: 1.5; }
+    .nodec { fill: #fbeee5; stroke: #b35a1f; stroke-width: 2.5; }
+    .edge { stroke: #4a5563; stroke-width: 1.5; fill: none; }
+    .edgec { stroke: #b35a1f; stroke-width: 3; fill: none; }
+  </style>
+  <rect x="0" y="0" width="640" height="488" fill="#f5f6f4"/>
+
+  <text x="16" y="40" class="title">成立する経路は SQL インジェクションだけ</text>
+
+  <!-- 枝 -->
+  <path d="M152,212 L192,134" class="edge"/>
+  <path d="M152,212 L192,290" class="edgec"/>
+  <path d="M360,134 L392,100 M360,134 L392,168" class="edge"/>
+  <path d="M376.4,116.5 A24,24 0 0 1 376.4,151.5" class="edge"/>
+  <path d="M360,290 L392,256" class="edge"/>
+  <path d="M360,290 L392,324" class="edgec"/>
+
+  <!-- 根 -->
+  <rect x="16" y="184" width="136" height="56" rx="8" class="node"/>
+  <text x="84" y="207" class="h" text-anchor="middle">承認済みの申請</text>
+  <text x="84" y="229" class="h" text-anchor="middle">を改ざんする</text>
+  <text x="84" y="260" class="k" text-anchor="middle">OR</text>
+
+  <!-- 中間 -->
+  <rect x="192" y="110" width="168" height="48" rx="8" class="node"/>
+  <text x="276" y="140" class="h" text-anchor="middle">管理者になりすます</text>
+  <text x="276" y="178" class="k" text-anchor="middle">AND</text>
+  <rect x="192" y="266" width="168" height="48" rx="8" class="nodec"/>
+  <text x="276" y="296" class="h" text-anchor="middle">DB に直接書き込む</text>
+  <text x="276" y="334" class="k" text-anchor="middle">OR</text>
+
+  <!-- 葉 -->
+  <rect x="392" y="72" width="232" height="56" rx="8" class="node"/>
+  <text x="404" y="96" class="h">パスワードを入手する</text>
+  <text x="404" y="118" class="s">対策なし</text>
+  <rect x="392" y="140" width="232" height="56" rx="8" class="node"/>
+  <text x="404" y="164" class="h">多要素認証を突破する</text>
+  <text x="404" y="186" class="s">対策あり(全員に必須)</text>
+  <rect x="392" y="228" width="232" height="56" rx="8" class="node"/>
+  <text x="404" y="252" class="h">DB の接続情報を盗む</text>
+  <text x="404" y="274" class="s">対策あり(保管庫で管理)</text>
+  <rect x="392" y="296" width="232" height="56" rx="8" class="nodec"/>
+  <text x="404" y="320" class="h">SQL インジェクションを使う</text>
+  <text x="404" y="342" class="k" style="fill:#9a4a14">対策なし</text>
+
+  <!-- 凡例 -->
+  <line x1="16" y1="384" x2="624" y2="384" stroke="#7a8490" stroke-width="1"/>
+  <path d="M16,416 L40,404 M16,416 L40,428" class="edge"/><path d="M28,410 A13,13 0 0 1 28,422" class="edge"/>
+  <text x="56" y="421" class="s">AND: 子がすべて成立すると成立する</text>
+  <text x="56" y="449" class="s">OR: 子のどれか 1 つが成立すると成立する</text>
+  <path d="M16,472 H48" class="edgec"/>
+  <text x="56" y="477" class="s">対策の無い葉から根まで成立する経路</text>
+</svg>

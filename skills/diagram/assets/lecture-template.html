@@ -1,0 +1,379 @@
+<meta charset="utf-8">
+<title>講義の題名</title><!-- 埋める: 題名(2〜4 語の名前) -->
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* 1 列の読み物。メインの図の上に印の層を重ね、テストは図の下に 1 問ずつ出す */
+:root {
+  --bg: #f3f5f7; --surface: #ffffff; --ink: #1c2530; --muted: #4d5966; --line: #d3d9df;
+  --allow: #2b5c8a; --allow-soft: #e3ecf5; --deny: #9a4a14; --deny-soft: #fbeee5; --code-bg: #eaeef2;
+  --plate: #f5f6f4; --mark-hl: #b35a1f;
+  --font-body: "BIZ UDPGothic", "Yu Gothic UI", "Meiryo", "Hiragino Sans", "Noto Sans JP", sans-serif;
+  --font-code: "JetBrains Mono", "Consolas", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #161b21; --surface: #1f262e; --ink: #e6ebf0; --muted: #a7b2bd; --line: #36414c;
+    --allow: #8fb8e0; --allow-soft: #213245; --deny: #f0a878; --deny-soft: #3a2a20; --code-bg: #2a333d;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #161b21; --surface: #1f262e; --ink: #e6ebf0; --muted: #a7b2bd; --line: #36414c;
+  --allow: #8fb8e0; --allow-soft: #213245; --deny: #f0a878; --deny-soft: #3a2a20; --code-bg: #2a333d;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.85;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 32px 64px;
+}
+.wrap { max-width: 780px; margin: 0 auto; display: grid; gap: 56px; }
+header { display: grid; gap: 12px; }
+.eyebrow { font-size: 13px; letter-spacing: .08em; color: var(--muted); }
+h1 { font-size: clamp(26px, 5vw, 34px); line-height: 1.35; margin: 0; text-wrap: balance; }
+h2 { font-size: 23px; line-height: 1.4; margin: 0 0 4px; text-wrap: balance; padding-bottom: 8px; border-bottom: 2px solid var(--ink); }
+h3 { font-size: 18px; line-height: 1.5; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+section { display: grid; gap: 18px; min-width: 0; }
+.lead { font-size: 17px; }
+code { font-family: var(--font-code); font-size: .88em; background: var(--code-bg); padding: 1px 5px; border-radius: 4px; overflow-wrap: anywhere; }
+a { color: var(--allow); }
+a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible { outline: 2px solid var(--allow); outline-offset: 2px; }
+ul.plain { margin: 0; padding-left: 1.3em; display: grid; gap: 6px; }
+.takeaways { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.takeaways li { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; display: grid; grid-template-columns: auto 1fr; gap: 12px; align-items: start; }
+.mark-pill { font-weight: 700; font-size: 14px; border-radius: 999px; padding: 1px 10px; white-space: nowrap; }
+.mark-pill.ok { color: var(--allow); background: var(--allow-soft); }
+.mark-pill.ng { color: var(--deny); background: var(--deny-soft); }
+.mark-pill.wait { color: var(--muted); background: var(--code-bg); }
+
+/* メインの図と印の層 */
+figure { margin: 0; display: grid; gap: 8px; }
+.plate { background: var(--plate); border: 1px solid var(--line); border-radius: 10px; padding: 8px; overflow-x: auto; }
+.stage { position: relative; max-width: 640px; margin: 0 auto; }
+.stage img { display: block; width: 100%; height: auto; }
+.stage svg.marks { position: absolute; inset: 0; width: 100%; height: 100%; }
+.marks rect.mark { fill: transparent; stroke: transparent; stroke-width: 2; cursor: pointer; }
+.marks rect.mark:hover, .marks rect.mark:focus { stroke: #2b5c8a; stroke-dasharray: 4 3; outline: none; }
+.stage.show-marks rect.mark { stroke: #2b5c8a; stroke-dasharray: 4 3; }
+.marks rect.mark.hl { stroke: var(--mark-hl); stroke-width: 4; stroke-dasharray: none; fill: rgba(179, 90, 31, .12); }
+.marks rect.mark.masked { fill: #f5f6f4; stroke: var(--mark-hl); stroke-width: 2; stroke-dasharray: none; }
+.marks text.mask-q { font: 700 18px var(--font-body); fill: #9a4a14; pointer-events: none; }
+figcaption { font-size: 14px; color: var(--muted); }
+.fig-tools { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+button { font: inherit; font-size: 15px; border-radius: 8px; padding: 6px 14px; cursor: pointer; border: 1px solid var(--line); background: var(--surface); color: var(--ink); }
+button.primary { background: var(--allow); border-color: var(--allow); color: var(--surface); font-weight: 700; }
+button[aria-pressed="true"] { background: var(--allow-soft); border-color: var(--allow); }
+
+/* テスト */
+.quiz { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; display: grid; gap: 12px; }
+.quiz-progress { font-size: 13px; color: var(--muted); font-family: var(--font-code); }
+.quiz-prompt { font-size: 17px; font-weight: 700; }
+.choices { display: grid; gap: 8px; }
+.choices button { text-align: left; }
+.choices button.right { border-color: var(--allow); background: var(--allow-soft); }
+.choices button.wrong { border-color: var(--deny); background: var(--deny-soft); }
+.reveal { display: grid; gap: 8px; border-top: 1px dashed var(--line); padding-top: 10px; }
+.grade { display: flex; gap: 8px; flex-wrap: wrap; }
+.quiz-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.verdict.ok { color: var(--allow); font-weight: 700; }
+.verdict.ng { color: var(--deny); font-weight: 700; }
+.term-links { font-size: 14px; color: var(--muted); }
+
+/* 用語集 */
+.glossary-tools { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.glossary-tools label { font-size: 14px; color: var(--muted); }
+#term-filter { font: inherit; font-size: 15px; padding: 6px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: var(--ink); width: min(320px, 100%); }
+.step { display: grid; gap: 14px; }
+.step-head { display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; }
+.step-no { font-family: var(--font-code); font-weight: 600; color: var(--allow); font-size: 15px; }
+.terms { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; }
+.term { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 6px; align-content: start; min-width: 0; scroll-margin-top: 24px; }
+.term.flash { border-color: var(--allow); box-shadow: 0 0 0 3px var(--allow-soft); }
+.term h4 { margin: 0; font-size: 16px; }
+.term .short { font-weight: 700; color: var(--allow); font-size: 15px; }
+.term p { font-size: 15px; line-height: 1.75; }
+.term .here { font-size: 14px; color: var(--muted); border-top: 1px dashed var(--line); padding-top: 6px; }
+.empty { color: var(--muted); font-size: 14px; }
+.note { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 18px; display: grid; gap: 8px; }
+.note.deny { border-color: var(--deny); background: var(--deny-soft); }
+.note h4 { margin: 0; font-size: 15px; }
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 15px; min-width: 520px; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 14px; color: var(--muted); }
+footer { font-size: 13px; color: var(--muted); display: grid; gap: 4px; }
+@media (max-width: 480px) { .takeaways li { grid-template-columns: 1fr; gap: 4px; } }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
+</style>
+
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">案件名 ・ 記録の番号</div><!-- 埋める: 出どころ -->
+  <h1>講義の見出し</h1><!-- 埋める: 何を理解する講義か -->
+  <p class="lead">なぜこの話をしたかを 3〜4 文で書く。</p><!-- 埋める: 背景 -->
+</header>
+
+<section aria-labelledby="sum">
+  <h2 id="sum">結論</h2>
+  <ul class="takeaways">
+    <!-- 埋める: 3〜5 行。印は ok(動いた)・ng(注意)・wait(未確認) -->
+    <li><span class="mark-pill ok">動いた</span><span>結論の 1 行目。</span></li>
+    <li><span class="mark-pill ng">注意</span><span>結論の 2 行目。</span></li>
+  </ul>
+</section>
+
+<section aria-labelledby="main">
+  <h2 id="main">全体の図</h2>
+  <figure>
+    <div class="plate">
+      <div class="stage" id="stage">
+        <!-- 埋める: メインの図。SVG を data URI で入れ、width と height は viewBox と同じにする -->
+        <img id="main-figure" alt="メインの図の説明" width="640" height="200"
+             src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 200' width='640' height='200' font-family='sans-serif'%3E%3Crect width='640' height='200' fill='%23f5f6f4'/%3E%3Crect x='40' y='70' width='200' height='60' rx='8' fill='%23fcfcfa' stroke='%237a8490'/%3E%3Ctext x='140' y='106' text-anchor='middle' font-size='16' font-weight='700' fill='%231e2733'%3E例: ワーカー%3C/text%3E%3Crect x='400' y='70' width='200' height='60' rx='8' fill='%23fcfcfa' stroke='%237a8490'/%3E%3Ctext x='500' y='106' text-anchor='middle' font-size='16' font-weight='700' fill='%231e2733'%3E例: ブローカー%3C/text%3E%3Cpath d='M242,100 H396' stroke='%234a5563' stroke-width='2'/%3E%3C/svg%3E">
+      </div>
+    </div>
+    <figcaption>図の記号の意味を 1 文で書く。</figcaption><!-- 埋める: 凡例 -->
+  </figure>
+  <div class="fig-tools">
+    <button class="primary" id="quiz-start" type="button">この図でテスト(基本 5 問)</button>
+    <button id="toggle-marks" type="button" aria-pressed="false">用語の場所を表示</button>
+  </div>
+  <div class="quiz" id="quiz" hidden aria-live="polite"></div>
+  <p>図の読み方を書く。図の題を言い換えず、どこから見ればよいかを書く。</p><!-- 埋める: 図の読み方 -->
+</section>
+
+<section aria-labelledby="terms">
+  <h2 id="terms">用語</h2>
+  <p>段階の順に読むと、後の語を前の語で説明できる。</p>
+  <div class="glossary-tools">
+    <label for="term-filter">用語を絞り込む</label>
+    <input id="term-filter" type="search" placeholder="例: 用語の名前" autocomplete="off">
+  </div>
+  <!-- 埋める: 段階ごとに .step を置き、カードの id は term-<印の term> にする -->
+  <div class="step" data-step>
+    <div class="step-head"><span class="step-no">段階 1</span><h3>段階の見出し</h3></div>
+    <p>この段階が何の話かを 1 文で書く。</p>
+    <div class="terms">
+      <article class="term" id="term-worker"><h4>例: ワーカー</h4><div class="short">ひとことで</div><p>もう少し(2〜4 文)。</p><p class="here">この話では、どこに出たか。</p></article>
+      <article class="term" id="term-broker"><h4>例: ブローカー</h4><div class="short">ひとことで</div><p>もう少し(2〜4 文)。</p><p class="here">この話では、どこに出たか。</p></article>
+    </div>
+  </div>
+  <p class="empty" id="term-empty" hidden>一致する用語がありません。</p>
+</section>
+
+<section aria-labelledby="r1">
+  <h2 id="r1">分かったこと 1 見出し</h2><!-- 埋める: 分かったことを 1 つずつ節にする。補助の図はここに置く -->
+  <p>本文。</p>
+  <p>つまり、…</p>
+</section>
+
+<section aria-labelledby="open">
+  <h2 id="open">残っていること</h2>
+  <ul class="plain"><li>確かめていないことと、次に決めること。</li></ul><!-- 埋める -->
+</section>
+
+<footer>
+  <p>環境と日付。記録の場所。</p><!-- 埋める -->
+</footer>
+
+</div>
+
+<!-- 埋める: 印と問題。形は references/lecture.md の「ひな形の埋め方」 -->
+<script type="application/json" id="lecture-data">
+{
+  "viewBox": [0, 0, 640, 200],
+  "marks": [
+    { "id": "worker", "x": 40, "y": 70, "w": 200, "h": 60, "term": "worker", "label": "ワーカー" },
+    { "id": "broker", "x": 400, "y": 70, "w": 200, "h": 60, "term": "broker", "label": "ブローカー" }
+  ],
+  "questions": [
+    { "level": "basic", "type": "recall", "prompt": "例: 光っている部品の役割は何か。", "highlight": ["worker"], "mask": [], "answer": "例: 答え。", "terms": ["worker"] },
+    { "level": "basic", "type": "choice", "prompt": "例: 隠れている部品の名前は何か。", "highlight": [], "mask": ["broker"], "choices": ["例: 選択肢 A", "例: ブローカー", "例: 選択肢 C"], "correct": 1, "explain": "例: 解説。", "terms": ["broker"] },
+    { "level": "advanced", "type": "recall", "prompt": "例: 発展の問題。", "highlight": [], "mask": [], "answer": "例: 答え。", "terms": [] }
+  ]
+}
+</script>
+
+<script>
+(function () {
+  var data = JSON.parse(document.getElementById('lecture-data').textContent);
+  var stage = document.getElementById('stage');
+  var NS = 'http://www.w3.org/2000/svg';
+  var layer = document.createElementNS(NS, 'svg');
+  layer.setAttribute('class', 'marks');
+  layer.setAttribute('viewBox', data.viewBox.join(' '));
+  layer.setAttribute('preserveAspectRatio', 'none');
+  stage.appendChild(layer);
+  var rects = {};
+  data.marks.forEach(function (m) {
+    var r = document.createElementNS(NS, 'rect');
+    r.setAttribute('class', 'mark');
+    ['x', 'y'].forEach(function (k) { r.setAttribute(k, m[k]); });
+    r.setAttribute('width', m.w); r.setAttribute('height', m.h); r.setAttribute('rx', 6);
+    r.setAttribute('tabindex', '0'); r.setAttribute('role', 'link');
+    r.setAttribute('aria-label', (m.label || m.id) + ' の用語へ移る');
+    var t = document.createElementNS(NS, 'title'); t.textContent = m.label || m.id; r.appendChild(t);
+    var go = function () { if (m.term) showTerm(m.term); };
+    r.addEventListener('click', go);
+    r.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
+    layer.appendChild(r);
+    rects[m.id] = { el: r, mark: m };
+  });
+
+  function showTerm(id) {
+    var card = document.getElementById('term-' + id);
+    if (!card) return;
+    var filter = document.getElementById('term-filter');
+    if (filter.value) { filter.value = ''; filter.dispatchEvent(new Event('input')); }
+    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    card.classList.add('flash');
+    setTimeout(function () { card.classList.remove('flash'); }, 1600);
+  }
+
+  var maskTexts = [];
+  function clearMarks() {
+    Object.keys(rects).forEach(function (k) { rects[k].el.classList.remove('hl', 'masked'); });
+    maskTexts.forEach(function (t) { t.remove(); }); maskTexts = [];
+  }
+  function applyMarks(q) {
+    clearMarks();
+    (q.highlight || []).forEach(function (id) { if (rects[id]) rects[id].el.classList.add('hl'); });
+    (q.mask || []).forEach(function (id) {
+      var o = rects[id]; if (!o) return;
+      o.el.classList.add('masked');
+      var t = document.createElementNS(NS, 'text');
+      t.setAttribute('class', 'mask-q'); t.setAttribute('text-anchor', 'middle');
+      t.setAttribute('x', o.mark.x + o.mark.w / 2); t.setAttribute('y', o.mark.y + o.mark.h / 2 + 6);
+      t.textContent = '？'; layer.appendChild(t); maskTexts.push(t);
+    });
+  }
+  function unmask() { maskTexts.forEach(function (t) { t.remove(); }); maskTexts = []; Object.keys(rects).forEach(function (k) { rects[k].el.classList.remove('masked'); }); }
+
+  var toggle = document.getElementById('toggle-marks');
+  toggle.addEventListener('click', function () {
+    var on = stage.classList.toggle('show-marks');
+    toggle.setAttribute('aria-pressed', on ? 'true' : 'false');
+  });
+
+  var quiz = document.getElementById('quiz');
+  var startBtn = document.getElementById('quiz-start');
+  var state = null;
+  var LEVEL = { basic: '基本', advanced: '発展' };
+
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function termLinks(ids) {
+    if (!ids || !ids.length) return null;
+    var p = el('p', 'term-links', '関係する用語: ');
+    ids.forEach(function (id, i) {
+      var card = document.getElementById('term-' + id);
+      var a = el('a', null, card ? card.querySelector('h4').textContent : id);
+      a.href = '#term-' + id;
+      a.addEventListener('click', function (e) { e.preventDefault(); showTerm(id); });
+      if (i) p.appendChild(document.createTextNode('、'));
+      p.appendChild(a);
+    });
+    return p;
+  }
+
+  function start(level) {
+    state = { level: level, list: data.questions.filter(function (q) { return q.level === level; }), i: 0, results: state && state.level === 'basic' ? state.results : [] };
+    quiz.hidden = false;
+    render();
+    quiz.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+  startBtn.addEventListener('click', function () { state = null; start('basic'); });
+
+  function render() {
+    quiz.innerHTML = '';
+    if (state.i >= state.list.length) return summary();
+    var q = state.list[state.i];
+    applyMarks(q);
+    quiz.appendChild(el('div', 'quiz-progress', LEVEL[state.level] + ' ' + (state.i + 1) + ' / ' + state.list.length));
+    quiz.appendChild(el('p', 'quiz-prompt', q.prompt));
+    var after = el('div', 'reveal'); after.hidden = true;
+    var next = el('button', 'primary', state.i + 1 < state.list.length ? '次の問題' : '結果を見る'); next.type = 'button';
+    next.addEventListener('click', function () { state.i++; render(); });
+    if (q.type === 'choice') {
+      var box = el('div', 'choices');
+      q.choices.forEach(function (c, idx) {
+        var b = el('button', null, c); b.type = 'button';
+        b.addEventListener('click', function () {
+          var ok = idx === q.correct;
+          Array.prototype.forEach.call(box.children, function (x, j) { x.disabled = true; if (j === q.correct) x.classList.add('right'); });
+          if (!ok) b.classList.add('wrong');
+          state.results.push({ q: q, grade: ok ? 'ok' : 'ng' });
+          unmask();
+          after.appendChild(el('p', 'verdict ' + (ok ? 'ok' : 'ng'), ok ? '正解' : '不正解'));
+          if (q.explain) after.appendChild(el('p', null, q.explain));
+          var tl = termLinks(q.terms); if (tl) after.appendChild(tl);
+          after.appendChild(next); after.hidden = false;
+        });
+        box.appendChild(b);
+      });
+      quiz.appendChild(box);
+    } else {
+      var show = el('button', 'primary', '答えを見る'); show.type = 'button';
+      quiz.appendChild(el('p', 'term-links', '答えを頭で思い浮かべてから押す。'));
+      show.addEventListener('click', function () {
+        show.hidden = true; unmask();
+        after.appendChild(el('p', null, q.answer));
+        var tl = termLinks(q.terms); if (tl) after.appendChild(tl);
+        var g = el('div', 'grade');
+        [['ok', 'できた'], ['maybe', 'あいまい'], ['ng', 'できなかった']].forEach(function (p) {
+          var b = el('button', null, p[1]); b.type = 'button';
+          b.addEventListener('click', function () { state.results.push({ q: q, grade: p[0] }); state.i++; render(); });
+          g.appendChild(b);
+        });
+        after.appendChild(g); after.hidden = false;
+      });
+      quiz.appendChild(show);
+    }
+    quiz.appendChild(after);
+  }
+
+  function summary() {
+    clearMarks();
+    var r = state.results;
+    var count = function (g) { return r.filter(function (x) { return x.grade === g; }).length; };
+    quiz.appendChild(el('p', 'quiz-prompt', (state.level === 'basic' ? '基本の結果' : '全体の結果')));
+    quiz.appendChild(el('p', null, 'できた・正解 ' + count('ok') + ' 問、あいまい ' + count('maybe') + ' 問、できなかった・不正解 ' + count('ng') + ' 問'));
+    var review = [];
+    r.forEach(function (x) { if (x.grade !== 'ok') (x.q.terms || []).forEach(function (t) { if (review.indexOf(t) < 0) review.push(t); }); });
+    var tl = termLinks(review);
+    if (tl) { tl.firstChild.textContent = '見直す用語: '; quiz.appendChild(tl); }
+    var actions = el('div', 'quiz-actions');
+    var hasAdv = data.questions.some(function (q) { return q.level === 'advanced'; });
+    if (state.level === 'basic' && hasAdv) {
+      var adv = el('button', 'primary', '発展 5 問に進む'); adv.type = 'button';
+      adv.addEventListener('click', function () { start('advanced'); });
+      actions.appendChild(adv);
+    }
+    var again = el('button', null, '最初から'); again.type = 'button';
+    again.addEventListener('click', function () { state = null; start('basic'); });
+    actions.appendChild(again);
+    quiz.appendChild(actions);
+  }
+
+  var input = document.getElementById('term-filter');
+  var empty = document.getElementById('term-empty');
+  var steps = Array.prototype.slice.call(document.querySelectorAll('[data-step]'));
+  input.addEventListener('input', function () {
+    var q = input.value.trim().toLowerCase(); var shown = 0;
+    steps.forEach(function (step) {
+      var any = false;
+      step.querySelectorAll('.term').forEach(function (card) {
+        var hit = !q || card.textContent.toLowerCase().indexOf(q) !== -1;
+        card.hidden = !hit; if (hit) { any = true; shown++; }
+      });
+      step.hidden = !any;
+    });
+    empty.hidden = shown !== 0;
+  });
+})();
+</script>

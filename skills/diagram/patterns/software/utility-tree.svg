@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 468" width="640" height="468" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
+  <title>重要で難しいシナリオ 2 つから設計を検討する</title>
+  <desc>ATAM(SEI のアーキテクチャトレードオフ分析法)のユーティリティツリーの作例(架空の経費精算システム、シナリオと評価も架空)。根のユーティリティを品質特性、品質副特性、具体的なシナリオの順に分ける。品質特性と品質副特性の名前は JIS X 25010:2013 に従った。各シナリオの (H, M) のような組は、1 つ目が事業上の重要度、2 つ目が実現の難易度で、H は高い、M は中程度、L は低いを表す。品質特性は、その下で最も優先度の高いシナリオの順に上から並べ、同じ品質特性の中でも優先度の高いシナリオを上に置いた。上から、信頼性の可用性(H, H)DB の切り替え中も申請を受け付ける、セキュリティの責任追跡性(H, H)承認した人と日時を後から追える、セキュリティの機密性(H, L)他部署の申請は承認者にだけ見せる、性能効率性の時間効率性(H, M)月末の繁忙時も 2 秒以内に保存する、保守性の修正性(M, M)費目の追加を設定の変更だけで済ませる、である。(H, H) の 2 つを青い背景で強調した。この図は、シナリオごとの設計の選択肢と、そのトレードオフを描いていない。</desc>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .t { font-size: 14px; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .p { font-size: 14px; font-weight: 700; fill: #1e2733; }
+    .tree { stroke: #7a8490; stroke-width: 1.5; fill: none; }
+    .hl { fill: #e3ecf5; }
+  </style>
+  <rect x="0" y="0" width="640" height="468" fill="#f5f6f4"/>
+
+  <text x="16" y="40" class="title">重要で難しいシナリオ 2 つから設計を検討する</text>
+
+  <text x="156" y="80" class="s">品質特性</text>
+  <text x="274" y="80" class="s">品質副特性</text>
+  <text x="376" y="80" class="s">シナリオ(上から優先度の高い順)</text>
+  <line x1="16" y1="90" x2="624" y2="90" stroke="#7a8490" stroke-width="1"/>
+
+  <!-- 強調 -->
+  <rect x="368" y="96" width="256" height="46" rx="6" class="hl"/>
+  <rect x="368" y="158" width="256" height="48" rx="6" class="hl"/>
+
+  <!-- 根 -->
+  <text x="16" y="249" class="h">ユーティリティ</text>
+  <path d="M132,244 H144 M144,116 V372 M144,116 H152 M144,212 H152 M144,308 H152 M144,372 H152" class="tree"/>
+
+  <!-- 品質特性 -->
+  <text x="156" y="121" class="h">信頼性</text>
+  <text x="156" y="217" class="h">セキュリティ</text>
+  <text x="156" y="313" class="h">性能効率性</text>
+  <text x="156" y="377" class="h">保守性</text>
+  <path d="M208,116 H270 M256,212 H262 M262,180 V244 M262,180 H270 M262,244 H270 M240,308 H270 M208,372 H270" class="tree"/>
+
+  <!-- 品質副特性 -->
+  <text x="274" y="121" class="t">可用性</text>
+  <text x="274" y="185" class="t">責任追跡性</text>
+  <text x="274" y="249" class="t">機密性</text>
+  <text x="274" y="313" class="t">時間効率性</text>
+  <text x="274" y="377" class="t">修正性</text>
+  <path d="M326,116 H370 M358,180 H370 M326,244 H370 M358,308 H370 M326,372 H370" class="tree"/>
+
+  <!-- シナリオ -->
+  <text x="376" y="113" class="p" style="fill:#2b5c8a">(H, H)</text>
+  <text x="432" y="113" class="t">DB の切り替え中も</text>
+  <text x="432" y="133" class="t">申請を受け付ける</text>
+
+  <text x="376" y="177" class="p" style="fill:#2b5c8a">(H, H)</text>
+  <text x="432" y="177" class="t">承認した人と日時を</text>
+  <text x="432" y="197" class="t">後から追える</text>
+
+  <text x="376" y="241" class="p">(H, L)</text>
+  <text x="432" y="241" class="t">他部署の申請は</text>
+  <text x="432" y="261" class="t">承認者にだけ見せる</text>
+
+  <text x="376" y="305" class="p">(H, M)</text>
+  <text x="432" y="305" class="t">月末の繁忙時も</text>
+  <text x="432" y="325" class="t">2 秒以内に保存する</text>
+
+  <text x="376" y="369" class="p">(M, M)</text>
+  <text x="432" y="369" class="t">費目の追加を</text>
+  <text x="432" y="389" class="t">設定の変更だけで済ませる</text>
+
+  <!-- 凡例 -->
+  <line x1="16" y1="416" x2="624" y2="416" stroke="#7a8490" stroke-width="1"/>
+  <text x="16" y="440" class="s">(重要度, 難易度)。H 高い、M 中程度、L 低い</text>
+  <text x="16" y="460" class="s">重要度は事業にとっての重要さ、難易度は実現の難しさ</text>
+</svg>

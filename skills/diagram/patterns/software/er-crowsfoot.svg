@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 620" width="640" height="620" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
+  <title>申請 1 件には明細が 1 行以上ある</title>
+  <desc>ER 図の作例(架空の経費精算システム)。記法は IE 記法(James Martin の Information Engineering、通称 crow's foot)に従う。エンティティは見出しと属性の箱で、罫線より上が主キー(PK)、FK は外部キーである。関連の線の端の記号は、反対側の 1 件に対してこちら側が何件あるかを表し、外側の記号が最小、エンティティに接する記号が最大である。縦棒 2 本は 1 件だけ、円と鳥の足は 0 件以上、縦棒と鳥の足は 1 件以上を表す。社員 1 人は経費申請を 0 件以上申請し、経費申請は申請明細を 1 行以上含む。費目 1 つは申請明細を 0 行以上分類する。申請明細の主キーは申請番号と行番号の複合キーである。識別関連と非識別関連の線種の区別は描いていない。</desc>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .t { font-size: 14px; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .k { font-size: 14px; font-weight: 700; fill: #4a5563; }
+    .ent { fill: #fcfcfa; stroke: #4a5563; stroke-width: 1.5; }
+    .head { fill: #e8eaed; stroke: #4a5563; stroke-width: 1.5; }
+    .rule { stroke: #7a8490; stroke-width: 1; }
+    .rel { stroke: #1e2733; stroke-width: 1.5; fill: none; }
+    .relp { stroke: #2b5c8a; stroke-width: 2.5; fill: none; }
+  </style>
+  <rect x="0" y="0" width="640" height="620" fill="#f5f6f4"/>
+
+  <text x="16" y="40" class="title">申請 1 件には明細が 1 行以上ある</text>
+
+  <!-- 社員 -->
+  <rect x="16" y="80" width="232" height="120" class="ent"/>
+  <rect x="16" y="80" width="232" height="36" class="head"/>
+  <text x="132" y="104" class="h" text-anchor="middle">社員</text>
+  <text x="28" y="133" class="k">PK</text><text x="96" y="133" class="t">社員番号</text>
+  <line x1="16" y1="144" x2="248" y2="144" class="rule"/>
+  <text x="96" y="165" class="t">氏名</text>
+  <text x="96" y="189" class="t">所属部署</text>
+
+  <!-- 経費申請 -->
+  <rect x="392" y="80" width="232" height="144" class="ent"/>
+  <rect x="392" y="80" width="232" height="36" class="head"/>
+  <text x="508" y="104" class="h" text-anchor="middle">経費申請</text>
+  <text x="404" y="133" class="k">PK</text><text x="472" y="133" class="t">申請番号</text>
+  <line x1="392" y1="144" x2="624" y2="144" class="rule"/>
+  <text x="404" y="165" class="k">FK</text><text x="472" y="165" class="t">申請者の社員番号</text>
+  <text x="472" y="189" class="t">申請日</text>
+  <text x="472" y="213" class="t">状態</text>
+
+  <!-- 費目 -->
+  <rect x="16" y="320" width="232" height="96" class="ent"/>
+  <rect x="16" y="320" width="232" height="36" class="head"/>
+  <text x="132" y="344" class="h" text-anchor="middle">費目</text>
+  <text x="28" y="373" class="k">PK</text><text x="96" y="373" class="t">費目コード</text>
+  <line x1="16" y1="384" x2="248" y2="384" class="rule"/>
+  <text x="96" y="405" class="t">費目名</text>
+
+  <!-- 申請明細 -->
+  <rect x="392" y="320" width="232" height="168" class="ent"/>
+  <rect x="392" y="320" width="232" height="36" class="head"/>
+  <text x="508" y="344" class="h" text-anchor="middle">申請明細</text>
+  <text x="404" y="373" class="k">PK, FK</text><text x="472" y="373" class="t">申請番号</text>
+  <text x="404" y="397" class="k">PK</text><text x="472" y="397" class="t">行番号</text>
+  <line x1="392" y1="408" x2="624" y2="408" class="rule"/>
+  <text x="404" y="429" class="k">FK</text><text x="472" y="429" class="t">費目コード</text>
+  <text x="472" y="453" class="t">金額</text>
+  <text x="472" y="477" class="t">利用日</text>
+
+  <!-- 社員 1 : 経費申請 0 以上 -->
+  <path d="M248,136 H392" class="rel"/>
+  <path d="M258,128 V144 M266,128 V144" class="rel"/>
+  <circle cx="366" cy="136" r="6" fill="#f5f6f4" stroke="#1e2733" stroke-width="1.5"/>
+  <path d="M376,136 L392,126 M376,136 L392,146" class="rel"/>
+  <text x="313" y="126" class="s" text-anchor="middle">申請する</text>
+
+  <!-- 経費申請 1 : 申請明細 1 以上 -->
+  <path d="M508,224 V320" class="relp"/>
+  <path d="M500,234 H516 M500,242 H516" class="relp"/>
+  <path d="M500,296 H516" class="relp"/>
+  <path d="M508,304 L498,320 M508,304 L518,320" class="relp"/>
+  <text x="522" y="275" class="s" style="fill:#2b5c8a;font-weight:700">含む</text>
+
+  <!-- 費目 1 : 申請明細 0 以上 -->
+  <path d="M248,372 H392" class="rel"/>
+  <path d="M258,364 V380 M266,364 V380" class="rel"/>
+  <circle cx="366" cy="372" r="6" fill="#f5f6f4" stroke="#1e2733" stroke-width="1.5"/>
+  <path d="M376,372 L392,362 M376,372 L392,382" class="rel"/>
+  <text x="313" y="362" class="s" text-anchor="middle">分類する</text>
+
+  <!-- 凡例 -->
+  <line x1="16" y1="512" x2="624" y2="512" class="rule"/>
+  <path d="M16,540 H64" class="rel"/><path d="M48,532 V548 M56,532 V548" class="rel"/><path d="M64,528 V552" stroke="#4a5563" stroke-width="2"/>
+  <text x="72" y="545" class="s">1 件だけ</text>
+  <path d="M176,540 H224" class="rel"/><circle cx="198" cy="540" r="6" fill="#f5f6f4" stroke="#1e2733" stroke-width="1.5"/><path d="M208,540 L224,530 M208,540 L224,550" class="rel"/><path d="M224,528 V552" stroke="#4a5563" stroke-width="2"/>
+  <text x="232" y="545" class="s">0 件以上</text>
+  <path d="M336,540 H384" class="rel"/><path d="M360,532 V548" class="rel"/><path d="M368,540 L384,530 M368,540 L384,550" class="rel"/><path d="M384,528 V552" stroke="#4a5563" stroke-width="2"/>
+  <text x="392" y="545" class="s">1 件以上</text>
+  <text x="496" y="545" class="s">PK 主キー</text>
+  <text x="496" y="569" class="s">FK 外部キー</text>
+  <text x="16" y="580" class="s">端の記号は、反対側の 1 件に対する件数を表す。</text>
+  <text x="16" y="602" class="s">外側が最小、エンティティに接する側が最大。</text>
+</svg>

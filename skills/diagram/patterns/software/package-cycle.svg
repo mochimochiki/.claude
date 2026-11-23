@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 540" width="640" height="540" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
+  <title>1 か所の参照が循環依存を作っている</title>
+  <desc>UML パッケージ図の作例(架空の経費精算システムの名前空間)。表記は UML 2.5.1 に従い、パッケージをタブの付いた矩形、依存を開いた矢じりの破線の矢印で描く。矢印の根元のパッケージが先端のパッケージを参照する。Expense.Web は Expense.Application と Expense.Infrastructure を参照し、Expense.Application と Expense.Infrastructure は Expense.Domain を参照する。Expense.Domain の Order.cs が Expense.Infrastructure の SqlHelper を使っているため、Domain から Infrastructure への参照があり、Infrastructure との間で循環依存ができている。Infrastructure から Domain への参照は依存の向きとして正しいので灰色にし、循環を作る Domain から Infrastructure への 1 本だけを橙で示した。依存の調査結果を図にしたもので、望ましい依存の向きを示す図ではない。</desc>
+  <defs>
+    <marker id="og" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10" fill="none" stroke="#4a5563" stroke-width="1.5"/>
+    </marker>
+    <marker id="oc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10" fill="none" stroke="#b35a1f" stroke-width="1.8"/>
+    </marker>
+  </defs>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .t { font-size: 14px; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .pkg { fill: #fcfcfa; stroke: #4a5563; stroke-width: 1.5; }
+    .dep { stroke: #4a5563; stroke-width: 1.5; stroke-dasharray: 6 4; fill: none; marker-end: url(#og); }
+    .cyc { stroke: #b35a1f; stroke-width: 2.5; stroke-dasharray: 6 4; fill: none; marker-end: url(#oc); }
+  </style>
+  <rect x="0" y="0" width="640" height="540" fill="#f5f6f4"/>
+
+  <text x="16" y="40" class="title">1 か所の参照が循環依存を作っている</text>
+
+  <!-- パッケージ -->
+  <rect x="202" y="72" width="72" height="14" class="pkg"/>
+  <rect x="202" y="86" width="236" height="52" class="pkg"/>
+  <text x="320" y="118" class="h" text-anchor="middle">Expense.Web</text>
+
+  <rect x="16" y="202" width="72" height="14" class="pkg"/>
+  <rect x="16" y="216" width="236" height="52" class="pkg"/>
+  <text x="134" y="248" class="h" text-anchor="middle">Expense.Application</text>
+
+  <rect x="388" y="202" width="72" height="14" class="pkg"/>
+  <rect x="388" y="216" width="236" height="52" class="pkg"/>
+  <text x="506" y="248" class="h" text-anchor="middle">Expense.Infrastructure</text>
+
+  <rect x="202" y="358" width="72" height="14" class="pkg"/>
+  <rect x="202" y="372" width="236" height="52" class="pkg"/>
+  <text x="320" y="404" class="h" text-anchor="middle">Expense.Domain</text>
+
+  <!-- 依存 -->
+  <path d="M280,138 V176 H134 V214" class="dep"/>
+  <path d="M360,138 V176 H506 V214" class="dep"/>
+  <path d="M134,268 V398 H200" class="dep"/>
+  <path d="M560,268 V398 H440" class="dep"/>
+  <path d="M400,372 V270" class="cyc"/>
+  <text x="412" y="326" class="h" style="fill:#9a4a14">循環を作る参照</text>
+
+  <!-- 注記 -->
+  <text x="16" y="456" class="t">Domain の Order.cs が</text>
+  <text x="16" y="476" class="t">Infrastructure の SqlHelper を使っている</text>
+
+  <!-- 凡例 -->
+  <path d="M16,512 H62" class="dep"/>
+  <text x="76" y="517" class="s">参照する(依存)</text>
+  <path d="M248,512 H294" class="cyc"/>
+  <text x="308" y="517" class="s">循環を作る参照</text>
+</svg>

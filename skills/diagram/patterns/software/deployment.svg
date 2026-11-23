@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 684" width="640" height="684" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
+  <title>DB へは社内 LAN からしか接続できない</title>
+  <desc>UML 配置図の作例(架空の経費精算システム)。表記は UML 2.5.1 の配置図に従う。直方体はノードで、«device» は物理的な機器、«executionEnvironment» は機器の中の実行環境である。書類の記号の付いた矩形は成果物(artifact)で、置かれた実行環境に配置されていることを示す。ノードを結ぶ矢じりの無い線は通信経路で、«HTTPS» と «TCP/IP» は通信の種類を表すステレオタイプである。背景の帯はネットワークのゾーン(UML の記号ではない注記)で、上から下へ、インターネット、DMZ、社内 LAN の順に内側になる。利用者の PC とスマートフォンは DMZ のリバースプロキシにだけ接続し、リバースプロキシは社内 LAN のアプリサーバーに接続する。DB サーバーに通信経路を持つのは、同じ社内 LAN のアプリサーバーだけである。ファイアウォールの規則、ポート番号、冗長化の台数は描いていない。</desc>
+  <defs>
+    <symbol id="document" viewBox="0 0 24 24"><path d="M6,2.5 H14 L19,7.5 V21.5 H6 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14,2.5 V7.5 H19" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9,12 H16 M9,15.5 H16 M9,19 H13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  </defs>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .zone { font-size: 14px; font-weight: 700; fill: #4a5563; }
+    .front { fill: #fcfcfa; stroke: #4a5563; stroke-width: 1.5; }
+    .side { fill: #e8eaed; stroke: #4a5563; stroke-width: 1.5; stroke-linejoin: round; }
+    .env { fill: #e3ecf5; stroke: #2b5c8a; stroke-width: 1.5; }
+    .envside { fill: #c9d9ea; stroke: #2b5c8a; stroke-width: 1.5; stroke-linejoin: round; }
+    .art { fill: #fcfcfa; stroke: #7a8490; stroke-width: 1.5; }
+    .path { stroke: #1e2733; stroke-width: 2; fill: none; }
+  </style>
+  <rect x="0" y="0" width="640" height="684" fill="#f5f6f4"/>
+
+  <text x="16" y="40" class="title">DB へは社内 LAN からしか接続できない</text>
+
+  <!-- ゾーン -->
+  <rect x="16" y="56" width="608" height="140" fill="#dfe2e6"/>
+  <rect x="16" y="196" width="608" height="128" fill="#e8eaed"/>
+  <text x="28" y="80" class="zone">インターネット</text>
+  <text x="28" y="220" class="zone">DMZ</text>
+  <text x="28" y="348" class="zone">社内 LAN</text>
+
+  <!-- インターネット -->
+  <path d="M112,96 L122,86 H298 L288,96 Z" class="side"/>
+  <path d="M288,96 L298,86 V158 L288,168 Z" class="side"/>
+  <rect x="112" y="96" width="176" height="72" class="front"/>
+  <text x="200" y="118" class="s" text-anchor="middle">«device»</text>
+  <text x="200" y="142" class="h" text-anchor="middle">利用者の PC</text>
+
+  <path d="M352,96 L362,86 H538 L528,96 Z" class="side"/>
+  <path d="M528,96 L538,86 V158 L528,168 Z" class="side"/>
+  <rect x="352" y="96" width="176" height="72" class="front"/>
+  <text x="440" y="118" class="s" text-anchor="middle">«device»</text>
+  <text x="440" y="142" class="h" text-anchor="middle">スマートフォン</text>
+
+  <!-- DMZ -->
+  <path d="M200,236 L210,226 H450 L440,236 Z" class="side"/>
+  <path d="M440,236 L450,226 V290 L440,300 Z" class="side"/>
+  <rect x="200" y="236" width="240" height="64" class="front"/>
+  <text x="320" y="258" class="s" text-anchor="middle">«device»</text>
+  <text x="320" y="282" class="h" text-anchor="middle">リバースプロキシ</text>
+
+  <!-- 社内 LAN: アプリサーバー -->
+  <path d="M24,388 L34,378 H300 L290,388 Z" class="side"/>
+  <path d="M290,388 L300,378 V598 L290,608 Z" class="side"/>
+  <rect x="24" y="388" width="266" height="220" class="front"/>
+  <text x="157" y="410" class="s" text-anchor="middle">«device»</text>
+  <text x="157" y="432" class="h" text-anchor="middle">アプリサーバー</text>
+  <path d="M40,456 L48,448 H282 L274,456 Z" class="envside"/>
+  <path d="M274,456 L282,448 V584 L274,592 Z" class="envside"/>
+  <rect x="40" y="456" width="234" height="136" class="env"/>
+  <text x="157" y="478" class="s" text-anchor="middle">«executionEnvironment»</text>
+  <text x="157" y="500" class="h" text-anchor="middle">.NET 8 ランタイム</text>
+  <rect x="50" y="510" width="214" height="34" class="art"/>
+  <use href="#document" x="54" y="515" width="24" height="24" color="#4a5563"/>
+  <text x="84" y="533" class="h">Expense.Api.dll</text>
+  <rect x="50" y="550" width="214" height="34" class="art"/>
+  <use href="#document" x="54" y="555" width="24" height="24" color="#4a5563"/>
+  <text x="84" y="573" class="h">Expense.Batch.dll</text>
+
+  <!-- 社内 LAN: DB サーバー -->
+  <path d="M376,388 L386,378 H622 L612,388 Z" class="side"/>
+  <path d="M612,388 L622,378 V510 L612,520 Z" class="side"/>
+  <rect x="376" y="388" width="236" height="132" class="front"/>
+  <text x="494" y="410" class="s" text-anchor="middle">«device»</text>
+  <text x="494" y="432" class="h" text-anchor="middle">DB サーバー</text>
+  <path d="M392,456 L400,448 H604 L596,456 Z" class="envside"/>
+  <path d="M596,456 L604,448 V496 L596,504 Z" class="envside"/>
+  <rect x="392" y="456" width="204" height="48" class="env"/>
+  <text x="494" y="476" class="s" text-anchor="middle">«executionEnvironment»</text>
+  <text x="494" y="497" class="h" text-anchor="middle">PostgreSQL 16</text>
+
+  <!-- 通信経路 -->
+  <path d="M200,168 L272,226" class="path"/>
+  <text x="222" y="218" class="s" text-anchor="end">«HTTPS»</text>
+  <path d="M440,168 L368,226" class="path"/>
+  <text x="418" y="218" class="s">«HTTPS»</text>
+  <path d="M240,300 V378" class="path"/>
+  <text x="248" y="346" class="s">«HTTPS»</text>
+  <path d="M300,440 H376" class="path"/>
+  <text x="338" y="430" class="s" text-anchor="middle">«TCP/IP»</text>
+
+  <!-- 凡例 -->
+  <line x1="16" y1="640" x2="624" y2="640" stroke="#7a8490" stroke-width="1"/>
+  <path d="M16,660 L22,654 H46 L40,660 Z M40,660 L46,654 V670 L40,676 Z" class="side"/>
+  <rect x="16" y="660" width="24" height="16" class="front"/>
+  <text x="56" y="673" class="s">ノード</text>
+  <rect x="120" y="658" width="28" height="18" class="env"/>
+  <text x="156" y="673" class="s">実行環境</text>
+  <use href="#document" x="240" y="655" width="24" height="24" color="#4a5563"/>
+  <text x="270" y="673" class="s">成果物</text>
+  <line x1="346" y1="667" x2="386" y2="667" class="path"/>
+  <text x="394" y="673" class="s">通信経路</text>
+  <rect x="478" y="658" width="28" height="18" fill="#dfe2e6"/>
+  <text x="514" y="673" class="s">ゾーン</text>
+</svg>

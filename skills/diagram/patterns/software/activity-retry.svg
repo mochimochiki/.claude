@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 596" width="640" height="596" font-family="'BIZ UDPGothic','Yu Gothic UI','Meiryo','Hiragino Sans','Noto Sans JP','Noto Sans CJK JP','IPAPGothic',sans-serif">
+  <title>取得に 3 回失敗したら、取り込まずに通知する</title>
+  <desc>UML アクティビティ図の作例(架空の夜間取り込みジョブ、回数と待ち時間も架空)。表記は UML 2.5.1 に従う。黒丸は開始ノード、二重丸はアクティビティ終了ノード、角の丸い矩形はアクション、ひし形はデシジョンノードとマージノード、砂時計は時間イベントを受け付けるアクションで、角かっこの中はガードである。ファイルの取得に失敗し、まだ 3 回未満なら 5 分待ってマージノードから取得をやり直す。3 回目も失敗したら、取り込みを行わずに担当者に通知して終わる。取得に成功したら取り込み、エラー行があったときだけエラー行を別に保存し、マージノードで合流して完了を記録する。試行回数の数え方、取り込みの中の処理、通知の宛先は描いていない。アクティビティの枠(act)は省いた。</desc>
+  <defs>
+    <marker id="o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10" fill="none" stroke="#1e2733" stroke-width="1.5"/>
+    </marker>
+    <marker id="oc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10" fill="none" stroke="#b35a1f" stroke-width="1.8"/>
+    </marker>
+  </defs>
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #1e2733; }
+    .h { font-size: 16px; font-weight: 700; fill: #1e2733; }
+    .s { font-size: 14px; fill: #4a5563; }
+    .act { fill: #fcfcfa; stroke: #1e2733; stroke-width: 1.5; }
+    .flow { stroke: #1e2733; stroke-width: 1.5; fill: none; marker-end: url(#o); }
+    .fail { stroke: #b35a1f; stroke-width: 2.5; fill: none; marker-end: url(#oc); }
+  </style>
+  <rect x="0" y="0" width="640" height="596" fill="#f5f6f4"/>
+
+  <text x="16" y="40" class="title">取得に 3 回失敗したら、取り込まずに通知する</text>
+
+  <!-- 開始とやり直しの合流 -->
+  <circle cx="240" cy="68" r="8" fill="#1e2733"/>
+  <path d="M240,76 V86" class="flow"/>
+  <path d="M240,88 L256,104 L240,120 L224,104 Z" class="act"/>
+  <path d="M240,120 V138" class="flow"/>
+  <rect x="160" y="140" width="160" height="40" rx="14" class="act"/>
+  <text x="240" y="166" class="h" text-anchor="middle">ファイルを取得する</text>
+  <path d="M240,180 V196" class="flow"/>
+
+  <!-- 取得の結果 -->
+  <path d="M240,198 L264,222 L240,246 L216,222 Z" class="act"/>
+  <path d="M216,222 H70" class="flow"/>
+  <text x="143" y="214" class="s" text-anchor="middle">[失敗・3 回未満]</text>
+  <path d="M46,210 H66 L46,234 H66 Z" class="act"/>
+  <text x="56" y="256" class="s" text-anchor="middle">5 分後</text>
+  <path d="M56,210 V104 H222" class="flow"/>
+
+  <path d="M264,222 H422" class="fail"/>
+  <text x="343" y="214" class="s" text-anchor="middle" style="fill:#9a4a14;font-weight:700">[失敗・3 回目]</text>
+  <rect x="424" y="202" width="184" height="40" rx="14" class="act" style="stroke:#b35a1f;stroke-width:2.5"/>
+  <text x="516" y="228" class="h" text-anchor="middle">担当者に通知する</text>
+  <path d="M516,242 V270" class="fail"/>
+  <circle cx="516" cy="284" r="12" fill="#f5f6f4" stroke="#1e2733" stroke-width="1.5"/>
+  <circle cx="516" cy="284" r="7" fill="#1e2733"/>
+
+  <!-- 取り込み -->
+  <path d="M240,246 V278" class="flow"/>
+  <text x="248" y="268" class="s">[成功]</text>
+  <rect x="160" y="280" width="160" height="40" rx="14" class="act"/>
+  <text x="240" y="306" class="h" text-anchor="middle">データを取り込む</text>
+  <path d="M240,320 V336" class="flow"/>
+  <path d="M240,338 L264,362 L240,386 L216,362 Z" class="act"/>
+  <path d="M264,362 H406" class="flow"/>
+  <text x="335" y="354" class="s" text-anchor="middle">[エラー行あり]</text>
+  <rect x="408" y="342" width="200" height="40" rx="14" class="act"/>
+  <text x="508" y="368" class="h" text-anchor="middle">エラー行を別に保存する</text>
+  <path d="M508,382 V436 H266" class="flow"/>
+  <path d="M240,386 V410" class="flow"/>
+  <text x="248" y="402" class="s">[エラー行なし]</text>
+
+  <!-- 合流と完了 -->
+  <path d="M240,412 L264,436 L240,460 L216,436 Z" class="act"/>
+  <path d="M240,460 V478" class="flow"/>
+  <rect x="160" y="480" width="160" height="40" rx="14" class="act"/>
+  <text x="240" y="506" class="h" text-anchor="middle">完了を記録する</text>
+  <path d="M240,520 V532" class="flow"/>
+  <circle cx="240" cy="546" r="12" fill="#f5f6f4" stroke="#1e2733" stroke-width="1.5"/>
+  <circle cx="240" cy="546" r="7" fill="#1e2733"/>
+
+  <!-- 凡例 -->
+  <line x1="16" y1="568" x2="624" y2="568" stroke="#7a8490" stroke-width="1"/>
+  <circle cx="24" cy="583" r="6" fill="#1e2733"/>
+  <text x="36" y="588" class="s">開始</text>
+  <circle cx="92" cy="583" r="8" fill="#f5f6f4" stroke="#1e2733" stroke-width="1.5"/><circle cx="92" cy="583" r="4.5" fill="#1e2733"/>
+  <text x="106" y="588" class="s">終了</text>
+  <path d="M164,575 L172,583 L164,591 L156,583 Z" class="act"/>
+  <text x="180" y="588" class="s">デシジョン・マージ</text>
+  <path d="M320,575 H334 L320,591 H334 Z" class="act"/>
+  <text x="342" y="588" class="s">時間イベント</text>
+  <path d="M440,583 H472" class="fail"/>
+  <text x="480" y="588" class="s">取り込まない経路</text>
+</svg>
